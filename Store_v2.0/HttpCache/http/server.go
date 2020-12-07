@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/HttpCache/cache"
+	"github.com/impact-eintr/WEB-Project/Store_v2.0/HttpCache/cache"
 	"net/http"
 )
 
