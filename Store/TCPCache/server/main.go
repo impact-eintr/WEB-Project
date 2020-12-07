@@ -3,9 +3,11 @@ package main
 import (
 	"TCPCache/server/cache"
 	"TCPCache/server/http"
+	"TCPCache/server/tcp"
 )
 
 func main() {
-	c := cache.New("inmemory")
-	http.New(c).Listen()
+	ca := cache.New("inmemory")
+	go tcp.New(ca).Listen()
+	http.New(ca).Listen()
 }
