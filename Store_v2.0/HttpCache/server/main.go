@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/HttpCache/cache"
-	"github.com/HttpCache/http"
+	"github.com/impact-eintr/WEB-Project/Store_v2.0/HttpCache/cache"
+	"github.com/impact-eintr/WEB-Project/Store_v2.0/HttpCache/http"
 )
 
 func main() {
