@@ -3,7 +3,6 @@ package cache
 /*
 #include <stdlib.h>
 #include <rocksdb/c.h>
-#cgo CFLAGS: -I/usr/include/rocksdb
 #cgo LDFLAGS: -lpthread -lstdc++ -lrocksdb -ldl -lm -O3
 */
 import "C"
