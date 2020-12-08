@@ -54,7 +54,6 @@ func (s *Server) process(conn net.Conn) {
 		//S3 5 AAAaaaaa
 		if op == 'S' {
 			err = s.set(conn, r)
-
 		} else if op == 'G' { //G 3 AAA
 			err = s.get(conn, r)
 		} else if op == 'D' { //D 3 AAA
@@ -62,17 +61,13 @@ func (s *Server) process(conn net.Conn) {
 		} else {
 			log.Println("close connection due to invalid operation: ", op)
 			return
-
 		}
 
 		if err != nil {
 			log.Println("close connection due to error:", err)
 			return
-
 		}
-
 	}
-
 }
 
 func (s *Server) get(conn net.Conn, r *bufio.Reader) error {

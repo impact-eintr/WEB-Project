@@ -66,6 +66,7 @@ func (c *inMemoryCache) Set(k string, v []byte) error {
 func (c *inMemoryCache) Get(k string) ([]byte, error) {
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
+	log.Println(c.c)
 	return c.c[k], nil
 
 }

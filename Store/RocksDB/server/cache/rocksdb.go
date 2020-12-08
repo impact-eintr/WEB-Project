@@ -53,7 +53,6 @@ func (c *rocksdbCache) Del(key string) error {
 	C.rocksdb_delete(c.db, c.wo, k, C.size_t(len(key)), &c.e)
 	if c.e != nil {
 		return errors.New(C.GoString(c.e))
-
 	}
 	return nil
 
