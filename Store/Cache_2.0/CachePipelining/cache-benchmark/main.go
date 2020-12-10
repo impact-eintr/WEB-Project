@@ -34,5 +34,5 @@ func init() {
 }
 
 func main() {
-	fmt.Println("vim-go")
+	//goroutine
 }
