@@ -10,6 +10,7 @@ import (
 var typ, server, operation string
 var total, valueSize, threads, keyspacelen, pipelen int
 
+//初始化参数
 func init() {
 	flag.StringVar(&typ, "type", "redis", "cache server type")
 	flag.StringVar(&server, "h", "localhsot", "cache server address")
@@ -33,6 +34,66 @@ func init() {
 
 }
 
+//statistic统计值
+type statistic struct {
+	count int           //同一时间级下操作计数
+	time  time.Duration //持续时间
+}
+
+type result struct {
+	getCount    int         //记录一共进行了多少次Get
+	missCount   int         //记录一共进行了多少次Set
+	setCount    int         //没有hit到的次数
+	statBuckets []statistic //记录操作花费的时间
+}
+
+//增加新的统计值
+//如果是在现有的"桶"中存在，就直接累加，否则先创建新的桶
+func (r *result) addStatistic(bucket int, stat statistic) {
+	if bucket > len(r.statBuckets)-1 {
+		newStatBuckets := make([]statistic, bucket+1)
+		copy(newStatBuckets, r.statBuckets)
+		r.statBuckets = newStatBuckets
+	}
+	s := r.statBuckets[bucket]
+	s.count += stat.count
+	s.time += stat.time
+	r.statBuckets[bucket] = s
+}
+
+func (r *result) addDuration(d time.Duration, typ string) {
+	bucket := int(d / time.Millisecond)
+	r.addStatistic(bucket, statistic{1, d})
+	if typ == "get" {
+		r.getCount++
+	} else if typ == "set" {
+		r.setCount++
+	} else {
+		r.missCount++
+	}
+}
+
+func (r *result) addResult(src *result) {
+	for b, s := range src.statBuckets {
+		r.addStatistic(b, s)
+	}
+	r.getCount += src.getCount
+	r.setCount += src.setCount
+	r.missCount += src.missCount
+}
+
+//operate
+func operate() {
+
+}
+
 func main() {
 	//goroutine
+	ch := make(chan *result, threads)
+	res := &result{0, 0, 0, make([]static, 0)}
+	start := time.Now()
+	for i := 0; i < threads; i++ {
+		go operate(i, total/threads, ch)
+	}
+
 }
