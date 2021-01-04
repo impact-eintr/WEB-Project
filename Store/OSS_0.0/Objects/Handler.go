@@ -28,14 +28,14 @@ func put(w http.ResponseWriter, r *http.Request) {
 	res := strings.Join(strings.Split(r.URL.EscapedPath(), "/")[2:], "/")
 	dirName := filepath.Dir(res)
 	if dirName != "." {
-		e := os.Mkdir(os.Getenv("STORAGE_ROOT")+"/objects/"+dirName, 0755)
+		e := os.Mkdir("$HOME/tmp"+"/objects/"+dirName, 0755)
 		if e != nil {
 			log.Fatalln(e)
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
 	}
-	f, e := os.Create(os.Getenv("STORAGE_ROOT") + "/objects/" + res)
+	f, e := os.Create("$HOME/tmp" + "/objects/" + res)
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)
@@ -47,7 +47,7 @@ func put(w http.ResponseWriter, r *http.Request) {
 
 func get(w http.ResponseWriter, r *http.Request) {
 	res := strings.Join(strings.Split(r.URL.EscapedPath(), "/")[2:], "/")
-	f, e := os.Open(os.Getenv("STORAGE_ROOT") + "/objects/" + res)
+	f, e := os.Open("$HOME/tmp" + "/objects/" + res)
 	log.Println(res)
 	if e != nil {
 		log.Fatalln(e)
@@ -61,14 +61,14 @@ func post(w http.ResponseWriter, r *http.Request) {
 	res := strings.Join(strings.Split(r.URL.EscapedPath(), "/")[2:], "/")
 	dirName := filepath.Dir(res)
 	if dirName != "." {
-		e := os.Mkdir(os.Getenv("STORAGE_ROOT")+"/objects/"+dirName, 0755)
+		e := os.Mkdir("$HOME/tmp"+"/objects/"+dirName, 0755)
 		if e != nil {
 			log.Fatalln(e)
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
 	}
-	f, e := os.Create(os.Getenv("STORAGE_ROOT") + "/objects/" + res)
+	f, e := os.Create("$HOME/tmp" + "/objects/" + res)
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)

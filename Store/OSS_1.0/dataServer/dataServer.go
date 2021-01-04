@@ -1,9 +1,9 @@
 package main
 
 import (
-	"OSS_1.0/Objects"
-	"OSS_1.0/heartbeat"
-	"OSS_1.0/locate"
+	"OSS_1.0/dataServer/Objects"
+	"OSS_1.0/dataServer/heartbeat"
+	"OSS_1.0/dataServer/locate"
 	"log"
 	"net/http"
 	"os"
@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	go heartbeat.StartHeartbeat()
+	go heartbeat.StartHeartBeat()
 	go locate.StartLocate()
 	http.HandleFunc("/Objects/", Objects.Handler)
 	log.Fatal(http.ListenAndServe(os.Getenv("LISTEN_ADDRESS"), nil))
