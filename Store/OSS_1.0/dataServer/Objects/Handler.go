@@ -1,3 +1,4 @@
+//负责datanode的读写
 package Objects
 
 import "io"

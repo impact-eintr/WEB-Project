@@ -1,3 +1,4 @@
+//负责发送心跳信号
 package heartbeat
 
 import (

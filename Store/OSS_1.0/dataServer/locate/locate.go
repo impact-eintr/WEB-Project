@@ -1,3 +1,4 @@
+//负责接收定位请求 处理定位请求
 package locate
 
 import (
