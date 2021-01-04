@@ -1,3 +1,3 @@
-module Store/OSS_1.0/apiServer
+module OSS_1.0/apiServer
 
 go 1.15

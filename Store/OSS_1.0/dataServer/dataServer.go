@@ -11,8 +11,8 @@ import (
 
 func main() {
 
-	go heartbeat.StartHeartBeat()
-	go locate.StartLocate()
+	go heartbeat.StartHeartBeat() //开启数据节点的心跳服务
+	go locate.StartLocate()       //开启数据节点的定位服务
 	http.HandleFunc("/Objects/", Objects.Handler)
 	log.Fatal(http.ListenAndServe(os.Getenv("LISTEN_ADDRESS"), nil))
 
