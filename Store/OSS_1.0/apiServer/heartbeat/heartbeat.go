@@ -37,7 +37,7 @@ func removeExpiredDataServer() {
 		time.Sleep(5 * time.Second)
 		mutex.Lock()
 		for s, t := range dataServers {
-			if t.Add(10 * time.Second).Before(time.Now()) {
+			if t.Add(10 * time.Second).Before(time.Now()) { //已经有10秒没有更新
 				delete(dataServers, s)
 			}
 		}
