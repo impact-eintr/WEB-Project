@@ -4,6 +4,7 @@ package objectstream
 import (
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 )
 
@@ -19,8 +20,11 @@ func NewPutStream(server, object string) *PutStream {
 	c := make(chan error)
 	go func() {
 		request, _ := http.NewRequest("PUT", "http://"+server+"/objects/"+object, reader)
+		log.Println("stream 接收的dataNode:", request.URL)
 		client := http.Client{}
 		r, e := client.Do(request)
+		//r, e = http.Get("http://" + server + "/objects/+object")
+		log.Println(r.Body)
 		if e == nil && r.StatusCode != http.StatusOK {
 			e = fmt.Errorf("dataServer return http code %d", r.StatusCode)
 

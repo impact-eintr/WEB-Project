@@ -14,11 +14,13 @@ func Locate(name string) bool {
 }
 
 func StartLocate() {
-	q := rabbitmq.New(os.Getenv("RABBIT_SERVER"))
+	q := rabbitmq.New(os.Getenv("RABBITMQ_SERVER"))
 	defer q.Close()
 	q.Bind("dataServers") //与dataServer绑定
 	c := q.Consume()      //消息通道
+	log.Println(c)
 	for msg := range c {
+		log.Println("开启定位")
 		log.Println(string(msg.Body))
 		object, err := strconv.Unquote(string(msg.Body))
 		if err != nil {

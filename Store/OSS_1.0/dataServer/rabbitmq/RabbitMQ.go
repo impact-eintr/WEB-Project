@@ -3,6 +3,7 @@ package rabbitmq
 import (
 	"encoding/json"
 	"github.com/streadway/amqp"
+	"log"
 )
 
 type RabbitMQ struct {
@@ -111,6 +112,7 @@ func (q *RabbitMQ) Consume() <-chan amqp.Delivery {
 	if e != nil {
 		panic(e)
 	}
+	log.Println(c)
 	return c
 
 }

@@ -29,7 +29,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 //name是需要定位的对象的名字 创建一个新的消息队列 并向dataServers exchange群发这个对象的定位信息
 func Locate(name string) string {
-	q := rabbitmq.New(os.Getenv("RABBIT_SERVER"))
+	q := rabbitmq.New(os.Getenv("RABBITMQ_SERVER"))
 	q.Publish("dataServers", name) //群发
 	c := q.Consume()               //群发后接收返回信息
 	go func() {

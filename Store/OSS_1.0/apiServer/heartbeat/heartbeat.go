@@ -3,6 +3,7 @@ package heartbeat
 
 import (
 	"OSS_1.0/apiServer/rabbitmq"
+	"log"
 	"math/rand"
 	"os"
 	"strconv"
@@ -53,6 +54,7 @@ func GetDataServers() []string {
 	for s, _ := range dataServers {
 		ds = append(ds, s)
 	}
+	log.Println("dataNode:", ds)
 	return ds
 }
 
@@ -63,5 +65,6 @@ func ChooseRandomDataServer() string {
 	if n == 0 {
 		return ""
 	}
-	return ds[rand.Intn(n)]
+	dataNode := rand.Intn(n)
+	return ds[dataNode]
 }
