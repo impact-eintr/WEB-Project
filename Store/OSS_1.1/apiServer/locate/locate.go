@@ -1,10 +1,10 @@
 package locate
 
 import (
+	"OSS_1.1/apiServer/conf"
 	"OSS_1.1/apiServer/rabbitmq"
 	"encoding/json"
 	"net/http"
-	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -29,7 +29,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func Locate(name string) string {
-	q := rabbitmq.New(os.Getenv("RABBITMQ_SERVER"))
+	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
 	q.Publish("dataServers", name)
 	c := q.Consume()
 	go func() {
