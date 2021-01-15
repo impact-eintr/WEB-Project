@@ -15,10 +15,10 @@ func main() {
 	var listenPort string //监听端口
 	var url string        //监听地址:端口
 	var dir string        //工作地址
-	flag.StringVar(&rabbitmqAddr, "q", "amqp://test:test@192.168.4.1:5672", "消息队列机地址，默认为ubuntu")
+	flag.StringVar(&rabbitmqAddr, "q", "amqp://test:test@121.196.144.74:5672", "消息队列机地址，默认为ubuntu")
 	flag.StringVar(&listenAddr, "h", "127.0.0.1", "主机地址，默认为本机")
 	flag.StringVar(&listenPort, "p", "54321", "主机地址，默认为本机")
-	flag.StringVar(&dir, "r", "/tmp/objects", "存储目录，默认/tmp/objects")
+	flag.StringVar(&dir, "r", "/home/eintr/tmp/objects", "存储目录，默认/tmp/objects")
 
 	flag.Parse()
 	url = listenAddr + ":" + listenPort
