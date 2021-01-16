@@ -1,0 +1,5 @@
+{
+	"RabbitmqAddr":"amqp://test:test@121.196.144.74:5672",
+	"ListenAddr":"127.0.0.1",
+	 "ListenPort":"6060"
+}
