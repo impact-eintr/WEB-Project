@@ -12,6 +12,10 @@ import (
 	"strings"
 )
 
+func Get(c *gin.Context) {
+
+}
+
 func get(w http.ResponseWriter, r *http.Request) {
 	object := strings.Split(r.URL.EscapedPath(), "/")[2]
 	stream, e := getStream(object)
@@ -33,28 +37,19 @@ func getStream(object string) (io.Reader, error) {
 }
 
 func Put(c *gin.Context) {
-
+	url := c.Request.URL.EscapedPath()
+	body := c.Request.Body
+	put(url, body)
 }
 
-func put(w http.ResponseWriter, r *http.Request) {
-	object := strings.Split(r.URL.EscapedPath(), "/")[2]
-	c, e := storeObject(r.Body, object)
+func put(url string, body io.ReadCloser) {
+	object := strings.Split(url, "/")[2]
+	c, e := storeObject(body, object)
 	if e != nil {
 		log.Println(e)
 
 	}
 	w.WriteHeader(c)
-
-}
-
-func putStream(object string) (*objectstream.PutStream, error) {
-	server := heartbeat.ChooseRandomDataServer()
-	if server == "" {
-		return nil, fmt.Errorf("cannot find any dataServer")
-
-	}
-
-	return objectstream.NewPutStream(server, object), nil
 
 }
 
@@ -72,22 +67,15 @@ func storeObject(r io.Reader, object string) (int, error) {
 
 	}
 	return http.StatusOK, nil
-
 }
 
-func Get(c *gin.Context) {
+func putStream(object string) (*objectstream.PutStream, error) {
+	server := heartbeat.ChooseRandomDataServer()
+	if server == "" {
+		return nil, fmt.Errorf("cannot find any dataServer")
 
-}
-
-func Handler(w http.ResponseWriter, r *http.Request) {
-	m := r.Method
-	if m == http.MethodPut {
-		put(w, r)
-		return
-	} else if m == http.MethodGet {
-		get(w, r)
-		return
-	} else {
-		w.WriteHeader(http.StatusMethodNotAllowed)
 	}
+
+	return objectstream.NewPutStream(server, object), nil
+
 }
