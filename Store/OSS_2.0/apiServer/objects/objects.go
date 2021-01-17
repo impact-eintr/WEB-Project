@@ -15,20 +15,6 @@ import (
 	"strings"
 )
 
-//func get(w http.ResponseWriter, r *http.Request) {
-//	object := strings.Split(r.URL.EscapedPath(), "/")[3]
-//	log.Println(object)
-//	stream, e := getStream(object)
-//	if e != nil {
-//		log.Println(e)
-//		w.WriteHeader(http.StatusNotFound)
-//		return
-//
-//	}
-//	io.Copy(w, stream)
-//
-//}
-
 func get(w http.ResponseWriter, r *http.Request) {
 	name := strings.Split(r.URL.EscapedPath(), "/")[3]
 	versionId := r.URL.Query()["version"]
@@ -78,24 +64,12 @@ func getStream(object string) (io.Reader, error) {
 
 }
 
-//func put(w http.ResponseWriter, r *http.Request) {
-//	object := strings.Split(r.URL.EscapedPath(), "/")[3]
-//	c, e := storeObject(r.Body, object)
-//	if e != nil {
-//		log.Println(e)
-//
-//	}
-//	w.WriteHeader(c)
-//
-//}
-
 func put(w http.ResponseWriter, r *http.Request) {
 	hash := utils.GetHashFromHeader(r.Header)
 	if hash == "" {
 		log.Println("missing object hash in digest header")
 		w.WriteHeader(http.StatusBadRequest)
 		return
-
 	}
 
 	c, e := storeObject(r.Body, url.PathEscape(hash))
@@ -103,12 +77,11 @@ func put(w http.ResponseWriter, r *http.Request) {
 		log.Println(e)
 		w.WriteHeader(c)
 		return
-
 	}
+
 	if c != http.StatusOK {
 		w.WriteHeader(c)
 		return
-
 	}
 
 	name := strings.Split(r.URL.EscapedPath(), "/")[3]
@@ -117,9 +90,7 @@ func put(w http.ResponseWriter, r *http.Request) {
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)
-
 	}
-
 }
 
 func putStream(object string) (*objectstream.PutStream, error) {
