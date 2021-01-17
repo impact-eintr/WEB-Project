@@ -11,6 +11,7 @@ var Conf *Config = &Config{}
 
 type Config struct {
 	RabbitmqAddr string //rabbitmq服务器地址
+	EsAddr       string //es服务器地址
 	ListenAddr   string //监听地址
 	ListenPort   string //监听端口
 }

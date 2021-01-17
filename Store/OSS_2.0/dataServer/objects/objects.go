@@ -34,8 +34,6 @@ func put(w http.ResponseWriter, r *http.Request) {
 }
 
 func get(w http.ResponseWriter, r *http.Request) {
-	log.Println(r.URL)
-	log.Println(strings.Split(r.URL.EscapedPath(), "/")[2])
 	f, err := os.Open(conf.Conf.Dir + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
 	if err != nil {
 		log.Println(err)

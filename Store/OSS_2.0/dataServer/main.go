@@ -19,8 +19,8 @@ func main() {
 	url = conf.Conf.ListenAddr + ":" + conf.Conf.ListenPort
 	log.Println(url)
 
-	go heartbeat.StartHeartbeat(conf.Conf.RabbitmqAddr, url)
-	go locate.StartLocate(conf.Conf.RabbitmqAddr, url, conf.Conf.Dir)
+	go heartbeat.StartHeartbeat(url)
+	go locate.StartLocate(url)
 	http.HandleFunc("/objects/", objects.Handler)
 	log.Fatal(http.ListenAndServe(url, nil))
 }

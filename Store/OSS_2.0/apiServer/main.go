@@ -5,6 +5,7 @@ import (
 	"OSS/apiServer/heartbeat"
 	"OSS/apiServer/locate"
 	"OSS/apiServer/objects"
+	"OSS/apiServer/versions"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -22,10 +23,11 @@ func main() {
 
 	url = conf.Conf.ListenAddr + ":" + conf.Conf.ListenPort
 
-	go heartbeat.ListenHeartbeat(conf.Conf.RabbitmqAddr)
+	go heartbeat.ListenHeartbeat()
 	http.HandleFunc("/OSS/", indexPage)
 	http.HandleFunc("/OSS/objects/", objects.Handler)
 	http.HandleFunc("/OSS/locate/", locate.Handler)
+	http.HandleFunc("/OSS/versions/", versions.Handler)
 	log.Fatalln(http.ListenAndServe(url, nil))
 
 }
