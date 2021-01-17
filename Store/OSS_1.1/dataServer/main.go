@@ -22,8 +22,8 @@ func main() {
 	go heartbeat.StartHeartbeat(url)
 	go locate.StartLocate(url)
 
-	engine.GET("/objects", objects.Get)
-	engine.PUT("/objects", objects.Put)
+	engine.GET("/objects/:file", objects.Get)
+	engine.PUT("/objects/:file", objects.Put)
 
 	engine.Run(url)
 }

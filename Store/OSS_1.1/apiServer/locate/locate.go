@@ -1,31 +1,25 @@
 package locate
 
 import (
-	"OSS_1.1/apiServer/conf"
-	"OSS_1.1/apiServer/rabbitmq"
+	"OSS/apiServer/conf"
+	"OSS/apiServer/rabbitmq"
 	"encoding/json"
+	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
-	"strings"
 	"time"
 )
 
-func Handler(w http.ResponseWriter, r *http.Request) {
-	m := r.Method
-	if m != http.MethodGet {
-		w.WriteHeader(http.StatusMethodNotAllowed)
-		return
-
-	}
-	info := Locate(strings.Split(r.URL.EscapedPath(), "/")[2])
+func Get(c *gin.Context) {
+	info := Locate(c.Param("file"))
 	if len(info) == 0 {
-		w.WriteHeader(http.StatusNotFound)
+		c.Status(http.StatusNotFound)
 		return
 
 	}
 	b, _ := json.Marshal(info)
-	w.Write(b)
-
+	res := string(b)[1:]
+	c.JSON(http.StatusOK, res[:len(res)-1])
 }
 
 func Locate(name string) string {

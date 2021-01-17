@@ -4,37 +4,34 @@ import (
 	"OSS/dataServer/conf"
 	"github.com/gin-gonic/gin"
 	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
-	"strings"
 )
 
 func Put(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{})
-}
-
-func put(w http.ResponseWriter, r *http.Request) {
-	f, err := os.Create(conf.Conf.Dir + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
+	f, err := os.Create(conf.Conf.Dir + "/objects/" + c.Param("file"))
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusInternalServerError)
+		c.Status(http.StatusInternalServerError)
 		return
 	}
 	defer f.Close()
-	io.Copy(f, r.Body)
+	io.Copy(f, c.Request.Body)
 }
 
 func Get(c *gin.Context) {
+	f, err := os.Open(conf.Conf.Dir + "/objects/" + c.Param("file"))
+	log.Println("test")
+	defer f.Close()
 
-}
-func get(w http.ResponseWriter, r *http.Request) {
-	f, err := os.Open(conf.Conf.Dir + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusNotFound)
+		c.Status(http.StatusNotFound)
 		return
 	}
-	defer f.Close()
-	io.Copy(w, f)
+	data, _ := ioutil.ReadAll(f)
+
+	c.Data(http.StatusOK, "application/octet-stream", data)
 }

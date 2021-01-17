@@ -2,7 +2,6 @@ package objectstream
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
 )
@@ -15,8 +14,8 @@ func newGetStream(url string) (*GetStream, error) {
 	r, e := http.Get(url)
 	if e != nil {
 		return nil, e
-
 	}
+
 	if r.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("dataServer return http code %d", r.StatusCode)
 

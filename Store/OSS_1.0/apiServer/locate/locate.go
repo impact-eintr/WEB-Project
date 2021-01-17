@@ -40,10 +40,8 @@ func Locate(name string) string {
 	msg := <-c
 	s, _ := strconv.Unquote(string(msg.Body))
 	return s
-
 }
 
 func Exist(name string) bool {
 	return Locate(name) != ""
-
 }
