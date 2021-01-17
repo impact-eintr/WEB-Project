@@ -1,5 +1,8 @@
-module OSS_1.1/apiServer
+module OSS/apiServer
 
 go 1.15
 
-require github.com/streadway/amqp v1.0.0
+require (
+	github.com/gin-gonic/gin v1.6.3 // indirect
+	github.com/streadway/amqp v1.0.0
+)

@@ -1,15 +1,16 @@
 package heartbeat
 
 import (
-	"OSS_1.1/dataServer/rabbitmq"
+	"OSS/dataServer/conf"
+	"OSS/dataServer/rabbitmq"
 	"time"
 )
 
-func StartHeartbeat(rabbitmqAddr string, listenAddr string) {
-	q := rabbitmq.New(rabbitmqAddr)
+func StartHeartbeat(url string) {
+	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
 	defer q.Close()
 	for {
-		q.Publish("apiServers", listenAddr)
-		time.Sleep(5 * time.Second)
+		q.Publish("apiServers", url) //给apiServer消息队列发消息
+		time.Sleep(5 * time.Second)  //5秒后再发
 	}
 }

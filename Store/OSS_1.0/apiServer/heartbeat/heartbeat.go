@@ -1,9 +1,7 @@
 package heartbeat
 
 import (
-	"OSS/apiServer/conf"
-	"OSS/apiServer/rabbitmq"
-	"log"
+	"OSS_1.1/apiServer/rabbitmq"
 	"math/rand"
 	"strconv"
 	"sync"
@@ -13,8 +11,8 @@ import (
 var dataServers = make(map[string]time.Time)
 var mutex sync.Mutex
 
-func ListenHeartbeat() {
-	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
+func ListenHeartbeat(rabbitmqAddr string) {
+	q := rabbitmq.New(rabbitmqAddr)
 	defer q.Close()
 	q.Bind("apiServers")
 	c := q.Consume()
@@ -23,12 +21,14 @@ func ListenHeartbeat() {
 		dataServer, e := strconv.Unquote(string(msg.Body))
 		if e != nil {
 			panic(e)
+
 		}
 		mutex.Lock()
 		dataServers[dataServer] = time.Now()
-		log.Println(dataServers)
 		mutex.Unlock()
+
 	}
+
 }
 
 func removeExpiredDataServer() {

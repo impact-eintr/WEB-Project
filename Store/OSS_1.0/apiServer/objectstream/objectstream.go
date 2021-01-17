@@ -2,7 +2,6 @@ package objectstream
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io"
 	"net/http"
 )

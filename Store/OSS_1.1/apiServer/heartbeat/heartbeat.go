@@ -1,7 +1,8 @@
 package heartbeat
 
 import (
-	"OSS_1.1/apiServer/rabbitmq"
+	"OSS/apiServer/conf"
+	"OSS/apiServer/rabbitmq"
 	"math/rand"
 	"strconv"
 	"sync"
@@ -11,8 +12,8 @@ import (
 var dataServers = make(map[string]time.Time)
 var mutex sync.Mutex
 
-func ListenHeartbeat(rabbitmqAddr string) {
-	q := rabbitmq.New(rabbitmqAddr)
+func ListenHeartbeat() {
+	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
 	defer q.Close()
 	q.Bind("apiServers")
 	c := q.Consume()

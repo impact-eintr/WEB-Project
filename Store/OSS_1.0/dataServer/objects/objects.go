@@ -1,8 +1,7 @@
 package objects
 
 import (
-	"OSS/dataServer/conf"
-	"github.com/gin-gonic/gin"
+	"OSS_1.1/dataServer/conf"
 	"io"
 	"log"
 	"net/http"
@@ -10,8 +9,17 @@ import (
 	"strings"
 )
 
-func Put(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{})
+func Handler(w http.ResponseWriter, r *http.Request) {
+	m := r.Method
+	if m == http.MethodPut {
+		put(w, r)
+		return
+	} else if m == http.MethodGet {
+		get(w, r)
+		return
+	} else {
+		w.WriteHeader(http.StatusMethodNotAllowed)
+	}
 }
 
 func put(w http.ResponseWriter, r *http.Request) {
@@ -25,9 +33,6 @@ func put(w http.ResponseWriter, r *http.Request) {
 	io.Copy(f, r.Body)
 }
 
-func Get(c *gin.Context) {
-
-}
 func get(w http.ResponseWriter, r *http.Request) {
 	f, err := os.Open(conf.Conf.Dir + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
 	if err != nil {

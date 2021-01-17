@@ -1,11 +1,10 @@
 package objects
 
 import (
-	"OSS/apiServer/heartbeat"
-	"OSS/apiServer/locate"
-	"OSS/apiServer/objectstream"
+	"OSS_1.1/apiServer/heartbeat"
+	"OSS_1.1/apiServer/locate"
+	"OSS_1.1/apiServer/objectstream"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io"
 	"log"
 	"net/http"
@@ -19,20 +18,19 @@ func get(w http.ResponseWriter, r *http.Request) {
 		log.Println(e)
 		w.WriteHeader(http.StatusNotFound)
 		return
+
 	}
 	io.Copy(w, stream)
+
 }
 
 func getStream(object string) (io.Reader, error) {
 	server := locate.Locate(object)
 	if server == "" {
 		return nil, fmt.Errorf("object %s locate fail", object)
+
 	}
 	return objectstream.NewGetStream(server, object)
-
-}
-
-func Put(c *gin.Context) {
 
 }
 
@@ -72,10 +70,6 @@ func storeObject(r io.Reader, object string) (int, error) {
 
 	}
 	return http.StatusOK, nil
-
-}
-
-func Get(c *gin.Context) {
 
 }
 

@@ -1,8 +1,7 @@
 package locate
 
 import (
-	"OSS/dataServer/conf"
-	"OSS/dataServer/rabbitmq"
+	"OSS_1.1/dataServer/rabbitmq"
 	"os"
 	"strconv"
 )
@@ -12,8 +11,8 @@ func Locate(name string) bool {
 	return !os.IsNotExist(err)
 }
 
-func StartLocate(url string) {
-	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
+func StartLocate(rabbitmqAddr, url, dir string) {
+	q := rabbitmq.New(rabbitmqAddr)
 	defer q.Close()
 	q.Bind("dataServers")
 	c := q.Consume()
@@ -23,7 +22,7 @@ func StartLocate(url string) {
 			panic(e)
 
 		}
-		if Locate(conf.Conf.Dir + "/objects/" + object) {
+		if Locate(dir + "/objects/" + object) {
 			q.Send(msg.ReplyTo, url)
 		}
 	}
