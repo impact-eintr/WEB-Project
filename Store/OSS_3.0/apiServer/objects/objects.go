@@ -7,6 +7,7 @@ import (
 	"OSS/apiServer/objectstream"
 	"OSS/apiServer/utils"
 	"fmt"
+	"github.com/fatih/color"
 	"io"
 	"log"
 	"net/http"
@@ -56,10 +57,9 @@ func getStream(object string) (io.Reader, error) {
 	server := locate.Locate(object)
 	if server == "" {
 		return nil, fmt.Errorf("object %s locate fail", object)
-
 	}
-	return objectstream.NewGetStream(server, object)
 
+	return objectstream.NewGetStream(server, object)
 }
 
 func put(w http.ResponseWriter, r *http.Request) {
@@ -71,7 +71,10 @@ func put(w http.ResponseWriter, r *http.Request) {
 	}
 
 	size := utils.GetSizeFromHeader(r.Header)
-	c, e := storeObject(r.Body, hash, size) //向dataserver写入时附带hash信息
+	log.Println("来自客户端的PUT信息:")
+	color.Yellow("Hash : %v \nSize : %v\n", url.PathEscape(hash), strconv.FormatInt(size, 10))
+
+	c, e := storeObject(r.Body, hash, size) //向dataserver写入时附带hash信息 等元数据
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(c)
@@ -91,35 +94,32 @@ func put(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func putStream(object string, size int64) (*objectstream.PutStream, error) {
+func putStream(hash string, size int64) (*objectstream.TempPutStream, error) {
 	server := heartbeat.ChooseRandomDataServer()
 	if server == "" {
 		return nil, fmt.Errorf("cannot find any dataServer")
-
 	}
 
-	return objectstream.NewPutStream(server, object), nil
-
+	return objectstream.NewTempPutStream(server, hash, size)
 }
 
 func storeObject(r io.Reader, hash string, size int64) (int, error) {
-	log.Println(url.PathEscape(hash))
 	if locate.Exist(url.PathEscape(hash)) {
 		return http.StatusOK, nil
 	}
-
+	//调用封装的http写入流向发给detaserver的请求写入数据
 	stream, e := putStream(url.PathEscape(hash), size)
 	if e != nil {
 		return http.StatusServiceUnavailable, e
-
 	}
 
-	io.Copy(stream, r)
-	e = stream.Close()
-	if e != nil {
-		return http.StatusInternalServerError, e
-
+	reader := io.TeeReader(r, stream)
+	d := utils.CalculateHash(reader)
+	if d != hash {
+		stream.Commit(false)
+		return http.StatusBadRequest, fmt.Errorf("object hash mismatch,Calculated=%s,requested=%s", d, hash)
 	}
+	stream.Commit(true)
 	return http.StatusOK, nil
 
 }

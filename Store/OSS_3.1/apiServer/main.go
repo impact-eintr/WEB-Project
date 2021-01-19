@@ -7,7 +7,9 @@ import (
 	"OSS/apiServer/objects"
 	"OSS/apiServer/versions"
 	"github.com/gin-gonic/gin"
+	"io/ioutil"
 	"log"
+	"net/http"
 )
 
 func init() {
@@ -25,10 +27,16 @@ func main() {
 	//启动心跳 返回dataservers中随机一个地址
 	go heartbeat.ListenHeartbeat()
 
+	engine.GET("/OSS", indexPage)
 	engine.PUT("/OSS/objects/:file", objects.Put)
 	engine.GET("/OSS/objects/:file", objects.Get)
 	engine.DELETE("/OSS/objects/:file", objects.Delete)
 	engine.GET("/OSS/locate/:file", locate.Get)
 	engine.GET("/OSS/versions/:file", versions.Get)
 	engine.Run(url)
+}
+
+func indexPage(c *gin.Context) {
+	b, _ := ioutil.ReadFile("../index.html")
+	c.String(http.StatusOK, string(b))
 }

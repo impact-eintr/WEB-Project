@@ -5,6 +5,7 @@ import (
 	"OSS/dataServer/heartbeat"
 	"OSS/dataServer/locate"
 	"OSS/dataServer/objects"
+	"OSS/dataServer/temp"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,6 +25,10 @@ func main() {
 
 	engine.GET("/objects/:file", objects.Get)
 	engine.PUT("/objects/:file", objects.Put)
+	engine.PUT("/temp/:tempfile", temp.Put)
+	engine.PATCH("/temp/:tempfile", temp.Patch)
+	engine.POST("/temp/:tempfile", temp.Post)
+	engine.DELETE("/temp/:file", temp.Delete)
 
 	engine.Run(url)
 }

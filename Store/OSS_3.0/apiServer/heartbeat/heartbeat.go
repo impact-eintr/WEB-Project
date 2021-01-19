@@ -3,7 +3,7 @@ package heartbeat
 import (
 	"OSS/apiServer/conf"
 	"OSS/apiServer/rabbitmq"
-	"log"
+	"github.com/fatih/color"
 	"math/rand"
 	"strconv"
 	"sync"
@@ -26,7 +26,7 @@ func ListenHeartbeat() {
 		}
 		mutex.Lock()
 		dataServers[dataServer] = time.Now()
-		log.Println(dataServers)
+		color.Red
 		mutex.Unlock()
 	}
 }
