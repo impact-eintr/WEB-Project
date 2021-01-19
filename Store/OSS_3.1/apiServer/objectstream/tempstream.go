@@ -15,7 +15,7 @@ type TempPutStream struct {
 }
 
 func NewTempPutStream(server, object string, size int64) (*TempPutStream, error) {
-
+	log.Println(object)
 	request, err := http.NewRequest("POST", "http://"+server+"/temp/"+object, nil)
 	if err != nil {
 		return nil, err
@@ -43,7 +43,6 @@ func NewTempPutStream(server, object string, size int64) (*TempPutStream, error)
 
 //io.TeeReader() 调用 Write() 递送 PATCH请求
 func (w *TempPutStream) Write(p []byte) (n int, err error) {
-	log.Println("p[]:", p)
 	request, err := http.NewRequest("PATCH", "http://"+w.Server+"/temp/"+w.Uuid, strings.NewReader(string(p)))
 	if err != nil {
 		return 0, err

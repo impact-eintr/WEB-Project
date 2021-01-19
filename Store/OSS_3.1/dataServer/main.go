@@ -20,15 +20,17 @@ func main() {
 	var url string //监听地址:端口
 	url = conf.Conf.ListenAddr + ":" + conf.Conf.ListenPort
 
+	locate.CollectObjects()
+
 	go heartbeat.StartHeartbeat(url)
 	go locate.StartLocate(url)
 
 	engine.GET("/objects/:file", objects.Get)
 	engine.PUT("/objects/:file", objects.Put)
-	engine.PUT("/temp/:tempfile", temp.Put)
-	engine.PATCH("/temp/:tempfile", temp.Patch)
-	engine.POST("/temp/:tempfile", temp.Post)
-	engine.DELETE("/temp/:file", temp.Delete)
+	engine.PUT("/temp/*tempfile", temp.Put)
+	engine.PATCH("/temp/*tempfile", temp.Patch)
+	engine.POST("/temp/*tempfile", temp.Post)
+	engine.DELETE("/temp/*tempfile", temp.Delete)
 
 	engine.Run(url)
 }

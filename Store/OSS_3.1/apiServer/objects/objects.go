@@ -75,7 +75,6 @@ func Put(c *gin.Context) {
 	size := utils.GetSizeFromHeader(c.Request.Header)
 	log.Println("来自客户端的PUT信息:")
 	color.Yellow("Hash : %v \nSize : %v\n", url.PathEscape(hash), strconv.FormatInt(size, 10))
-
 	statuscode, err := storeObject(c.Request.Body, hash, size) //向dataserver发送带有hash and size信息的request
 	if err != nil {
 		log.Println(err)
@@ -102,12 +101,14 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 		return http.StatusOK, nil
 	}
 
-	stream, err := putStream(hash, size)
+	stream, err := putStream(url.PathEscape(hash), size)
 	if err != nil {
 		return http.StatusServiceUnavailable, err
 	}
 
 	reader := io.TeeReader(r, stream)
+	//data, _ := ioutil.ReadAll(reader)
+	//fmt.Println("reader:", data)
 	d := utils.CalculateHash(reader) //这里同时也调用了stream的Write()方法，向dataserver递送了PATCH请求
 
 	color.Red("apiServer计算的这个是什么? : %v\n", d)

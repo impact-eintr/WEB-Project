@@ -3,7 +3,6 @@ package utils
 import (
 	"crypto/sha256"
 	"encoding/base64"
-	"github.com/fatih/color"
 	"io"
 	"net/http"
 	"strconv"
@@ -49,7 +48,6 @@ func GetSizeFromHeader(h http.Header) int64 {
 func CalculateHash(r io.Reader) string {
 	h := sha256.New()
 	io.Copy(h, r)
-	color.Red("hash的变量大小? : %v\n", h.Size())
 	return base64.StdEncoding.EncodeToString(h.Sum(nil))
 
 }

@@ -2,16 +2,16 @@ package temp
 
 import (
 	"OSS/dataServer/conf"
+	"OSS/dataServer/locate"
 	"github.com/fatih/color"
 	"github.com/gin-gonic/gin"
-	"io"
 	"log"
 	"net/http"
 	"os"
 )
 
 func Put(c *gin.Context) {
-	uuid := c.Param("tempfile")
+	uuid := c.Param("tempfile")[1:]
 	tempinfo, err := readFromFile(uuid)
 	if err != nil {
 		log.Println(err)
@@ -48,4 +48,14 @@ func Put(c *gin.Context) {
 		return
 	}
 
+	commitTempObject(dataFile, tempinfo)
+}
+
+func commitTempObject(dataFile string, tempinfo *tempInfo) {
+	log.Println(dataFile)
+	_, err := os.Open(dataFile)
+	log.Println(err)
+	err = os.Rename(dataFile, conf.Conf.Dir+"/objects/"+tempinfo.Name)
+	log.Println(err)
+	locate.Add(tempinfo.Name)
 }

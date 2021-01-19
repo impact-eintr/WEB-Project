@@ -20,6 +20,7 @@ func main() {
 	url = conf.Conf.ListenAddr + ":" + conf.Conf.ListenPort
 	log.Println(url)
 
+	locate.CollectObjects()
 	go heartbeat.StartHeartbeat(url)
 	go locate.StartLocate(url)
 	http.HandleFunc("/objects/", objects.Handler)

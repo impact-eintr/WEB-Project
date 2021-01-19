@@ -125,7 +125,6 @@ func patch(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 
 	}
-
 }
 
 func readFromFile(uuid string) (*tempInfo, error) {

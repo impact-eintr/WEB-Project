@@ -16,7 +16,7 @@ func Post(c *gin.Context) {
 	output, _ := exec.Command("uuidgen").Output() //输出一个[]byte
 	uuid := strings.TrimSuffix(string(output), "\n")
 	//等价于uuid := string(output)[:len(output)-1]
-	name := c.Param("tempfile")
+	name := strings.Split(c.Request.URL.EscapedPath(), "/")[2]
 	size, err := strconv.ParseInt(c.Request.Header.Get("size"), 0, 64)
 	if err != nil {
 		log.Println(err)

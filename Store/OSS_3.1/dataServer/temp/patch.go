@@ -11,7 +11,7 @@ import (
 )
 
 func Patch(c *gin.Context) {
-	uuid := c.Param("tempfile")
+	uuid := c.Param("tempfile")[1:]
 	tempinfo, err := readFromFile(uuid)
 	if err != nil {
 		log.Println(err)
