@@ -54,8 +54,12 @@ func Put(c *gin.Context) {
 func commitTempObject(dataFile string, tempinfo *tempInfo) {
 	log.Println(dataFile)
 	_, err := os.Open(dataFile)
-	log.Println(err)
+	if err != nil {
+		log.Println(err)
+	}
 	err = os.Rename(dataFile, conf.Conf.Dir+"/objects/"+tempinfo.Name)
-	log.Println(err)
+	if err != nil {
+		log.Println(err)
+	}
 	locate.Add(tempinfo.Name)
 }

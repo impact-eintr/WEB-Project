@@ -107,8 +107,6 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 	}
 
 	reader := io.TeeReader(r, stream)
-	//data, _ := ioutil.ReadAll(reader)
-	//fmt.Println("reader:", data)
 	d := utils.CalculateHash(reader) //这里同时也调用了stream的Write()方法，向dataserver递送了PATCH请求
 
 	color.Red("apiServer计算的这个是什么? : %v\n", d)

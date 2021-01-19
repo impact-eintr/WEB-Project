@@ -57,7 +57,6 @@ func (w *TempPutStream) Write(p []byte) (n int, err error) {
 		return 0, fmt.Errorf("dataServer return http code : %d", response.StatusCode)
 	}
 
-	log.Println("p[]:", p)
 	return len(p), nil
 }
 
