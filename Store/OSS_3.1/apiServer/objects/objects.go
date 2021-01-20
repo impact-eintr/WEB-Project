@@ -74,7 +74,7 @@ func Put(c *gin.Context) {
 
 	size := utils.GetSizeFromHeader(c.Request.Header)
 	log.Println("来自客户端的PUT信息:")
-	color.Yellow("Hash : %v \nSize : %v\n", url.PathEscape(hash), strconv.FormatInt(size, 10))
+	color.Yellow("RawHash : %v \nHash : %v \nSize : %v\n", hash, url.PathEscape(hash), strconv.FormatInt(size, 10))
 	statuscode, err := storeObject(c.Request.Body, hash, size) //向dataserver发送带有hash and size信息的request
 	if err != nil {
 		log.Println(err)

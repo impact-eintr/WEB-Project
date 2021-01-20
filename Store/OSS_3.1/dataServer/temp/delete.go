@@ -7,7 +7,7 @@ import (
 )
 
 func Delete(c *gin.Context) {
-	uuid := c.Param("tempfile")[1:]
+	uuid := c.Param("uuid")
 	infoFile := conf.Conf.Dir + "/temp/" + uuid
 	dataFile := infoFile + ".dat"
 	os.Remove(infoFile)

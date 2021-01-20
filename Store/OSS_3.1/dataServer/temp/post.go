@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"strconv"
@@ -16,7 +17,7 @@ func Post(c *gin.Context) {
 	output, _ := exec.Command("uuidgen").Output() //输出一个[]byte
 	uuid := strings.TrimSuffix(string(output), "\n")
 	//等价于uuid := string(output)[:len(output)-1]
-	name := strings.Split(c.Request.URL.EscapedPath(), "/")[2]
+	name := url.PathEscape(c.Param("tempfile")[1:])
 	size, err := strconv.ParseInt(c.Request.Header.Get("size"), 0, 64)
 	if err != nil {
 		log.Println(err)

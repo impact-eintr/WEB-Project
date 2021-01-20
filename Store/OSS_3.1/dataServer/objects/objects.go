@@ -10,11 +10,10 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"strings"
 )
 
 func Get(c *gin.Context) {
-	file := getFile(strings.Split(c.Request.URL.EscapedPath(), "/")[2])
+	file := getFile(url.PathEscape(c.Param("file")[1:]))
 	if file == "" {
 		c.Status(http.StatusNotFound)
 		return

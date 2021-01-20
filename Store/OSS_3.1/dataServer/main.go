@@ -26,10 +26,10 @@ func main() {
 	go locate.StartLocate(url)
 
 	engine.GET("/objects/*file", objects.Get)
-	engine.PUT("/temp/*tempfile", temp.Put)
-	engine.PATCH("/temp/*tempfile", temp.Patch)
+	engine.PUT("/temp/:uuid", temp.Put)
+	engine.PATCH("/temp/:uuid", temp.Patch)
 	engine.POST("/temp/*tempfile", temp.Post)
-	engine.DELETE("/temp/*tempfile", temp.Delete)
+	engine.DELETE("/temp/:uuid", temp.Delete)
 
 	engine.Run(url)
 }

@@ -5,17 +5,18 @@ import "io/ioutil"
 import "log"
 import "net/http"
 import "os"
+import "strconv"
+import "strings"
 
 func main() {
 	r := gin.Default()
 
 	//http://127.0.0.1:8080/ping
 	//路径传参
-	r.GET("/ping", func(c *gin.Context) {
-		agent := c.GetHeader("User-Agent")
-		c.JSON(200, gin.H{
-			"message": "pong",
-			"agent":   agent,
+	r.GET("/OSS/objects/*file", func(c *gin.Context) {
+		c.IndentedJSON(http.StatusOK, gin.H{
+			"path":    strconv.Quote(c.Param("file")[1:]),
+			"rawpath": strings.Split(c.Request.URL.EscapedPath(), "/")[3],
 		})
 	})
 
