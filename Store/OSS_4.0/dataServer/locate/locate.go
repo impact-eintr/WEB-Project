@@ -3,6 +3,7 @@ package locate
 import (
 	"OSS/dataServer/conf"
 	"OSS/dataServer/rabbitmq"
+	"github.com/fatih/color"
 	"path/filepath"
 	"strconv"
 	"sync"
@@ -42,8 +43,9 @@ func StartLocate(url string) {
 		}
 
 		exist := Locate(hash)
+		color.Yellow("服务节点请求数据:%v\t状态: %v\n", hash, exist)
 		if exist {
-			q.Send(msg.ReplyTo, conf.Conf.RabbitmqAddr)
+			q.Send(msg.ReplyTo, url)
 		}
 	}
 }

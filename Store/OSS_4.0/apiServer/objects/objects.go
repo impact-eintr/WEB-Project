@@ -7,6 +7,7 @@ import (
 	"OSS/apiServer/objectstream"
 	"OSS/apiServer/utils"
 	"fmt"
+	"github.com/fatih/color"
 	"io"
 	"log"
 	"net/http"
@@ -70,6 +71,9 @@ func put(w http.ResponseWriter, r *http.Request) {
 	}
 
 	size := utils.GetSizeFromHeader(r.Header)
+	log.Println("来自客户端的PUT信息:")
+	color.Yellow("Hash : %v \nSize : %v\n", url.PathEscape(hash), strconv.FormatInt(size, 10))
+
 	c, e := storeObject(r.Body, hash, size) //向dataserver写入时附带hash信息 等元数据
 	if e != nil {
 		log.Println(e)
@@ -100,8 +104,6 @@ func putStream(hash string, size int64) (*objectstream.TempPutStream, error) {
 }
 
 func storeObject(r io.Reader, hash string, size int64) (int, error) {
-	log.Println(hash)
-	log.Println(url.PathEscape(hash))
 	if locate.Exist(url.PathEscape(hash)) {
 		return http.StatusOK, nil
 	}
@@ -113,6 +115,7 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 
 	reader := io.TeeReader(r, stream)
 	d := utils.CalculateHash(reader)
+	color.Red("api hash = %v\n", d)
 	if d != hash {
 		stream.Commit(false)
 		return http.StatusBadRequest, fmt.Errorf("object hash mismatch,Calculated=%s,requested=%s", d, hash)

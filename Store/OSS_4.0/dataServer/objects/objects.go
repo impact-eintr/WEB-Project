@@ -15,6 +15,7 @@ import (
 func Handler(w http.ResponseWriter, r *http.Request) {
 	m := r.Method
 	if m == http.MethodGet {
+		log.Println(strings.Split(r.URL.EscapedPath(), "/")[2])
 		get(w, r)
 		return
 	} else {
@@ -22,16 +23,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//func get(w http.ResponseWriter, r *http.Request) {
-//	f, err := os.Open(conf.Conf.Dir + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
-//	if err != nil {
-//		log.Println(err)
-//		w.WriteHeader(http.StatusNotFound)
-//		return
-//	}
-//	defer f.Close()
-//	io.Copy(w, f)
-//}
 func get(w http.ResponseWriter, r *http.Request) {
 	file := getFile(strings.Split(r.URL.EscapedPath(), "/")[2])
 	if file == "" {
@@ -42,6 +33,7 @@ func get(w http.ResponseWriter, r *http.Request) {
 	sendFile(w, file)
 
 }
+
 func getFile(hash string) string {
 	file := conf.Conf.Dir + "/objects/" + hash
 	f, _ := os.Open(file)
@@ -62,5 +54,4 @@ func sendFile(w io.Writer, file string) {
 	f, _ := os.Open(file)
 	defer f.Close()
 	io.Copy(w, f)
-
 }

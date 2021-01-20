@@ -3,7 +3,6 @@ package heartbeat
 import (
 	"OSS/apiServer/conf"
 	"OSS/apiServer/rabbitmq"
-	"github.com/fatih/color"
 	"math/rand"
 	"strconv"
 	"sync"
@@ -21,14 +20,16 @@ func ListenHeartbeat() {
 	go removeExpiredDataServer()
 	for msg := range c {
 		dataServer, e := strconv.Unquote(string(msg.Body))
-		color.Green("来自数据节点的心跳%v\n", dataServer)
 		if e != nil {
 			panic(e)
+
 		}
 		mutex.Lock()
 		dataServers[dataServer] = time.Now()
 		mutex.Unlock()
+
 	}
+
 }
 
 func removeExpiredDataServer() {

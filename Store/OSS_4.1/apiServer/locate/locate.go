@@ -6,21 +6,20 @@ import (
 	"encoding/json"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"net/url"
 	"strconv"
 	"time"
 )
 
 func Get(c *gin.Context) {
-	info := Locate(url.PathEscape(c.Param("hash")[1:]))
+	info := Locate(c.Param("file"))
 	if len(info) == 0 {
 		c.Status(http.StatusNotFound)
 		return
 
 	}
 	b, _ := json.Marshal(info)
-	url, _ := strconv.Unquote(string(b))
-	c.JSON(http.StatusOK, url)
+	res := string(b)[1:]
+	c.JSON(http.StatusOK, res[:len(res)-1])
 }
 
 func Locate(name string) string {

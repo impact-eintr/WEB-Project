@@ -31,7 +31,7 @@ func main() {
 	engine.PUT("/OSS/objects/:file", objects.Put)
 	engine.GET("/OSS/objects/:file", objects.Get)
 	engine.DELETE("/OSS/objects/:file", objects.Delete)
-	engine.GET("/OSS/locate/*hash", locate.Get)
+	engine.GET("/OSS/locate/:file", locate.Get)
 	engine.GET("/OSS/versions/:file", versions.Get)
 	engine.Run(url)
 }

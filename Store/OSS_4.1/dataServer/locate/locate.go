@@ -42,13 +42,13 @@ func StartLocate(url string) {
 			panic(e)
 
 		}
+		color.Green("%v\n", objects)
 		exist := Locate(hash)
 		color.Yellow("服务节点请求数据:%v\t状态: %v\n", hash, exist)
 		if exist {
 			q.Send(msg.ReplyTo, url)
 		}
 	}
-	color.Green("%v\n", objects)
 }
 
 func CollectObjects() {
