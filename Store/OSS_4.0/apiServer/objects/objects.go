@@ -4,7 +4,8 @@ import (
 	"OSS/apiServer/es"
 	"OSS/apiServer/heartbeat"
 	"OSS/apiServer/locate"
-	"OSS/apiServer/objectstream"
+	//"OSS/apiServer/objectstream"
+	"OSS/apiServer/rs"
 	"OSS/apiServer/utils"
 	"fmt"
 	"github.com/fatih/color"
@@ -16,8 +17,45 @@ import (
 	"strings"
 )
 
+//func get(w http.ResponseWriter, r *http.Request) {
+//	name := strings.Split(r.URL.EscapedPath(), "/")[3]
+//	versionId := r.URL.Query()["version"]
+//	version := 0
+//	var e error
+//	if len(versionId) != 0 {
+//		version, e = strconv.Atoi(versionId[0])
+//		if e != nil {
+//			log.Println(e)
+//			w.WriteHeader(http.StatusBadRequest)
+//			return
+//		}
+//	}
+//
+//	meta, e := es.GetMetadata(name, version)
+//	if e != nil {
+//		log.Println(e)
+//		w.WriteHeader(http.StatusInternalServerError)
+//		return
+//	}
+//
+//	if meta.Hash == "" {
+//		w.WriteHeader(http.StatusNotFound)
+//		return
+//	}
+//
+//	object := url.PathEscape(meta.Hash)
+//	stream, e := getStream(object)
+//	if e != nil {
+//		log.Println(e)
+//		w.WriteHeader(http.StatusNotFound)
+//		return
+//	}
+//
+//	io.Copy(w, stream)
+//}
+
 func get(w http.ResponseWriter, r *http.Request) {
-	name := strings.Split(r.URL.EscapedPath(), "/")[3]
+	name := strings.Split(r.URL.EscapedPath(), "/")[2]
 	versionId := r.URL.Query()["version"]
 	version := 0
 	var e error
@@ -27,39 +65,63 @@ func get(w http.ResponseWriter, r *http.Request) {
 			log.Println(e)
 			w.WriteHeader(http.StatusBadRequest)
 			return
-		}
-	}
 
+		}
+
+	}
 	meta, e := es.GetMetadata(name, version)
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusInternalServerError)
 		return
-	}
 
+	}
 	if meta.Hash == "" {
 		w.WriteHeader(http.StatusNotFound)
 		return
-	}
 
-	object := url.PathEscape(meta.Hash)
-	stream, e := getStream(object)
+	}
+	hash := url.PathEscape(meta.Hash)
+	stream, e := GetStream(hash, meta.Size)
 	if e != nil {
 		log.Println(e)
 		w.WriteHeader(http.StatusNotFound)
 		return
-	}
 
-	io.Copy(w, stream)
+	}
+	_, e = io.Copy(w, stream)
+	if e != nil {
+		log.Println(e)
+		w.WriteHeader(http.StatusNotFound)
+		return
+
+	}
+	stream.Close()
+
 }
 
-func getStream(object string) (io.Reader, error) {
-	server := locate.Locate(object)
-	if server == "" {
-		return nil, fmt.Errorf("object %s locate fail", object)
-	}
+//func getStream(object string) (io.Reader, error) {
+//	server := locate.Locate(object)
+//	if server == "" {
+//		return nil, fmt.Errorf("object %s locate fail", object)
+//	}
+//
+//	return objectstream.NewGetStream(server, object)
+//}
 
-	return objectstream.NewGetStream(server, object)
+func GetStream(hash string, size int64) (*rs.RSGetStream, error) {
+	locateInfo := locate.Locate(hash)
+	if len(locateInfo) < rs.DATA_SHARDS {
+		return nil, fmt.Errorf("object %s locate fail, result %v", hash, locateInfo)
+
+	}
+	dataServers := make([]string, 0)
+	if len(locateInfo) != rs.ALL_SHARDS {
+		dataServers = heartbeat.ChooseRandomDataServers(rs.ALL_SHARDS-len(locateInfo), locateInfo)
+
+	}
+	return rs.NewRSGetStream(locateInfo, dataServers, hash, size)
+
 }
 
 func put(w http.ResponseWriter, r *http.Request) {
@@ -94,13 +156,24 @@ func put(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func putStream(hash string, size int64) (*objectstream.TempPutStream, error) {
-	server := heartbeat.ChooseRandomDataServer()
-	if server == "" {
-		return nil, fmt.Errorf("cannot find any dataServer")
+//func putStream(hash string, size int64) (*objectstream.TempPutStream, error) {
+//	server := heartbeat.ChooseRandomDataServer()
+//	if server == "" {
+//		return nil, fmt.Errorf("cannot find any dataServer")
+//	}
+//
+//	return objectstream.NewTempPutStream(server, hash, size)
+//}
+
+func putStream(hash string, size int64) (*rs.RSPutStream, error) {
+	servers := heartbeat.ChooseRandomDataServers(rs.ALL_SHARDS, nil)
+	if len(servers) != rs.ALL_SHARDS {
+		return nil, fmt.Errorf("cannot find enough dataServer")
+
 	}
 
-	return objectstream.NewTempPutStream(server, hash, size)
+	return rs.NewRSPutStream(servers, hash, size)
+
 }
 
 func storeObject(r io.Reader, hash string, size int64) (int, error) {

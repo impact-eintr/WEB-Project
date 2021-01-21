@@ -3,12 +3,14 @@ package objects
 import (
 	"OSS/dataServer/conf"
 	"OSS/dataServer/locate"
-	"OSS/dataServer/utils"
+	"crypto/sha256"
+	"encoding/base64"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -34,11 +36,33 @@ func get(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func getFile(hash string) string {
-	file := conf.Conf.Dir + "/objects/" + hash
-	f, _ := os.Open(file)
-	d := url.PathEscape(utils.CalculateHash(f))
-	f.Close()
+//func getFile(hash string) string {
+//	file := conf.Conf.Dir + "/objects/" + hash
+//	f, _ := os.Open(file)
+//	d := url.PathEscape(utils.CalculateHash(f))
+//	f.Close()
+//	if d != hash {
+//		log.Println("object hash mismatch, remove", file)
+//		locate.Del(hash)
+//		os.Remove(file)
+//		return ""
+//
+//	}
+//	return file
+//
+//}
+
+func getFile(name string) string {
+	files, _ := filepath.Glob(conf.Conf.Dir + "/objects/" + name + ".*")
+	if len(files) != 1 {
+		return ""
+
+	}
+	file := files[0]
+	h := sha256.New()
+	sendFile(h, file)
+	d := url.PathEscape(base64.StdEncoding.EncodeToString(h.Sum(nil)))
+	hash := strings.Split(file, ".")[2]
 	if d != hash {
 		log.Println("object hash mismatch, remove", file)
 		locate.Del(hash)

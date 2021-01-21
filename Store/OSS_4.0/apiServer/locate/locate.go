@@ -3,9 +3,10 @@ package locate
 import (
 	"OSS/apiServer/conf"
 	"OSS/apiServer/rabbitmq"
+	"OSS/apiServer/rs"
+	"OSS/apiServer/types"
 	"encoding/json"
 	"net/http"
-	"strconv"
 	"strings"
 	"time"
 )
@@ -28,21 +29,50 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func Locate(name string) string {
+//func Locate(name string) string {
+//	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
+//	q.Publish("dataServers", name)
+//	c := q.Consume()
+//	go func() {
+//		time.Sleep(time.Second)
+//		q.Close()
+//	}()
+//	msg := <-c
+//	s, _ := strconv.Unquote(string(msg.Body))
+//	return s
+//
+//}
+//
+//func Exist(name string) bool {
+//	return Locate(name) != ""
+//
+//}
+func Locate(name string) (locateInfo map[int]string) {
 	q := rabbitmq.New(conf.Conf.RabbitmqAddr)
 	q.Publish("dataServers", name)
 	c := q.Consume()
 	go func() {
 		time.Sleep(time.Second)
 		q.Close()
+
 	}()
-	msg := <-c
-	s, _ := strconv.Unquote(string(msg.Body))
-	return s
+	locateInfo = make(map[int]string)
+	for i := 0; i < rs.ALL_SHARDS; i++ {
+		msg := <-c
+		if len(msg.Body) == 0 {
+			return
+
+		}
+		var info types.LocateMessage
+		json.Unmarshal(msg.Body, &info)
+		locateInfo[info.Id] = info.Addr
+
+	}
+	return
 
 }
 
 func Exist(name string) bool {
-	return Locate(name) != ""
+	return len(Locate(name)) >= rs.DATA_SHARDS
 
 }
