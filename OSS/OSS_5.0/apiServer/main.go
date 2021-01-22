@@ -5,6 +5,7 @@ import (
 	"OSS/apiServer/heartbeat"
 	"OSS/apiServer/locate"
 	"OSS/apiServer/objects"
+	"OSS/apiServer/temp"
 	"OSS/apiServer/versions"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
@@ -26,13 +27,18 @@ func main() {
 
 	//启动心跳 返回dataservers中随机一个地址
 	go heartbeat.ListenHeartbeat()
-
+	//前端界面
 	engine.GET("/OSS", indexPage)
+	//断点续传服务
+	engine.GET("OSS/temp/:file", temp.Get)
+	//OSS存储服务
 	engine.PUT("/OSS/objects/:file", objects.Put)
 	engine.GET("/OSS/objects/:file", objects.Get)
 	engine.DELETE("/OSS/objects/:file", objects.Delete)
-	engine.GET("/OSS/locate/:file", locate.Get)
+	//版本控制服务
 	engine.GET("/OSS/versions/:file", versions.Get)
+	//文件定位服务
+	engine.GET("/OSS/locate/:file", locate.Get)
 	engine.Run(url)
 }
 
