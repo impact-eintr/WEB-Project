@@ -59,6 +59,7 @@ func Get(c *gin.Context) {
 		return
 	}
 	c.Data(http.StatusOK, "application/octet-stream", data)
+	stream.Close()
 }
 
 func GetStream(hash string, size int64) (*rs.RSGetStream, error) {
@@ -71,7 +72,7 @@ func GetStream(hash string, size int64) (*rs.RSGetStream, error) {
 	dataServers := make([]string, 0)
 	if len(LocateInfo) != rs.ALL_SHARDS {
 		dataServers = heartbeat.ChooseRandomDataServers(rs.ALL_SHARDS-len(LocateInfo), LocateInfo)
-	}
+	} //拿到足够的数据节点
 	return rs.NewRSGetStream(LocateInfo, dataServers, hash, size)
 
 }
