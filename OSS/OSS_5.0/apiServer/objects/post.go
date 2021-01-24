@@ -49,14 +49,14 @@ func Post(c *gin.Context) {
 		return
 	}
 
-	stream, e := rs.NewRSResumablePutStream(ds, name, url.PathEscape(hash), size) //创建post与patch请求给datanode
+	stream, e := rs.NewRSResumablePutStream(ds, name, url.PathEscape(hash), size) //创建post请求给datanode
 	if e != nil {
 		log.Println(e)
 		c.Status(http.StatusInternalServerError)
 		return
 	}
 
-	c.Request.Header.Set("location", "/temp/"+url.PathEscape(stream.ToToken()))
+	c.Header("location", "/temp/"+url.PathEscape(stream.ToToken()))
 	c.Status(http.StatusCreated)
 
 }

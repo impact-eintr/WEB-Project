@@ -3,6 +3,7 @@ package utils
 import (
 	"crypto/sha256"
 	"encoding/base64"
+	"github.com/fatih/color"
 	"io"
 	"net/http"
 	"strconv"
@@ -11,6 +12,7 @@ import (
 
 func GetOffsetFromHeader(h http.Header) int64 {
 	byteRange := h.Get("range")
+	color.Blue("range : %v\n", byteRange)
 	if len(byteRange) < 7 {
 		return 0
 

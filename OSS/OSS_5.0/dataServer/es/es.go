@@ -2,15 +2,11 @@ package es
 
 import (
 	"OSS/apiServer/conf"
-	"context"
 	"encoding/json"
 	"fmt"
-	elastic "github.com/olivere/elastic/v7"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"net/url"
-	//"reflect"
 	"strings"
 )
 
@@ -71,54 +67,6 @@ func SearchLatestVersion(name string) (meta Metadata, err error) {
 
 	}
 	//fmt.Println(sr)
-	return
-}
-
-func Test() (result []string) {
-	ctx := context.Background()
-
-	client, err := elastic.NewClient()
-	if err != nil {
-		// Handle error
-		log.Println("ES initial failed!", err)
-		panic(err)
-	}
-	_, code, err := client.Ping("http://127.0.0.1:9200").Do(ctx)
-	if err != nil || code != http.StatusOK {
-		// Handle error
-		log.Println("ES initial failed!", err)
-		panic(err)
-	}
-
-	res, _ := client.Scroll("metadata").
-		Scroll("5m").
-		Do(ctx)
-	for {
-		res, _ := client.Scroll("1m").
-			ScrollId(res.ScrollId).
-			Do(ctx)
-
-		if len(res.Hits.Hits) <= 0 {
-			break
-		}
-	}
-
-	log.Println(res.TotalHits())
-	resmap := make(map[string]int)
-	for _, hit := range res.Hits.Hits {
-		item := make(map[string]interface{})
-		err := json.Unmarshal(hit.Source, &item)
-		if err != nil {
-			log.Println(err)
-		}
-		if item["size"] != "" && item["hash"] != "" {
-			name := item["name"].(string)
-			resmap[name]++
-		}
-	}
-	for idx, _ := range resmap {
-		result = append(result, idx)
-	}
 	return
 }
 

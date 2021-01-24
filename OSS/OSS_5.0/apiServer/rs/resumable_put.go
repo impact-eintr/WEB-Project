@@ -11,12 +11,13 @@ import (
 	"net/http"
 )
 
+//摘要信息
 type resumableToken struct {
-	Name    string
-	Size    int64
-	Hash    string
-	Servers []string
-	Uuids   []string
+	Name    string   //文件名
+	Size    int64    //文件大小
+	Hash    string   //文件散列值
+	Servers []string //数据节点地址
+	Uuids   []string //对象id
 }
 
 type RSResumablePutStream struct {

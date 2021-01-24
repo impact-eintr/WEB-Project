@@ -33,6 +33,9 @@ func main() {
 	go locate.StartLocate(url)
 
 	engine.GET("/objects/*file", objects.Get)
+
+	engine.HEAD("/temp/:uuid", temp.Head)
+	engine.GET("/temp/:uuid", temp.Get)
 	engine.PUT("/temp/:uuid", temp.Put)
 	engine.PATCH("/temp/:uuid", temp.Patch)
 	engine.POST("/temp/*tempfile", temp.Post)

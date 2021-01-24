@@ -5,8 +5,10 @@ import (
 	"OSS/apiServer/heartbeat"
 	"OSS/apiServer/locate"
 	"OSS/apiServer/rs"
+	"OSS/apiServer/utils"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -49,7 +51,14 @@ func Get(c *gin.Context) {
 		return
 	}
 
-	data, err := ioutil.ReadAll(stream)
+	offset := utils.GetOffsetFromHeader(c.Request.Header)
+	if offset != 0 {
+		stream.Seek(offset, io.SeekCurrent) //将文件的为读写指针seek到offset
+		c.Request.Header.Set("content-range", fmt.Sprintf("bytes %d-%d/%d", offset, meta.Size-1, meta.Size))
+		c.Status(http.StatusPartialContent)
+	}
+
+	data, err := ioutil.ReadAll(stream) //从偏移位置开始读
 	if err != nil {
 		log.Println(err)
 		c.Status(http.StatusNotFound)

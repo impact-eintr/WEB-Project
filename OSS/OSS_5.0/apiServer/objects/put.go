@@ -64,7 +64,7 @@ func storeObject(r io.Reader, hash string, size int64) (int, error) {
 	color.Red("apiServer计算的这个是什么? : %v\n", d)
 	if d != hash {
 		stream.Commit(false)
-		return http.StatusBadRequest, fmt.Errorf("object hash MISSMATCH , 文件计算hash : %s . 客户端提供的 : %s", d, hash)
+		return http.StatusBadRequest, fmt.Errorf("object hash MISSMATCH , 文件计算hash : %s  客户端提供的 : %s", d, hash)
 	}
 
 	stream.Commit(true)
