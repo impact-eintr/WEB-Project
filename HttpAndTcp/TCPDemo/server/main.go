@@ -9,6 +9,8 @@ import (
 	"io"
 	"log"
 	"net"
+
+	"TCPDemo/server/common"
 )
 
 var ctx = context.Background()
@@ -90,41 +92,42 @@ type User struct {
 
 func main() {
 
-	addr := "127.0.0.1:6379"
-
-	PoolTest(addr)
+	//addr := "127.0.0.1:6379"
 
 	color.Green("服务器开始监听...")
 
 	listener, err := net.Listen("tcp", "127.0.0.1:6066")
+	defer listener.Close()
 	if err != nil {
 		log.Fatalln(err)
 	}
-	defer listener.Close()
 
 	for {
 		conn, err := listener.Accept()
+		defer conn.Close()
 		if err != nil {
 			log.Println(err)
 			continue
 		}
+
 		go func(conn net.Conn) {
 			color.Yellow("来自%v的访问\n", conn.RemoteAddr())
 			defer conn.Close()
 			for {
-				res := make([]byte, 4096)
-				n, err := conn.Read(res)
-				if err == io.EOF {
-					log.Println("客户端退出")
-					break
-				}
-
-				log.Println(string(res[:n]))
-
-				response := "发送成功\n"
-				conn.Write([]byte(response))
 			}
 		}(conn)
 	}
 
+}
+
+func PkgRead(conn net.Conn) (mes common.Message, err error) {
+
+	lenMes := make([]byte, 4096)
+	n, err := conn.Read(lenMes)
+	if n != 4 || err == io.EOF {
+		log.Println("conn Read err", err)
+	}
+
+	response := "Server : 长度信息接受成功\n"
+	conn.Write([]byte(response))
 }
