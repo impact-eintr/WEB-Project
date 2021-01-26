@@ -4,6 +4,8 @@ import (
 	"TCPDemo/client/common"
 	"TCPDemo/client/utils"
 	"encoding/json"
+	"fmt"
+	"github.com/fatih/color"
 	"log"
 )
 
@@ -13,7 +15,7 @@ type UserProcess struct {
 //登录封装
 func (this *UserProcess) LogIn(user common.User) {
 
-	conn, err := talkToServer()
+	conn, err := connToServer()
 	if err != nil {
 		log.Println(err)
 		return
@@ -49,8 +51,20 @@ func (this *UserProcess) LogIn(user common.User) {
 	tf.PkgWrite(data)
 
 	resp, err := tf.PkgRead()
-	log.Println(resp)
 	var temp common.LoginRes
 	json.Unmarshal([]byte(resp.Data), &temp)
-	log.Println(temp.Code)
+
+	if temp.Code == 200 {
+		uname := color.CyanString(" %s ", "yixingwei")
+		fmt.Printf("%s欢迎回来\n", uname)
+
+		go talkToServer(conn)
+
+		for {
+			ShowMenu()
+		}
+	} else {
+		color.Red("认证失败 %s\n", temp.Error)
+	}
+
 }

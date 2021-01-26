@@ -1,10 +1,12 @@
 package main
 
 import (
+	"TCPDemo/server/module"
 	"TCPDemo/server/process"
 	"github.com/fatih/color"
 	"log"
 	"net"
+	"time"
 )
 
 type Status int
@@ -18,6 +20,11 @@ type User struct {
 	Uid    string
 	Name   string
 	Status Status
+}
+
+func init() {
+	module.InitPool(16, 0, 300*time.Second, "127.0.0.1:6379")
+	module.MyUserDao = module.NewUserDao(module.Pool)
 }
 
 func main() {

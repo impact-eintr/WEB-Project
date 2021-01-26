@@ -12,7 +12,6 @@ import (
 
 func main() {
 	var option common.Option
-	//var loop bool
 	var user common.User
 	for {
 		color.Green("----------------- Golang Chat ------------------")
@@ -24,7 +23,16 @@ func main() {
 
 		switch option {
 		case common.LOGIN:
+			color.Yellow("Input You Uid please......\n")
+			fmt.Scanf("%s\n", &user.Uid)
+			color.Yellow("Input You Passwd please......\n")
+			temp, _ := gopass.GetPasswdMasked()
+			user.Pwd = string(temp)
+
 			color.Cyan("登录中......\n")
+			up := process.UserProcess{}
+			up.LogIn(user)
+
 		case common.SIGNIN:
 			color.Cyan("跳转中......\n")
 		case common.EXIT:
@@ -33,18 +41,6 @@ func main() {
 			color.Red("输入有误")
 		}
 
-		if option == common.LOGIN {
-
-			color.Yellow("Input You Uid please......\n")
-			fmt.Scanf("%s\n", &user.Uid)
-			color.Yellow("Input You Passwd please......\n")
-			temp, _ := gopass.GetPasswdMasked()
-			user.Pwd = string(temp)
-			up := process.UserProcess{}
-			up.LogIn(user)
-		} else if option == common.SIGNIN {
-
-		}
 	}
 
 }

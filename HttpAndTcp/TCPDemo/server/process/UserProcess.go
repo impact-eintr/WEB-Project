@@ -6,6 +6,7 @@ import (
 	"net"
 
 	"TCPDemo/server/common"
+	"TCPDemo/server/module"
 	"TCPDemo/server/utils"
 )
 
@@ -24,12 +25,27 @@ func (this *UserProcess) ServerProcessLogin(mes *common.Message) (err error) {
 	var resMes common.Message
 	var loginResMes common.LoginRes
 
-	if loginMes.Uid == "111" && loginMes.Pwd == "hhh" {
-		loginResMes.Code = 200
+	user, err := module.MyUserDao.Login(loginMes.Uid, loginMes.Pwd)
+	if err != nil {
+		if err == module.ERROR_USER_NOTEXITS {
+
+			loginResMes.Code = 404
+			loginResMes.Error = err.Error()
+		} else if err == module.ERROR_USER_PWD {
+
+			loginResMes.Code = 403
+			loginResMes.Error = err.Error()
+		} else {
+
+			loginResMes.Code = 500
+			loginResMes.Error = err.Error()
+		}
+
 	} else {
-		loginResMes.Code = 500
-		loginResMes.Error = "用户不存在"
+		loginResMes.Code = 200
+		fmt.Println(user.Unmae, "上号")
 	}
+
 	//对响应数据进行序列化
 	data, err := json.Marshal(loginResMes)
 	if err != nil {
