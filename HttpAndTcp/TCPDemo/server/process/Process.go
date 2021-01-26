@@ -5,7 +5,6 @@ import (
 	"io"
 	"log"
 	"net"
-	"time"
 
 	"TCPDemo/server/common"
 	"TCPDemo/server/utils"
@@ -15,6 +14,9 @@ type Processor struct {
 	Conn net.Conn
 }
 
+var LoginCh = make(chan string, 2)
+var RegisterCh = make(chan string, 2)
+
 //数据中继
 func (this *Processor) ServerProcessMess() error {
 	for {
@@ -22,12 +24,18 @@ func (this *Processor) ServerProcessMess() error {
 			Conn: this.Conn,
 		}
 		mes, err := tf.PkgRead()
-		if err != nil && err != io.EOF {
-			log.Println("err:", err)
+
+		if err != nil {
+			if err == io.EOF {
+				log.Println(<-LoginCh, <-LoginCh, "下号")
+			} else {
+				log.Println("err:", err)
+			}
+
 			return err
 		}
 		this.serverProcessMess(&mes)
-		time.Sleep(3 * time.Second)
+
 	}
 }
 func (this *Processor) serverProcessMess(mes *common.Message) (err error) {
@@ -38,8 +46,11 @@ func (this *Processor) serverProcessMess(mes *common.Message) (err error) {
 			Conn: this.Conn,
 		}
 		err = up.ServerProcessLogin(mes)
-	case common.LogupRegType:
-		//err = up.ServerProcessRegister()
+	case common.RefisterMesType:
+		up := UserProcess{
+			Conn: this.Conn,
+		}
+		err = up.ServerProcessRegister(mes)
 
 	default:
 		err = errors.New("消息类型不存在")

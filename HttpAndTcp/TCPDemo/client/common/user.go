@@ -10,6 +10,7 @@ const (
 )
 
 type User struct {
-	Uid string
-	Pwd string
+	Uid   string `json:"uid"`
+	Pwd   string `json:"pwd"`
+	Uname string `json:"uname"`
 }

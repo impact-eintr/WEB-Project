@@ -55,7 +55,7 @@ func (this *UserProcess) LogIn(user common.User) {
 	json.Unmarshal([]byte(resp.Data), &temp)
 
 	if temp.Code == 200 {
-		uname := color.CyanString(" %s ", "yixingwei")
+		uname := color.CyanString(" %s ", temp.Uname)
 		fmt.Printf("%s欢迎回来\n", uname)
 
 		go talkToServer(conn)
@@ -67,4 +67,59 @@ func (this *UserProcess) LogIn(user common.User) {
 		color.Red("认证失败 %s\n", temp.Error)
 	}
 
+}
+
+func (this *UserProcess) Register(user common.User) {
+
+	conn, err := connToServer()
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	//开始登陆
+	var mes common.Message
+
+	//构建登陆信息
+	var registerMes common.RegisterMes
+	registerMes.User.Uid = user.Uid
+	registerMes.User.Pwd = user.Pwd
+	registerMes.User.Uname = user.Uname
+
+	//协议数据部分序列化
+	data, err := json.Marshal(registerMes)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	mes.Type = common.RegisterMesType
+	mes.Data = string(data)
+
+	//协议序列化
+	data, err = json.Marshal(mes)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	tf := &utils.Transfer{
+		Conn: conn,
+	}
+	tf.PkgWrite(data)
+
+	resp, err := tf.PkgRead()
+	var temp common.RegisterRes
+	json.Unmarshal([]byte(resp.Data), &temp)
+
+	if temp.Code == 200 {
+		uname := color.CyanString(" %s ", "yixingwei")
+		fmt.Printf("%s，注册成功，可以上号了\n", uname)
+		go talkToServer(conn)
+
+		for {
+			ShowMenu()
+		}
+	} else {
+		color.Red("注册失败 %s\n", temp.Error)
+	}
 }

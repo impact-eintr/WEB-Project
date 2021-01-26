@@ -29,7 +29,7 @@ func main() {
 	//启动心跳 返回dataservers中随机一个地址
 	go heartbeat.ListenHeartbeat()
 	//前端界面
-	engine.LoadHTMLGlob("html/index.html")
+	engine.LoadHTMLGlob("html/*")
 	engine.GET("/OSS", indexPage)
 	engine.GET("/OSS/file/:uid", tmpl.Get)
 

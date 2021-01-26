@@ -1,8 +1,10 @@
 package common
 
 const (
-	LoginMesType = "LoginMes"
-	LoginResType = "LoginRes"
+	LoginMesType    = "LoginMes"
+	LoginResType    = "LoginRes"
+	RegisterMesType = "RegisterMes"
+	RegisterResType = "RegisterRes"
 )
 
 type Message struct {
@@ -22,6 +24,18 @@ type LoginRes struct {
 	Code int `json:"code"` //返回状态码
 	//500 未注册
 	//200 登陆成功
+
+	Error string `json:"error"` //返回错误消息
+	Uname string `json:"uname"` //返回用户名
+}
+type RegisterMes struct {
+	User User `json:"user"`
+}
+
+type RegisterRes struct {
+	Code int `json:"code"` //返回状态码
+	//400 已占用
+	//200 注册成功
 
 	Error string `jdon:"error"` //返回错误消息
 }
