@@ -5,7 +5,7 @@ type Option int
 const (
 	_ Option = iota
 	LOGIN
-	LOGUP
+	SIGNIN
 	EXIT
 )
 

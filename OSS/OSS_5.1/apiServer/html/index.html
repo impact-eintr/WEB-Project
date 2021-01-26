@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {{ .name }}</title>
+</head>
+<body>
+    <h1 style='color:#6ad7e5' align="center">Hello! Welcome to my OSS Site<img src="https://miro.medium.com/max/1838/0*XoSKJTcPn78ADdUu.png" alt="golang" width="200px"></h1>
+    <hr>
+    <h2>{{ .name  }}的文件目录</h2>
+    {{ range $idx,$file := .files }}
+        <p>
+            <a href="http://192.168.2.101:6060/OSS/objects/{{$file}}">
+                {{ $idx }} - {{ $file }}
+            </a>
+        </p>
+    {{ end }}
+</body>
+</html>

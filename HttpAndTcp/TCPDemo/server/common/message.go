@@ -3,6 +3,7 @@ package common
 const (
 	LoginMesType = "LoginMes"
 	LoginResType = "LoginRes"
+	LogupRegType = "LogupReg"
 )
 
 type Message struct {
@@ -24,4 +25,7 @@ type LoginRes struct {
 	//200 登陆成功
 
 	Error string `jdon:"error"` //返回错误消息
+}
+
+type RegisterMes struct {
 }

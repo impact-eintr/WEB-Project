@@ -7,12 +7,12 @@ import (
 	"github.com/howeyc/gopass"
 
 	"TCPDemo/client/common"
-	"TCPDemo/client/login"
+	"TCPDemo/client/process"
 )
 
 func main() {
 	var option common.Option
-	var loop bool
+	//var loop bool
 	var user common.User
 	for {
 		color.Green("----------------- Golang Chat ------------------")
@@ -25,13 +25,10 @@ func main() {
 		switch option {
 		case common.LOGIN:
 			color.Cyan("登录中......\n")
-			loop = false
-		case common.LOGUP:
+		case common.SIGNIN:
 			color.Cyan("跳转中......\n")
-			loop = false
 		case common.EXIT:
 			color.Cyan("退出中......\n")
-			loop = false
 		default:
 			color.Red("输入有误")
 		}
@@ -43,13 +40,11 @@ func main() {
 			color.Yellow("Input You Passwd please......\n")
 			temp, _ := gopass.GetPasswdMasked()
 			user.Pwd = string(temp)
-
-			login.LogIn(user)
-
-		} else if option == common.LOGUP {
+			up := process.UserProcess{}
+			up.LogIn(user)
+		} else if option == common.SIGNIN {
 
 		}
-		fmt.Println(loop)
 	}
 
 }
