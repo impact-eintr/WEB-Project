@@ -3,12 +3,12 @@ package common
 const (
 	LoginMesType    = "LoginMes"
 	LoginResType    = "LoginRes"
-	RefisterMesType = "RefisterMes"
-	RefisterResType = "RefisterRes"
+	RegisterMesType = "RegisterMes"
+	RegisterResType = "RegisterRes"
 )
 
 type Message struct {
-	Type string `jdon:"type"` //类型
+	Type string `json:"type"` //类型
 	Data string `json:"data"` //内容
 }
 
@@ -39,7 +39,7 @@ type RegisterRes struct {
 	//400 已占用
 	//200 注册成功
 
-	Error string `jdon:"error"` //返回错误消息
+	Error string `json:"error"` //返回错误消息
 	Uid   string `json:"uid"`   //返回用户id
 	Uname string `json:"uname"`
 }

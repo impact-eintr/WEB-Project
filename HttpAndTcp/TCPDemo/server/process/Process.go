@@ -28,11 +28,10 @@ func (this *Processor) ServerProcessMess() error {
 		if err != nil {
 			if err == io.EOF {
 				log.Println(<-LoginCh, <-LoginCh, "下号")
+				return err
 			} else {
 				log.Println("err:", err)
 			}
-
-			return err
 		}
 		this.serverProcessMess(&mes)
 
@@ -46,13 +45,16 @@ func (this *Processor) serverProcessMess(mes *common.Message) (err error) {
 			Conn: this.Conn,
 		}
 		err = up.ServerProcessLogin(mes)
-	case common.RefisterMesType:
+
+	case common.RegisterMesType:
 		up := UserProcess{
 			Conn: this.Conn,
 		}
 		err = up.ServerProcessRegister(mes)
 
 	default:
+
+		log.Println("call test:", mes.Type)
 		err = errors.New("消息类型不存在")
 		return
 	}

@@ -3,6 +3,7 @@ package process
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net"
 
 	"TCPDemo/server/common"
@@ -12,6 +13,8 @@ import (
 
 type UserProcess struct {
 	Conn net.Conn
+	//表明这个连接是哪个用户的conn
+	Uid string
 }
 
 func (this *UserProcess) ServerProcessLogin(mes *common.Message) (err error) {
@@ -23,35 +26,41 @@ func (this *UserProcess) ServerProcessLogin(mes *common.Message) (err error) {
 	}
 
 	var resMes common.Message
-	var loginResMes common.LoginRes
+	var loginRes common.LoginRes
 
 	user, err := module.MyUserDao.Login(loginMes.Uid, loginMes.Pwd)
 	if err != nil {
 		if err == module.ERROR_USER_NOTEXITS {
 
-			loginResMes.Code = 404
-			loginResMes.Error = err.Error()
+			loginRes.Code = 404
+			loginRes.Error = err.Error()
 		} else if err == module.ERROR_USER_PWD {
 
-			loginResMes.Code = 403
-			loginResMes.Error = err.Error()
+			loginRes.Code = 403
+			loginRes.Error = err.Error()
 		} else {
 
-			loginResMes.Code = 500
-			loginResMes.Error = err.Error()
+			loginRes.Code = 500
+			loginRes.Error = err.Error()
 		}
 
 	} else {
-		loginResMes.Code = 200
-		loginResMes.Uid = user.Uid
+		loginRes.Code = 200
+		loginRes.Uid = user.Uid
+		loginRes.Uname = user.Uname
+
 		LoginCh <- user.Uid
-		loginResMes.Uname = user.Uname
 		LoginCh <- user.Uname
-		fmt.Println(user.Uid, user.Uname, "上号")
+		defer close(LoginCh)
+
+		this.Uid = user.Uid
+		userList.AddOnlineUser(this)
+
+		log.Println(user.Uid, user.Uname, "上号")
 	}
 
 	//对响应数据进行序列化
-	data, err := json.Marshal(loginResMes)
+	data, err := json.Marshal(loginRes)
 	if err != nil {
 		fmt.Println("json.Marshal failed ", err)
 		return
@@ -89,7 +98,7 @@ func (this *UserProcess) ServerProcessRegister(mes *common.Message) (err error) 
 	var resMes common.Message
 	var registerRes common.RegisterRes
 
-	user, err := module.MyUserDao.Register(registerMes)
+	err = module.MyUserDao.Register(&registerMes.User)
 	if err != nil {
 		if err == module.ERROR_USER_EXITS {
 
@@ -99,12 +108,16 @@ func (this *UserProcess) ServerProcessRegister(mes *common.Message) (err error) 
 
 	} else {
 		registerRes.Code = 200
+		registerRes.Uid = registerMes.User.Uid
+		registerRes.Uname = registerMes.User.Uname
+
 		RegisterCh <- registerRes.Uid
 		RegisterCh <- registerRes.Uname
+		fmt.Println(registerRes.Uid, registerRes.Uname)
 	}
 
 	//对响应数据进行序列化
-	data, err := json.Marshal(loginResMes)
+	data, err := json.Marshal(registerRes)
 	if err != nil {
 		fmt.Println("json.Marshal failed ", err)
 		return

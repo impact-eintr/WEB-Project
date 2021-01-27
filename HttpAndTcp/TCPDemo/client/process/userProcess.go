@@ -101,24 +101,20 @@ func (this *UserProcess) Register(user common.User) {
 		log.Println(err)
 		return
 	}
-
 	tf := &utils.Transfer{
 		Conn: conn,
 	}
 	tf.PkgWrite(data)
 
 	resp, err := tf.PkgRead()
+	log.Println("test")
 	var temp common.RegisterRes
 	json.Unmarshal([]byte(resp.Data), &temp)
 
 	if temp.Code == 200 {
-		uname := color.CyanString(" %s ", "yixingwei")
+		uname := color.CyanString(" %s ", temp.Uname)
 		fmt.Printf("%s，注册成功，可以上号了\n", uname)
-		go talkToServer(conn)
 
-		for {
-			ShowMenu()
-		}
 	} else {
 		color.Red("注册失败 %s\n", temp.Error)
 	}

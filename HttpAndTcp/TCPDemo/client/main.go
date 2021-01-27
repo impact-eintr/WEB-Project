@@ -37,6 +37,8 @@ func main() {
 		case common.SIGNIN:
 			color.Green("Input You Uid please......\n")
 			fmt.Scanf("%s\n", &user.Uid)
+			color.Green("Input You Uname please......\n")
+			fmt.Scanf("%s\n", &user.Uname)
 			for {
 				color.Yellow("Input You Passwd please......\n")
 				temp, _ := gopass.GetPasswdMasked()

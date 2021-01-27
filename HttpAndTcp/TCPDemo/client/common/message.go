@@ -8,7 +8,7 @@ const (
 )
 
 type Message struct {
-	Type string `jdon:"type"` //类型
+	Type string `json:"type"` //类型
 	Data string `json:"data"` //内容
 }
 
@@ -26,8 +26,10 @@ type LoginRes struct {
 	//200 登陆成功
 
 	Error string `json:"error"` //返回错误消息
-	Uname string `json:"uname"` //返回用户名
+	Uid   string `json:"uid"`   //返回用id
+	Uname string `json:"uname"`
 }
+
 type RegisterMes struct {
 	User User `json:"user"`
 }
@@ -37,5 +39,7 @@ type RegisterRes struct {
 	//400 已占用
 	//200 注册成功
 
-	Error string `jdon:"error"` //返回错误消息
+	Error string `json:"error"` //返回错误消息
+	Uid   string `json:"uid"`   //返回用户id
+	Uname string `json:"uname"`
 }
