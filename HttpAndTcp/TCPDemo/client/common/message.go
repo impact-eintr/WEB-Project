@@ -1,10 +1,11 @@
 package common
 
 const (
-	LoginMesType    = "LoginMes"
-	LoginResType    = "LoginRes"
-	RegisterMesType = "RegisterMes"
-	RegisterResType = "RegisterRes"
+	LoginMesType            = "LoginMes"
+	LoginResType            = "LoginRes"
+	RegisterMesType         = "RegisterMes"
+	RegisterResType         = "RegisterRes"
+	NotifyUserStatusMesType = "NotifyUserStatusMes"
 )
 
 type Message struct {
@@ -25,9 +26,10 @@ type LoginRes struct {
 	//500 未注册
 	//200 登陆成功
 
-	Error string `json:"error"` //返回错误消息
-	Uid   string `json:"uid"`   //返回用id
-	Uname string `json:"uname"`
+	Error   string   `json:"error"` //返回错误消息
+	Uid     string   `json:"uid"`   //返回用id
+	Uname   string   `json:"uname"`
+	UsersId []string `json:"usersid"`
 }
 
 type RegisterMes struct {
@@ -42,4 +44,10 @@ type RegisterRes struct {
 	Error string `json:"error"` //返回错误消息
 	Uid   string `json:"uid"`   //返回用户id
 	Uname string `json:"uname"`
+}
+
+//配合服务器推送用户状态变化的消息
+type NotifyUserStatusMes struct {
+	Uid     string `json:"uid"`
+	UStatus Status `json:"ustatus"`
 }

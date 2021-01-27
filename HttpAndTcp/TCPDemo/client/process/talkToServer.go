@@ -1,11 +1,14 @@
 package process
 
 import (
+	"TCPDemo/client/common"
 	"TCPDemo/client/utils"
+	"encoding/json"
 	"fmt"
-	"github.com/fatih/color"
 	"log"
 	"net"
+
+	"github.com/fatih/color"
 )
 
 func connToServer() (net.Conn, error) {
@@ -25,12 +28,22 @@ func talkToServer(conn net.Conn) {
 		Conn: conn,
 	}
 	for {
-		fmt.Println("客户端正在等待读取服务器发送的消息")
+		fmt.Println("==========================")
 		mes, err := tf.PkgRead()
 		if err != nil {
 			log.Println("tf.ReadPkg err=", err)
 			return
 		}
-		fmt.Printf("%v\n", mes)
+
+		switch mes.Type {
+		case common.NotifyUserStatusMesType:
+			//更新客户端维护的usermap
+			var notifyUserStatusMes common.NotifyUserStatusMes
+			json.Unmarshal([]byte(mes.Data), &notifyUserStatusMes)
+			updateUserStatus(&notifyUserStatusMes)
+		default:
+			fmt.Println("消息类型未知")
+		}
+
 	}
 }

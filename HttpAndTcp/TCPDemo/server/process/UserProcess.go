@@ -14,7 +14,8 @@ import (
 type UserProcess struct {
 	Conn net.Conn
 	//表明这个连接是哪个用户的conn
-	Uid string
+	Uid     string
+	LoginCh chan string
 }
 
 func (this *UserProcess) ServerProcessLogin(mes *common.Message) (err error) {
@@ -49,12 +50,17 @@ func (this *UserProcess) ServerProcessLogin(mes *common.Message) (err error) {
 		loginRes.Uid = user.Uid
 		loginRes.Uname = user.Uname
 
-		LoginCh <- user.Uid
-		LoginCh <- user.Uname
-		defer close(LoginCh)
+		this.LoginCh <- user.Uid
+		this.LoginCh <- user.Uname
+		defer close(this.LoginCh)
 
 		this.Uid = user.Uid
 		userList.AddOnlineUser(this)
+		this.NotifyOthersOnlineUser(user.Uid)
+
+		for id := range userList.onlineUsers {
+			loginRes.UsersId = append(loginRes.UsersId, id)
+		}
 
 		log.Println(user.Uid, user.Uname, "上号")
 	}
@@ -143,4 +149,47 @@ func (this *UserProcess) ServerProcessRegister(mes *common.Message) (err error) 
 
 	return
 
+}
+
+//给客户端推送消息
+func (this *UserProcess) NotifyOthersOnlineUser(uid string) {
+	for id, up := range userList.onlineUsers {
+		if id == uid {
+			continue
+		}
+
+		up.NotifyMeOnlineUser(uid)
+	}
+}
+
+func (this *UserProcess) NotifyMeOnlineUser(uid string) {
+	var mes common.Message
+	mes.Type = common.NotifyUserStatusMesType
+
+	var notifyUserStatusMes common.NotifyUserStatusMes
+	notifyUserStatusMes.Uid = uid
+	notifyUserStatusMes.UStatus = common.ONLINE
+
+	data, err := json.Marshal(notifyUserStatusMes)
+	if err != nil {
+		fmt.Println("json.Marshal err = ", err)
+	}
+
+	mes.Data = string(data)
+
+	data, err = json.Marshal(mes)
+	if err != nil {
+		fmt.Println("json,Marshal err = ", err)
+		return
+	}
+
+	tf := &utils.Transfer{
+		Conn: this.Conn,
+	}
+
+	err = tf.PkgWrite(data)
+	if err != nil {
+		fmt.Println("NotifyMeOnline err=", err)
+		return
+	}
 }

@@ -58,6 +58,19 @@ func (this *UserProcess) LogIn(user common.User) {
 		uname := color.CyanString(" %s ", temp.Uname)
 		fmt.Printf("%s欢迎回来\n", uname)
 
+		for _, v := range temp.UsersId {
+
+			if v == temp.Uid {
+				continue
+			}
+			otherUser := &common.User{
+				Uid:     v,
+				Ustatus: common.ONLINE,
+			}
+			onlineUsers[v] = otherUser
+			fmt.Println(v)
+		}
+
 		go talkToServer(conn)
 
 		for {

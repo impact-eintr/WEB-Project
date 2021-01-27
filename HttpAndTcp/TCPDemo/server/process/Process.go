@@ -14,11 +14,11 @@ type Processor struct {
 	Conn net.Conn
 }
 
-var LoginCh = make(chan string, 2)
 var RegisterCh = make(chan string, 2)
 
 //数据中继
 func (this *Processor) ServerProcessMess() error {
+	loginCh := make(chan string, 2)
 	for {
 		tf := &utils.Transfer{
 			Conn: this.Conn,
@@ -27,22 +27,23 @@ func (this *Processor) ServerProcessMess() error {
 
 		if err != nil {
 			if err == io.EOF {
-				log.Println(<-LoginCh, <-LoginCh, "下号")
+				log.Println(<-loginCh, <-loginCh, "下号")
 				return err
 			} else {
 				log.Println("err:", err)
 			}
 		}
-		this.serverProcessMess(&mes)
+		this.serverProcessMess(&mes, loginCh)
 
 	}
 }
-func (this *Processor) serverProcessMess(mes *common.Message) (err error) {
+func (this *Processor) serverProcessMess(mes *common.Message, loginCh chan string) (err error) {
 
 	switch mes.Type {
 	case common.LoginMesType:
 		up := UserProcess{
-			Conn: this.Conn,
+			Conn:    this.Conn,
+			LoginCh: loginCh,
 		}
 		err = up.ServerProcessLogin(mes)
 
