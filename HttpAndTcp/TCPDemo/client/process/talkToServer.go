@@ -34,13 +34,21 @@ func talkToServer(conn net.Conn) {
 			log.Println("tf.ReadPkg err=", err)
 			return
 		}
-
 		switch mes.Type {
 		case common.NotifyUserStatusMesType:
 			//更新客户端维护的usermap
 			var notifyUserStatusMes common.NotifyUserStatusMes
 			json.Unmarshal([]byte(mes.Data), &notifyUserStatusMes)
 			updateUserStatus(&notifyUserStatusMes)
+		case common.SmsMesType:
+			var smsMes common.SmsMes
+			json.Unmarshal([]byte(mes.Data), &smsMes)
+			if smsMes.Uid == CurUser.Uid {
+				fmt.Printf("我:\n%v\n", smsMes.Content)
+			} else {
+				fmt.Printf("%v:\n%v\n", smsMes.Uid, smsMes.Content)
+
+			}
 		default:
 			fmt.Println("消息类型未知")
 		}

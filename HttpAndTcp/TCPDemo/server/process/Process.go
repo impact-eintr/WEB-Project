@@ -53,6 +53,10 @@ func (this *Processor) serverProcessMess(mes *common.Message, loginCh chan strin
 		}
 		err = up.ServerProcessRegister(mes)
 
+	case common.SmsMesType:
+		up := SmsProcess{}
+		up.SendGroupMes(mes)
+
 	default:
 
 		log.Println("call test:", mes.Type)

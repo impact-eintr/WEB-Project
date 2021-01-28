@@ -55,6 +55,11 @@ func (this *UserProcess) LogIn(user common.User) {
 	json.Unmarshal([]byte(resp.Data), &temp)
 
 	if temp.Code == 200 {
+
+		CurUser.Conn = conn
+		CurUser.Uid = temp.Uid
+		CurUser.Ustatus = common.ONLINE
+
 		uname := color.CyanString(" %s ", temp.Uname)
 		fmt.Printf("%s欢迎回来\n", uname)
 
@@ -76,6 +81,7 @@ func (this *UserProcess) LogIn(user common.User) {
 		for {
 			ShowMenu()
 		}
+
 	} else {
 		color.Red("认证失败 %s\n", temp.Error)
 	}
