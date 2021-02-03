@@ -23,6 +23,8 @@ func New(typ string) Cache {
 		c = newInMemryCache()
 	} else if typ == "rocksdb" {
 		c = newRocksdbCache()
+	} else if typ == "rocksdbbatch" {
+		c = newRocksdbCache()
 	}
 	if c == nil {
 		log.Fatalln("未知的类型")
