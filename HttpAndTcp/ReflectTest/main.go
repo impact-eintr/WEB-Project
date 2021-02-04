@@ -22,12 +22,11 @@ func main() {
 	aVal := reflect.ValueOf(&a)
 	aVal.Elem().FieldByName("Name").SetString("yixingwei")
 
-	fmt.Println(a)
-
 	num := aTyp.NumField()
 	val := reflect.ValueOf(a)
 	for i := 0; i < num; i++ {
-		fmt.Println(aTyp.Field(i).Tag.Get("json"))
+		res, _ := aTyp.Field(i).Tag.Lookup("json")
+		fmt.Println("res: ", res)
 		fmt.Println(val.Field(i))
 	}
 
