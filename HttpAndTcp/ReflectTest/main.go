@@ -15,6 +15,7 @@ func main() {
 		Age:  28,
 	}
 	aTyp := reflect.TypeOf(a)
+	fmt.Println(aTyp)
 	if aTyp.Kind() != reflect.Struct {
 		err := errors.New("不是结构体")
 		panic(err)

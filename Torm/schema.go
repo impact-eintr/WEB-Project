@@ -7,18 +7,18 @@ import (
 	"sync"
 )
 
-type Filed struct {
-	Name       string `json:"name"`
-	i          string
-	Type       string `json:"type"`
-	TableColum string `json:"tablecolum"`
-	Tag        string `json:"tag"`
+type Field struct {
+	Name        string
+	i           int
+	Type        string
+	TableColumn string
+	Tag         string
 }
 
 type Schema struct {
-	Filed      []*Filed          //字段属性组合
-	FiledNames []string          //字段名称
-	FiledMap   map[string]*Filed // key:value
+	Fields     []*Field          //字段属性组合
+	FieldNames []string          //字段名称
+	FieldMap   map[string]*Field // key:value
 }
 
 var (
@@ -44,9 +44,9 @@ func StructForType(t reflect.Type) *Schema {
 	}
 	//缓存中没有 创建数据并缓存
 	st = &Schema{
-		FiledMap: make(map[string]*Filed),
+		FieldMap: make(map[string]*Field),
 	}
-	dataTypeof(t, st)
+	dataTypeOf(t, st)
 
 	structCache[t] = st
 	return st
@@ -56,25 +56,58 @@ func StructForType(t reflect.Type) *Schema {
 func dataTypeOf(types reflect.Type, schema *Schema) {
 	for i := 0; i < types.NumField(); i++ {
 		p := types.Field(i)
+
 		if p.Anonymous || !ast.IsExported(p.Name) {
 			continue
 		}
 		field := &Field{
-			Name: p.Name,
-			i:    i,
+			Name:        p.Name, //默认是结构体原字段
+			i:           i,
+			TableColumn: p.Name, //默认是结构体原字段
+			Tag:         p.Name, //默认是结构体原字段
+		}
+		//追加标签
+		if tg, ok := p.Tag.Lookup("torm"); ok {
+			field.Tag = tg
 		}
 
-		var tag = field.Name
-		field.TableColum = field.Name
-		if tg, ok := p.Tag.Lookup("Torm"); ok {
-			tag = tg
+		//切分标签
+		tagArr := strings.Split(field.Tag, ",")
+		// 数据库中对应列表名称
+		if len(tagArr[0]) > 0 {
+			field.TableColumn = tagArr[0]
 		}
 
-		tagArr := strings.Split(tag, ",")
-		if len(tagArr) > 0 {
-			if tagArr[0] == "-" {
-				continue
-			}
+		// 数据库中对应列表类型
+		if len(tagArr) > 1 && len(tagArr[1]) > 0 {
+			field.Type = tagArr[1]
+
 		}
+
+		schema.Fields = append(schema.Fields, field)
+		schema.FieldMap[p.Name] = field
+		schema.FieldNames = append(schema.FieldNames, p.Name)
 	}
+}
+
+func (s *Schema) RecordValues(dest interface{}) []interface{} {
+	destValue := reflect.Indirect(reflect.ValueOf(dest))
+	var fieldValues []interface{}
+	for _, field := range s.Fields {
+		fieldValues = append(fieldValues, destValue.FieldByName(field.Name).Interface())
+
+	}
+	return fieldValues
+
+}
+
+func (s *Schema) UpdateParam(dest interface{}) map[string]interface{} {
+	destValue := reflect.Indirect(reflect.ValueOf(dest))
+	m := make(map[string]interface{})
+	for _, field := range s.Fields {
+		m[field.TableColumn] = destValue.FieldByName(field.Name).Interface()
+
+	}
+	return m
+
 }
