@@ -28,7 +28,7 @@ func TestClause_InsertStruct(t *testing.T) {
 func TestClause_Condition(t *testing.T) {
 	clause := Torm.NewClause()
 	clause = clause.SetTableName("test").
-		AndEqual("name", "迈莫coding").
+		AndEqual("user_name", "迈莫coding").
 		OrEqual("age", 5).
 		SelectField("user_name,age")
 	log.Println(clause.Condition)
@@ -37,14 +37,14 @@ func TestClause_Condition(t *testing.T) {
 
 }
 
-//func TestClause_UpdateStruct(t *testing.T) {
-//	user := &Users{
-//		Name: "迈莫coding",
-//	}
-//	clause := newClause()
-//	clause = clause.SetTableName("memo").
-//		updateStruct(user)
-//	log.Info(clause.sqlType[Update])
-//	log.Info(clause.paramsType[Update])
-//
-//}
+func TestClause_UpdateStruct(t *testing.T) {
+	user := &Users{
+		Name: "迈莫coding",
+	}
+	clause := Torm.NewClause()
+	clause = clause.SetTableName("memo").
+		UpdateStruct(user)
+	log.Println(clause.SqlType[Torm.Update])
+	log.Println(clause.ParamsType[Torm.Update])
+
+}
