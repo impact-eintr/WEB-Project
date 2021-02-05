@@ -1,7 +1,8 @@
 package Torm_test
 
 import (
-	log "github.com/sirupsen/logrus"
+	"Torm"
+	"log"
 	"testing"
 )
 
@@ -12,36 +13,37 @@ type Users struct {
 
 func TestClause_InsertStruct(t *testing.T) {
 	user := &Users{
-		Name: "迈莫coding",
-		Age:  1,
+		Name: "yixingwei",
+		Age:  23,
 	}
 	clause := Torm.NewClause()
 	clause = clause.SetTableName("test").
-		insertStruct(user)
-	log.Info(clause.sql)
-	log.Info(clause.params)
+		InsertStruct(user)
+	log.Println(clause.Sql)
+	log.Println(clause.Params)
 	// sql := "INSERT INTO memo (Name,Age) VALUES (?,?)"
 
 }
-func TestClause_Condition(t *testing.T) {
-	clause := newClause()
-	clause = clause.SetTableName("memo").
-		andEqual("name", "迈莫coding").
-		orEqual("age", 5).
-		selectField("name,age")
-	log.Info(clause.condition)
-	log.Info(clause.params)
-	log.Info(clause.cselect)
 
-}
-func TestClause_UpdateStruct(t *testing.T) {
-	user := &Users{
-		Name: "迈莫coding",
-	}
-	clause := newClause()
-	clause = clause.SetTableName("memo").
-		updateStruct(user)
-	log.Info(clause.sqlType[Update])
-	log.Info(clause.paramsType[Update])
-
-}
+//func TestClause_Condition(t *testing.T) {
+//	clause := newClause()
+//	clause = clause.SetTableName("memo").
+//		andEqual("name", "迈莫coding").
+//		orEqual("age", 5).
+//		selectField("name,age")
+//	log.Info(clause.condition)
+//	log.Info(clause.params)
+//	log.Info(clause.cselect)
+//
+//}
+//func TestClause_UpdateStruct(t *testing.T) {
+//	user := &Users{
+//		Name: "迈莫coding",
+//	}
+//	clause := newClause()
+//	clause = clause.SetTableName("memo").
+//		updateStruct(user)
+//	log.Info(clause.sqlType[Update])
+//	log.Info(clause.paramsType[Update])
+//
+//}
