@@ -56,7 +56,6 @@ func (this *Clause) Build(orders ...Type) {
 		}
 	}
 
-	fmt.Println(sqls, "\n", vars)
 	this.Sql = strings.Join(sqls, " ")
 	this.Params = vars
 }
@@ -70,8 +69,9 @@ func (this *Clause) InsertStruct(vars interface{}) *Clause {
 		return this
 	}
 
-	//数据映射
+	//数据映射到
 	schema := StructForType(typ)
+	fmt.Println(schema.FieldMap["Name"])
 
 	//构建SQL语句
 	this.Set(Insert, this.Tablename, schema.FieldNames)

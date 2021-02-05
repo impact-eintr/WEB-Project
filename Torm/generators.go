@@ -61,7 +61,6 @@ func _values(values ...interface{}) (string, []interface{}) {
 		v := value.([]interface{})
 		if bindStr == "" {
 			bindStr = genBindVars(len(v))
-			fmt.Println("空值处理？ ： ", bindStr)
 		}
 
 		sql.WriteString(fmt.Sprintf("(%v)", bindStr))
