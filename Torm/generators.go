@@ -39,7 +39,7 @@ func init() {
 
 func _insert(values ...interface{}) (string, []interface{}) {
 	tableName := values[0]                            //截获表名
-	fields := strings.Join(values[1].([]string), ",") //类型断言
+	fields := strings.Join(values[1].([]string), ",") //类型断言,注意values中传过来的是一个string和一个[]string
 	return fmt.Sprintf("INSERT INTO %s (%v)", tableName, fields), []interface{}{}
 }
 

@@ -41,6 +41,7 @@ func (this *Clause) SetTableName(tablename string) *Clause {
 //根据关键字构建sql语句
 func (this *Clause) Set(operation Type, param ...interface{}) {
 	sql, vars := generators[operation](param...)
+	fmt.Println("vars : ", vars)
 	this.SqlType[operation] = sql
 	this.ParamsType[operation] = vars
 }
@@ -71,12 +72,13 @@ func (this *Clause) InsertStruct(vars interface{}) *Clause {
 
 	//数据映射到
 	schema := StructForType(typ)
-	fmt.Println(schema.FieldMap["Name"])
 
 	//构建SQL语句
-	this.Set(Insert, this.Tablename, schema.FieldNames)
+	this.Set(Insert, this.Tablename, schema.FieldNames) //["Name","Age"]
+	//INSERT INTO test(name,age)
 	recordValues := make([]interface{}, 0)
 	recordValues = append(recordValues, schema.RecordValues(vars))
+	//recordValues := schema.RecordValues(vars)
 	this.Set(Value, recordValues...)
 	this.Build(Insert, Value)
 	return this

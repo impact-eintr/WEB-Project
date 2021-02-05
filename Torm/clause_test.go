@@ -25,17 +25,18 @@ func TestClause_InsertStruct(t *testing.T) {
 
 }
 
-//func TestClause_Condition(t *testing.T) {
-//	clause := newClause()
-//	clause = clause.SetTableName("memo").
-//		andEqual("name", "迈莫coding").
-//		orEqual("age", 5).
-//		selectField("name,age")
-//	log.Info(clause.condition)
-//	log.Info(clause.params)
-//	log.Info(clause.cselect)
-//
-//}
+func TestClause_Condition(t *testing.T) {
+	clause := Torm.NewClause()
+	clause = clause.SetTableName("test").
+		AndEqual("name", "迈莫coding").
+		OrEqual("age", 5).
+		SelectField("user_name,age")
+	log.Println(clause.Condition)
+	log.Println(clause.Params)
+	log.Println(clause.Cselect)
+
+}
+
 //func TestClause_UpdateStruct(t *testing.T) {
 //	user := &Users{
 //		Name: "迈莫coding",
