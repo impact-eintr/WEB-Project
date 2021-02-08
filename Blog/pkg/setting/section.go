@@ -18,6 +18,7 @@ type AppSettingS struct {
 	DefaultContextTimeout time.Duration
 	LogSavePath           string
 	LogFileName           string
+	LogFileExt            string //后缀?
 	//UploadServerUrl string
 	//UploadImageMaxSize int
 	//UploadImageAllowExts []string
@@ -26,6 +27,7 @@ type AppSettingS struct {
 type DatabaseSettingS struct {
 	DBType       string
 	UserName     string
+	Password     string
 	Host         string
 	DBName       string
 	TablePrefix  string
