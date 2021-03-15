@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试嵌套模板</title>
+</head>
+<body>
+
+<h1>测试嵌套模板<h2>
+
+<hr>
+{{ template "ul.tmpl" }}
+<hr>
+
+<hr>
+{{ template "ol.tmpl" }}
+<hr>
+
+你好，{{ . }}
+
+</body>
+</html>
+
+{{ define "ol.tmpl" }}
+<ol>
+    <li>吃饭饭</li>
+    <li>睡觉觉</li>
+    <li>打豆豆</li>
+</ol>
+{{ end }}
