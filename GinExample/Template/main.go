@@ -35,8 +35,9 @@ func f(w http.ResponseWriter, r *http.Request) {
 }
 
 func t(w http.ResponseWriter, r *http.Request) {
+	//定义模板
 	t := template.New("t.tmpl")
-
+	//解析模板
 	_, err := t.ParseFiles("./t.tmpl", "./ul.tmpl")
 	if err != nil {
 		fmt.Printf("parse template failed,err:%v\n", err)
@@ -44,6 +45,7 @@ func t(w http.ResponseWriter, r *http.Request) {
 	}
 
 	name := "eintr"
+	//执行模板
 	t.Execute(w, name)
 }
 
@@ -79,8 +81,50 @@ func SayHello(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func index(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("./base.tmpl", "./index.tmpl")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "parse err :%s\n", err)
+		return
+	}
+	msg := "eintr"
+	t.Execute(w, msg)
+}
+
+func home(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("./base.tmpl", "./home.tmpl")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "parse err :%s\n", err)
+		return
+	}
+	msg := "eintr"
+	t.Execute(w, msg)
+
+}
+
+func Xss(w http.ResponseWriter, r *http.Request) {
+	t, err := template.New("Xss.tmpl").Funcs(template.FuncMap{
+		"safe": func(str string) template.HTML {
+			return template.HTML(str)
+		},
+	}).ParseFiles("Xss.tmpl")
+	if err != nil {
+		fmt.Println("err :", err)
+		return
+	}
+	str1 := "<script>alert('123');</script>"
+	str2 := "<a href='http://127.0.0.1:8081/xss'>回环测试</a>"
+	t.Execute(w, map[string]string{
+		"str1": str1,
+		"str2": str2,
+	})
+}
+
 func main() {
 	http.HandleFunc("/", t)
+	http.HandleFunc("/xss", Xss)
+	http.HandleFunc("/index", index)
+	http.HandleFunc("/home", home)
 	err := http.ListenAndServe(":8081", nil)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "err : %s\n", err)

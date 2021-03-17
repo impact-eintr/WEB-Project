@@ -174,3 +174,182 @@ func t(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, name)
 }
 ~~~
+
+
+~~~ html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板继承</title>
+    <style>
+    * {
+    margin: 0;
+    }
+    .nav {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        background-color: burlywood;
+    }
+    
+    .main {
+        margin-top: 50px;
+    }
+    
+    .menu {
+       width: 15%;
+       height: 100%;
+       position: fixed;
+       left: 0;
+       background-color: #6ad7e5;
+    }
+    
+    .center {
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <div class="nav"><div>
+    <div class="main">
+        <div class="menu"></div>
+        <div class="content center">
+            {{ block "content" . }}{{ end }}
+        </div>
+    </div>
+
+</body>
+</html>
+
+~~~
+
+~~~ html
+{{ template "base.tmpl" }}
+{{ define "content" }}
+    <h1>这是家目录</h1>
+    <h2>hello {{ . }}</h2>
+{{ end }}
+
+~~~
+
+
+~~~ html
+{{ template "base.tmpl" }}
+{{ define "content" }}
+    <h1>这是首页</h1>
+    <h2>hello {{ . }}</h2>
+{{ end }}
+
+~~~
+
+~~~ go
+func index(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("./base.tmpl", "./index.tmpl")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "parse err :%s\n", err)
+		return
+	}
+	msg := "eintr"
+	t.Execute(w, msg)
+}
+
+func home(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("./base.tmpl", "./home.tmpl")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "parse err :%s\n", err)
+		return
+	}
+	msg := "eintr"
+	t.Execute(w, msg)
+
+}
+
+func main() {
+	http.HandleFunc("/", t)
+	http.HandleFunc("/index", index)
+	http.HandleFunc("/home", home)
+	err := http.ListenAndServe(":8081", nil)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "err : %s\n", err)
+		return
+	}
+}
+
+~~~
+
+避免XSS攻击
+
+~~~ html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板继承</title>
+    <style>
+    * {
+    margin: 0;
+    }
+    .nav {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        background-color: burlywood;
+    }
+    
+    .main {
+        margin-top: 50px;
+    }
+    
+    .menu {
+       width: 15%;
+       height: 100%;
+       position: fixed;
+       left: 0;
+       background-color: #6ad7e5;
+    }
+    
+    .center {
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+    <div class="nav"><div>
+    <div class="main">
+        <div class="menu"></div>
+        <div class="content center">
+            {{ .str1 }}
+            {{ .str2 | safe }}
+        </div>
+    </div>
+
+</body>
+</html>
+~~~
+
+~~~ go
+func Xss(w http.ResponseWriter, r *http.Request) {
+	t, err := template.New("Xss.tmpl").Funcs(template.FuncMap{
+		"safe": func(str string) template.HTML {
+			return template.HTML(str)
+		},
+	}).ParseFiles("Xss.tmpl")
+	if err != nil {
+		fmt.Println("err :", err)
+		return
+	}
+	str1 := "<script>alert('123');</script>"
+	str2 := "<a href='http://127.0.0.1:8081/xss'>回环测试</a>"
+	t.Execute(w, map[string]string{
+		"str1": str1,
+		"str2": str2,
+	})
+}
+~~~
+
+
