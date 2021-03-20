@@ -44,8 +44,9 @@ func m3(c *gin.Context) {
 }
 
 func main() {
-	r := gin.Default()
-
+	r := gin.Default() //默认使用了Logger() 和 Recover()中间件
+	//r := gin.New() //不包含任何中间件
+	//当中间件或者handler中启动新的goroutine时不能使用原始上下文(c *gin.Context)必须使用其只读副本(c.Copy())
 	userGroup := r.Group("/user")
 
 	//为路由组设置中间件
