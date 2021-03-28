@@ -7,10 +7,35 @@ import (
 	"net"
 )
 
-func (s *Server) process(conn net.Conn) {
-	defer conn.Close()
+type result struct {
+	v []byte
+	e error
+}
 
+func reply(conn net.Conn, resultCh chan chan *result) {
+	defer conn.Close()
+	for {
+		c, open := <-resultCh
+		if !open {
+			return
+		}
+
+		r := <-c
+		e := sendResponse(r.v, r.e, conn)
+		if e != nil {
+			log.Println("异常关闭:", e)
+			return
+		}
+	}
+}
+
+func (s *Server) process(conn net.Conn) {
 	r := bufio.NewReader(conn)
+	resultCh := make(chan chan *result, 5000)
+
+	defer conn.Close()
+	go reply(conn, resultCh)
+
 	for {
 		op, err := r.ReadByte()
 		if err != nil {
@@ -20,11 +45,11 @@ func (s *Server) process(conn net.Conn) {
 			return
 		}
 		if op == 'S' {
-			err = s.set(conn, r)
+			s.set(resultCh, r)
 		} else if op == 'G' {
-			err = s.get(conn, r)
+			s.get(resultCh, r)
 		} else if op == 'D' {
-			err = s.get(conn, r)
+			s.get(resultCh, r)
 		} else {
 			log.Println("非法操作", op)
 			return
@@ -36,35 +61,49 @@ func (s *Server) process(conn net.Conn) {
 }
 
 //G3 AAA
-func (s *Server) get(conn net.Conn, r *bufio.Reader) error {
+func (s *Server) get(ch chan chan *result, r *bufio.Reader) {
+
+	c := make(chan *result)
+
+	ch <- c
+
 	k, e := s.readKey(r) //只读键 确认是否存在
 	if e != nil {
-		return e
+		c <- &result{nil, e}
+		return
 	}
-
-	v, e := s.Get(k)                //读键对应的值
-	return sendResponse(v, e, conn) //将值作为响应返回
+	go func() {
+		v, e := s.Get(k) //读键对应的值
+		c <- &result{v, e}
+	}()
 
 }
 
 //S3 5 AAAaaaaa
-func (s *Server) set(conn net.Conn, r *bufio.Reader) error {
+func (s *Server) set(ch chan chan *result, r *bufio.Reader) {
+	c := make(chan *result)
+	ch <- c
 	k, v, e := s.readKeyAndValue(r)
 	if e != nil {
-		return e
+		c <- &result{nil, s.Set(k, v)}
+		return
 	}
-
-	return sendResponse(nil, s.Set(k, v), conn)
-
+	go func() {
+		c <- &result{nil, s.Set(k, v)}
+	}()
 }
 
 //D3 AAA
-func (s *Server) del(conn net.Conn, r *bufio.Reader) error {
+func (s *Server) del(ch chan chan *result, r *bufio.Reader) {
+	c := make(chan *result)
+	ch <- c
 	k, e := s.readKey(r)
 	if e != nil {
-		return e
+		c <- &result{nil, s.Del(k)}
+		return
 	}
 
-	return sendResponse(nil, s.Del(k), conn)
-
+	go func() {
+		c <- &result{nil, s.Del(k)}
+	}()
 }
