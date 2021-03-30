@@ -4,10 +4,12 @@ import (
 	"basic/common"
 	"database/sql"
 	"encoding/json"
-	"github.com/gin-gonic/gin"
-	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"net/http"
+	"strconv"
+
+	"github.com/gin-gonic/gin"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func Query(count int) (roads []string) {
@@ -19,7 +21,7 @@ func Query(count int) (roads []string) {
 
 	log.Println("OK!")
 
-	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 limit 100")
+	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 limit ?,1", count)
 	if err != nil {
 		log.Println(err)
 		return
@@ -51,6 +53,11 @@ func Query(count int) (roads []string) {
 }
 
 func m1(c *gin.Context) {
+	num, _ := strconv.Atoi(c.Param("id"))
+	log.Println(num)
+	roads := Query(num)
+	c.Set("roads", roads)
+	c.Next()
 
 }
 
@@ -58,9 +65,13 @@ func main() {
 
 	r := gin.Default()
 
-	roads := Query(1)
+	//var roads []string
 
 	r.GET("/json/:id", m1, func(c *gin.Context) {
+		roads, err := c.Get("roads")
+		if !err {
+			log.Fatalln(err)
+		}
 		data := roads
 		c.JSON(http.StatusOK, data)
 	})
