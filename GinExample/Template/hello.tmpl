@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{{ $v1 := 100 }}
+{{ if $v1 }}
+{{ $v1 }}
+{{ else }}
+test
+{{ end }}
+
+{{ range $idx,$val := . }}
+    <p>{{ $idx }} - {{ $val.Name }}</p>
+{{ end }}
+
+</body>
+</html>
