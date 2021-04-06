@@ -1,6 +1,9 @@
 package cache
 
-import "sync"
+import (
+	"log"
+	"sync"
+)
 
 type inMemoryCache struct {
 	c     map[string][]byte //缓存键值对
@@ -33,8 +36,8 @@ func (c *inMemoryCache) Set(k string, v []byte) error {
 func (c *inMemoryCache) Get(k string) ([]byte, error) {
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
+	log.Println(c.c)
 	return c.c[k], nil
-
 }
 
 func (c *inMemoryCache) Del(k string) error {
@@ -44,13 +47,10 @@ func (c *inMemoryCache) Del(k string) error {
 	if exist {
 		delete(c.c, k)
 		c.del(k, v)
-
 	}
 	return nil
-
 }
 
 func (c *inMemoryCache) GetStat() Stat {
 	return c.Stat
-
 }

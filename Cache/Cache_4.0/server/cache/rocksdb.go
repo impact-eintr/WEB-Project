@@ -6,10 +6,12 @@ package cache
 #cgo LDFLAGS: -lpthread -lstdc++ -lrocksdb -ldl -lm -O3
 */
 import "C"
-import "errors"
-import "log"
-import "time"
-import "unsafe"
+import (
+	"errors"
+	"log"
+	"time"
+	"unsafe"
+)
 
 type rocksdbCache struct {
 	db *C.rocksdb_t              // rocksdb_t 类型的指针
@@ -21,16 +23,15 @@ type rocksdbCache struct {
 
 func (c *rocksdbCache) Get(key string) ([]byte, error) {
 	k := C.CString(key)
+	log.Println(key)
 	defer C.free(unsafe.Pointer(k))
 	var length C.size_t
 	v := C.rocksdb_get(c.db, c.ro, k, C.size_t(len(key)), &length, &c.e)
 	if c.e != nil {
 		return nil, errors.New(C.GoString(c.e))
-
 	}
 	defer C.free(unsafe.Pointer(v))
 	return C.GoBytes(unsafe.Pointer(v), C.int(length)), nil
-
 }
 
 const BATCH_SIZE = 100

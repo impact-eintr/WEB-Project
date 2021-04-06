@@ -1,68 +1,69 @@
 package http
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
-	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
-type cacheHandler struct {
-	*Server
-}
-
-func (s *Server) cacheHandler() http.Handler {
-	return &cacheHandler{s}
-}
-
-func (h *cacheHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	key := strings.Split(r.URL.EscapedPath(), "/")[2]
-	if len(key) == 0 {
-		w.WriteHeader(http.StatusBadRequest)
+func (s *Server) CacheCheck(c *gin.Context) {
+	key := c.Param("key")
+	if key == "" {
+		c.JSON(http.StatusBadRequest, nil)
 		return
-
 	}
-	m := r.Method
+
+	m := c.Request.Method
+
+	if m == http.MethodGet {
+		b, _ := s.Get(key)
+		log.Println(b)
+
+		if len(b) == 0 {
+			c.Set("test", true) //需要查数据库
+			return
+		}
+
+		c.JSON(http.StatusOK, string(b))
+		c.Set("test", false) //不需要查数据库
+		return
+	}
+
+	c.JSON(http.StatusMethodNotAllowed, nil)
+}
+func (s *Server) UpdateHandler(c *gin.Context) {
+	key := c.Param("key")
+
+	if key == "" {
+		c.JSON(http.StatusBadRequest, nil)
+		return
+	}
+
+	m := c.Request.Method
 	if m == http.MethodPut {
-		b, _ := io.ReadAll(r.Body)
+		b, _ := io.ReadAll(c.Request.Body)
+		fmt.Printf("b: %v\n", string(b))
 		if len(b) != 0 {
-			e := h.Set(key, b)
+			e := s.Set(key, b)
 			if e != nil {
 				log.Println(e)
-				w.WriteHeader(http.StatusInternalServerError)
-
+				c.JSON(http.StatusInternalServerError, nil)
 			}
-
 		}
 		return
-
 	}
-	if m == http.MethodGet {
-		b, e := h.Get(key)
-		if e != nil {
-			log.Println(e)
-			w.WriteHeader(http.StatusInternalServerError)
-			return
 
-		}
-		if len(b) == 0 {
-			w.WriteHeader(http.StatusNotFound)
-			return
-
-		}
-		w.Write(b)
-		return
-
-	}
 	if m == http.MethodDelete {
-		e := h.Del(key)
+		e := s.Del(key)
 		if e != nil {
 			log.Println(e)
-			w.WriteHeader(http.StatusInternalServerError)
-
+			c.JSON(http.StatusInternalServerError, nil)
 		}
 		return
-
 	}
-	w.WriteHeader(http.StatusMethodNotAllowed)
+
+	c.JSON(http.StatusMethodNotAllowed, nil)
 }

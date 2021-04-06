@@ -2,7 +2,6 @@ package http
 
 import (
 	"basic/cache/cache"
-	"net/http"
 )
 
 type Server struct {
@@ -11,11 +10,4 @@ type Server struct {
 
 func New(c cache.Cache) *Server {
 	return &Server{c}
-}
-
-func (s *Server) Listen() {
-	http.Handle("/cache/", s.cacheHandler())
-	http.Handle("/status", s.statusHandler())
-	http.ListenAndServe(":9427", nil)
-
 }

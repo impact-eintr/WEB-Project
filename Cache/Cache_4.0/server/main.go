@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	typ := flag.String("type", "inmemory", "cache type")
+	typ := flag.String("type", "rocksdb", "cache type")
 	flag.Parse()
 	log.Println("type is ", *typ)
 	c := cache.New(*typ)

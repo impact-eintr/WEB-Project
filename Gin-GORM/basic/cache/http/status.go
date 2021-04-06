@@ -4,27 +4,17 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
-type statusHandler struct {
-	*Server
-}
-
-func (h *statusHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.WriteHeader(http.StatusMethodNotAllowed)
-		return
-	}
-	log.Println(h.GetStat())
-	b, err := json.Marshal(h.GetStat())
+func (s *Server) StatusHandler(c *gin.Context) {
+	b, err := json.Marshal(s.GetStat())
 	if err != nil {
 		log.Println(err)
-		w.WriteHeader(http.StatusInternalServerError)
+		c.JSON(http.StatusInternalServerError, nil)
 		return
 	}
-	w.Write(b)
-}
 
-func (s *Server) statusHandler() http.Handler {
-	return &statusHandler{s}
+	c.JSON(http.StatusOK, string(b))
 }
