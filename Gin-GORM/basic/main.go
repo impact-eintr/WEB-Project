@@ -1,7 +1,12 @@
 package main
 
 import (
+	"basic/cache/cache"
+	"basic/cache/tcp"
 	"basic/common"
+	"basic/middleware"
+	"flag"
+
 	"database/sql"
 	"encoding/json"
 	"log"
@@ -11,41 +16,6 @@ import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 )
-
-func Cors() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		method := c.Request.Method
-		origin := c.Request.Header.Get("Origin") //请求头部
-		if origin != "" {
-			//接收客户端发送的origin （重要！）
-			c.Writer.Header().Set("Access-Control-Allow-Origin", origin)
-			//服务器支持的所有跨域请求的方法
-			c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE,UPDATE")
-			//允许跨域设置可以返回其他子段，可以自定义字段
-			c.Header("Access-Control-Allow-Headers", "Authorization, Content-Length, X-CSRF-Token, Token,session")
-			// 允许浏览器（客户端）可以解析的头部 （重要）
-			c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers")
-			//设置缓存时间
-			c.Header("Access-Control-Max-Age", "172800")
-			//允许客户端传递校验信息比如 cookie (重要)
-			c.Header("Access-Control-Allow-Credentials", "true")
-		}
-
-		//允许类型校验
-		if method == "OPTIONS" {
-			c.JSON(http.StatusOK, "ok!")
-
-		}
-
-		defer func() {
-			if err := recover(); err != nil {
-				log.Printf("Panic info is: %v", err)
-			}
-		}()
-		c.Next()
-	}
-
-}
 
 func Query(count int) (roads []string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
@@ -96,13 +66,29 @@ func m1(c *gin.Context) {
 
 }
 
+func m2(c *gin.Context) {
+	num, _ := strconv.Atoi(c.Param("id"))
+	log.Println(num)
+	roads := Query(num)
+	c.Set("roads", roads)
+	c.Next()
+
+}
+
 func main() {
+
+	typ := flag.String("type", "inmemory", "cache type")
+	flag.Parse()
+	log.Println("type is ", *typ)
+	c := cache.New(*typ)
+	go tcp.New(c).Listen()
+	//cachehttp.New(c).Listen()
 
 	r := gin.Default()
 
-	r.Use(Cors())
+	r.Use(middleware.Cors())
 
-	r.GET("/json/:id", m1, func(c *gin.Context) {
+	r.GET("/road-info/:id", m1, func(c *gin.Context) {
 		roads, err := c.Get("roads")
 		if !err {
 			log.Fatalln(err)
@@ -110,6 +96,55 @@ func main() {
 		data := roads
 		c.JSON(http.StatusOK, data)
 	})
+
+	key := strings.Split(r.URL.EscapedPath(), "/")[2]
+	if len(key) == 0 {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+
+	}
+	m := r.Method
+	if m == http.MethodPut {
+		b, _ := io.ReadAll(r.Body)
+		if len(b) != 0 {
+			e := h.Set(key, b)
+			if e != nil {
+				log.Println(e)
+				w.WriteHeader(http.StatusInternalServerError)
+
+			}
+
+		}
+		return
+
+	}
+	if m == http.MethodGet {
+		b, e := h.Get(key)
+		if e != nil {
+			log.Println(e)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+
+		}
+		if len(b) == 0 {
+			w.WriteHeader(http.StatusNotFound)
+			return
+
+		}
+		w.Write(b)
+		return
+
+	}
+	if m == http.MethodDelete {
+		e := h.Del(key)
+		if e != nil {
+			log.Println(e)
+			w.WriteHeader(http.StatusInternalServerError)
+
+		}
+		return
+
+	}
 
 	r.Run(":8081")
 }
