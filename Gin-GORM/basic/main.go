@@ -20,7 +20,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func RoadQuery(count int) (roads []string) {
+func RoadQuery(count int) (roads string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		log.Fatalln(err)
@@ -37,7 +37,8 @@ func RoadQuery(count int) (roads []string) {
 
 	for rows.Next() {
 		var road common.L21
-		rows.Scan(&road.R路线编号,
+		rows.Scan(
+			&road.R路线编号,
 			&road.R所在行政区划代码,
 			&road.R路线名称,
 			&road.R起点名称,
@@ -55,13 +56,14 @@ func RoadQuery(count int) (roads []string) {
 		if err != nil {
 			log.Println(err)
 		}
-		//roads += string(data)
-		roads = append(roads, string(data))
+		roads += string(data)
+		roads += ","
 	}
+	roads = roads[:len(roads)-1]
 	return
 }
 
-func BridgeQuery(count int) (bridges []string) {
+func BridgeQuery(count int) (bridges string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		log.Fatalln(err)
@@ -70,7 +72,7 @@ func BridgeQuery(count int) (bridges []string) {
 
 	log.Println("成功连接到数据库!")
 
-	rows, err := db.Query("select `桥梁名称`,`桥梁代码`,`桥梁中心桩号` ,`路线编号`,`路线名称`,`技术等级`,`桥梁全长(米)`,`跨径总长（米）`,`单孔最大跨径(米)`,`桥梁组合)孔*米)`,`桥梁全宽(米)`,`桥面净宽(米)`,`按跨径分类代码`,`按跨径分类类型` from L24a limit ?,1000", count)
+	rows, err := db.Query("select `桥梁名称`,`桥梁代码`,`桥梁中心桩号` ,`路线编号`,`路线名称`,`技术等级`,`桥梁全长(米)`,`跨径总长（米）`,`单孔最大跨径(米)`,`桥梁组合)孔*米)`,`桥梁全宽(米)`,`桥面净宽(米)`,`按跨径分类代码`,`按跨径分类类型` from L24a limit ?,2", count)
 	if err != nil {
 		log.Println(err)
 		return
@@ -96,13 +98,14 @@ func BridgeQuery(count int) (bridges []string) {
 		if err != nil {
 			log.Println(err)
 		}
-		//roads += string(data)
-		bridges = append(bridges, string(data))
+		bridges += string(data)
+		bridges += ","
 	}
+	bridges = bridges[:len(bridges)-1]
 	return
 }
 
-func TunnelQuery(count int) (tunnels []string) {
+func TunnelQuery(count int) (tunnels string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		log.Fatalln(err)
@@ -135,9 +138,10 @@ func TunnelQuery(count int) (tunnels []string) {
 		if err != nil {
 			log.Println(err)
 		}
-		//roads += string(data)
-		tunnels = append(tunnels, string(data))
+		tunnels += string(data)
+		tunnels += ","
 	}
+	tunnels = tunnels[:len(tunnels)-1]
 	return
 }
 
@@ -157,7 +161,7 @@ func m3(c *gin.Context) {
 	countnum, _ := strconv.Atoi(count.(string))
 	infotype, _ := c.Get("infotype")
 
-	var info []string
+	var info string
 	switch infotype {
 	case "road":
 		info = RoadQuery(countnum)
@@ -207,26 +211,24 @@ func main() {
 		infoGroup.Use(middleware.Cors(), m1)
 
 		infoGroup.GET("/:infotype/:count", m3, func(c *gin.Context) {
-			info := c.GetStringSlice("info")
-			//roads := c.GetString("roads")
+			info := c.GetString("info")
 			key := "/" + c.Param("infotype") + "/" + c.Param("count")
 
-			var x = []byte{}
+			//var x = []byte{}
 
-			for i, l := 0, len(info); i < l; i++ {
-				b := []byte(info[i])
-				for j := 0; j < len(b); j++ {
-					x = append(x, b[j])
-				}
-			}
+			//for i, l := 0, len(info); i < l; i++ {
+			//	b := []byte(info[i])
+			//	for j := 0; j < len(b); j++ {
+			//		x = append(x, b[j])
+			//	}
+			//}
 
 			c.JSON(http.StatusOK, info)
 			c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
 			c.Request.Method = http.MethodPut
-			c.Request.Body = ioutil.NopCloser(bytes.NewReader(x))
+			c.Request.Body = ioutil.NopCloser(bytes.NewReader([]byte(info)))
 
 			r.HandleContext(c) //继续之后的操作
-
 		})
 	}
 
