@@ -1,0 +1,1306 @@
+2021-04-07 16:25:44,669 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-04-07 16:25:44,690 INFO o.a.j.JMeter: Loading user properties from: /opt/jmeter/bin/user.properties
+2021-04-07 16:25:44,691 INFO o.a.j.JMeter: Loading system properties from: /opt/jmeter/bin/system.properties
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: Version 5.4.1
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: java.version=1.8.0_282
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: os.name=Linux
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: os.arch=amd64
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: os.version=5.11.11-arch1-1
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: file.encoding=UTF-8
+2021-04-07 16:25:44,702 INFO o.a.j.JMeter: java.awt.headless=null
+2021-04-07 16:25:44,703 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-04-07 16:25:44,703 INFO o.a.j.JMeter: Available Processors =8
+2021-04-07 16:25:44,709 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-04-07 16:25:44,710 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-04-07 16:25:44,710 INFO o.a.j.JMeter: JMeterHome=/opt/jmeter
+2021-04-07 16:25:44,710 INFO o.a.j.JMeter: user.dir  =/home/eintr/Projects/WEB-Project
+2021-04-07 16:25:44,710 INFO o.a.j.JMeter: PWD       =/home/eintr/Projects/WEB-Project
+2021-04-07 16:25:44,711 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: magicbook FullName: localhost
+2021-04-07 16:25:44,869 INFO o.a.j.JMeter: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2021-04-07 16:25:45,518 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-04-07 16:26:27,683 INFO o.a.j.s.FileServer: Default base='/home/eintr/Projects/WEB-Project'
+2021-04-07 16:26:27,688 INFO o.a.j.g.a.Load: Loading file: /home/eintr/HTTP请求.jmx
+2021-04-07 16:26:27,688 INFO o.a.j.s.FileServer: Set new base='/home/eintr'
+2021-04-07 16:26:27,896 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-04-07 16:26:27,916 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-04-07 16:26:27,918 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-04-07 16:26:27,922 INFO o.a.j.s.SaveService: Loading file: /home/eintr/HTTP请求.jmx
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2021-04-07 16:26:27,963 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2021-04-07 16:26:28,237 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-04-07 16:26:28,237 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-04-07 16:26:28,237 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-04-07 16:26:28,237 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-04-07 16:26:28,463 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-04-07 16:26:28,551 INFO o.a.j.s.FileServer: Set new base='/home/eintr'
+2021-04-07 16:26:36,179 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 16:26:36,181 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 16:26:36,181 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 16:26:36,185 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2021-04-07 16:26:36,185 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2021-04-07 16:26:36,520 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 16:26:36,691 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 16:26:36,692 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 16:26:36,692 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 16:26:36,692 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 16:26:36,702 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 16:26:36,716 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 16:26:36,734 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = magicbook
+2021-04-07 16:26:36,735 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 16:26:36,751 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2021-04-07 16:26:36,751 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 16:26:36,752 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 16:26:36,761 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 16:26:36,780 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 16:26:36,800 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 16:26:36,818 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 16:26:36,837 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 16:26:36,856 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 16:26:36,876 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 16:26:36,900 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 16:26:36,924 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 16:26:36,933 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 16:26:36,954 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 16:26:36,962 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 16:26:36,962 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 16:26:36,962 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 16:26:36,961 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 16:26:36,962 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 16:26:36,962 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 16:26:36,965 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 16:26:36,965 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 16:26:36,965 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 16:26:36,965 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 16:26:36,966 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 16:26:36,966 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 16:26:36,966 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 16:26:36,967 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 16:26:36,967 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 16:26:36,967 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 16:26:36,967 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 16:26:36,968 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 16:26:36,969 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 16:26:36,969 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 16:26:36,974 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 16:26:36,979 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 16:26:36,979 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 16:26:36,993 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 16:26:36,998 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 16:26:36,998 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 16:26:37,013 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 16:26:37,017 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 16:26:37,018 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 16:26:37,034 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 16:26:37,039 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 16:26:37,039 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 16:26:37,059 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 16:26:37,063 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 16:26:37,063 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 16:26:37,073 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 16:26:37,078 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 16:26:37,078 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 16:26:37,094 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 16:26:37,099 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 16:26:37,099 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 16:26:37,113 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 16:26:37,119 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 16:26:37,119 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 16:26:37,137 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 16:26:37,140 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 16:26:37,140 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 16:26:37,153 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 16:26:37,157 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 16:26:37,157 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 16:26:37,173 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 16:26:37,177 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 16:26:37,178 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 16:26:37,193 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 16:26:37,197 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 16:26:37,197 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 16:26:37,214 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 16:26:37,218 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 16:26:37,219 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 16:26:37,233 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 16:26:37,237 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 16:26:37,237 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 16:26:37,253 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 16:26:37,258 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 16:26:37,259 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 16:26:37,273 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 16:26:37,279 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 16:26:37,279 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 16:26:37,293 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 16:26:37,297 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 16:26:37,298 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 16:26:37,312 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 16:26:37,316 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 16:26:37,316 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 16:26:37,333 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 16:26:37,339 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 16:26:37,340 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 16:26:37,353 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 16:26:37,358 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 16:26:37,359 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 16:26:37,373 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 16:26:37,377 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 16:26:37,377 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 16:26:37,393 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 16:26:37,398 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 16:26:37,399 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 16:26:37,413 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 16:26:37,416 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 16:26:37,416 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 16:26:37,438 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 16:26:37,443 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 16:26:37,443 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 16:26:37,453 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 16:26:37,456 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 16:26:37,456 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 16:26:37,473 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 16:26:37,476 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 16:26:37,477 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 16:26:37,493 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 16:26:37,496 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 16:26:37,496 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 16:26:37,513 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 16:26:37,516 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 16:26:37,516 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 16:26:37,533 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 16:26:37,536 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 16:26:37,536 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 16:26:37,553 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 16:26:37,557 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 16:26:37,558 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 16:26:37,573 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 16:26:37,577 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 16:26:37,577 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 16:26:37,593 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 16:26:37,596 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 16:26:37,597 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 16:26:37,613 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 16:26:37,618 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 16:26:37,619 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 16:26:37,637 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 16:26:37,642 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 16:26:37,642 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 16:26:37,653 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 16:26:37,659 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 16:26:37,660 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 16:26:37,673 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 16:26:37,682 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 16:26:37,683 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 16:26:37,684 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 16:26:37,685 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 16:27:06,640 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 16:27:06,641 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 16:27:06,642 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 16:27:06,803 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 16:27:06,803 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 16:27:06,804 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 16:27:06,804 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 16:27:06,805 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 16:27:06,825 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 16:27:06,832 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 16:27:06,832 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 16:27:06,845 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 16:27:06,865 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 16:27:06,885 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 16:27:06,906 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 16:27:06,926 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 16:27:06,945 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 16:27:06,965 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 16:27:06,985 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 16:27:07,005 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 16:27:07,025 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 16:27:07,046 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 16:27:07,065 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 16:27:07,085 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 16:27:07,108 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 16:27:07,126 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 16:27:07,145 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 16:27:07,167 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 16:27:07,184 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 16:27:07,206 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 16:27:07,226 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 16:27:07,244 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 16:27:07,265 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 16:27:07,285 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 16:27:07,305 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 16:27:07,325 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 16:27:07,345 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 16:27:07,365 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 16:27:07,385 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 16:27:07,404 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 16:27:07,425 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 16:27:07,446 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 16:27:07,465 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 16:27:07,488 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 16:27:07,505 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 16:27:07,525 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 16:27:07,545 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 16:27:07,565 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 16:27:07,584 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 16:27:07,605 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 16:27:07,630 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 16:27:07,645 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 16:27:07,665 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 16:27:07,685 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 16:27:07,705 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 16:27:07,725 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 16:27:07,745 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 16:27:07,765 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 16:27:07,785 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 16:27:11,670 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 16:27:11,670 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 16:27:11,692 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 16:27:11,693 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 16:27:11,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 16:27:11,694 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 16:27:11,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 16:27:11,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 16:27:11,697 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 16:27:11,697 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 16:27:11,729 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 16:27:11,729 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 16:27:11,735 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 16:27:11,736 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 16:27:11,830 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 16:27:11,831 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 16:27:11,959 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 16:27:11,960 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 16:27:11,982 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 16:27:11,982 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 16:27:12,079 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 16:27:12,079 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 16:27:12,112 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 16:27:12,113 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 16:27:12,281 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 16:27:12,281 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 16:27:12,281 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 16:27:12,281 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 16:27:12,302 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 16:27:12,302 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 16:27:12,333 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 16:27:12,333 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 16:27:12,333 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 16:27:12,333 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 16:27:13,688 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 16:27:13,689 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 16:27:13,826 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 16:27:13,826 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 16:27:13,861 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 16:27:13,862 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 16:27:13,936 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 16:27:13,936 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 16:27:14,185 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 16:27:14,186 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 16:27:14,256 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 16:27:14,256 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 16:27:14,298 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 16:27:14,298 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 16:27:14,300 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 16:27:14,301 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 16:27:14,303 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 16:27:14,303 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 16:27:14,312 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 16:27:14,313 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 16:27:14,313 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 16:27:14,313 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 16:27:14,316 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 16:27:14,316 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 16:27:14,319 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 16:27:14,319 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 16:27:14,331 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 16:27:14,331 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 16:27:14,508 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 16:27:14,508 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 16:27:14,508 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 16:27:14,508 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 16:27:14,511 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 16:27:14,511 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 16:27:14,520 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 16:27:14,520 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 16:27:14,524 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 16:27:14,524 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 16:27:14,536 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 16:27:14,536 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 16:27:14,541 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 16:27:14,541 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 16:27:14,562 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 16:27:14,562 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 16:27:14,570 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 16:27:14,570 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 16:27:14,613 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 16:27:14,613 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 16:27:14,628 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 16:27:14,628 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 16:27:14,653 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 16:27:14,653 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 16:27:14,654 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 16:27:14,655 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 16:27:14,679 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 16:27:14,679 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 16:27:14,692 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 16:27:14,692 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 16:27:14,698 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 16:27:14,698 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 16:27:14,698 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 16:27:14,698 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 16:27:14,700 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 16:27:14,700 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 16:27:14,715 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 16:27:14,715 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 16:27:14,715 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 16:27:14,715 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 16:27:18,752 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 16:27:18,752 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 16:27:18,753 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 16:27:18,901 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 16:27:18,901 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 16:27:18,901 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 16:27:18,901 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 16:27:18,903 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 16:27:18,915 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 16:27:18,915 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 16:27:18,921 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 16:27:18,921 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 16:27:18,922 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 16:27:18,930 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 16:27:18,931 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 16:27:18,942 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 16:27:18,949 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 16:27:18,950 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 16:27:18,963 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 16:27:18,971 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 16:27:18,972 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 16:27:18,982 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 16:27:18,992 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 16:27:18,992 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 16:27:19,002 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 16:27:19,015 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 16:27:19,015 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 16:27:19,023 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 16:27:19,035 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 16:27:19,036 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 16:27:19,043 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 16:27:19,051 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 16:27:19,051 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 16:27:19,063 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 16:27:19,071 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 16:27:19,071 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 16:27:19,082 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 16:27:19,094 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 16:27:19,094 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 16:27:19,102 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 16:27:19,112 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 16:27:19,113 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 16:27:19,123 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 16:27:19,132 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 16:27:19,132 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 16:27:19,142 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 16:27:19,149 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 16:27:19,150 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 16:27:19,162 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 16:27:19,173 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 16:27:19,173 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 16:27:19,181 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 16:27:19,192 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 16:27:19,192 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 16:27:19,202 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 16:27:19,213 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 16:27:19,214 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 16:27:19,222 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 16:27:19,233 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 16:27:19,233 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 16:27:19,242 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 16:27:19,256 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 16:27:19,256 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 16:27:19,261 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 16:27:19,269 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 16:27:19,269 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 16:27:19,282 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 16:27:19,293 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 16:27:19,294 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 16:27:19,302 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 16:27:19,313 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 16:27:19,313 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 16:27:19,322 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 16:27:19,333 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 16:27:19,334 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 16:27:19,342 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 16:27:19,356 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 16:27:19,356 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 16:27:19,362 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 16:27:19,374 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 16:27:19,374 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 16:27:19,381 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 16:27:19,389 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 16:27:19,389 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 16:27:19,402 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 16:27:19,412 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 16:27:19,412 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 16:27:19,422 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 16:27:19,434 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 16:27:19,434 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 16:27:19,442 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 16:27:19,453 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 16:27:19,453 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 16:27:19,462 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 16:27:19,473 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 16:27:19,473 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 16:27:19,481 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 16:27:19,493 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 16:27:19,493 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 16:27:19,502 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 16:27:19,517 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 16:27:19,517 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 16:27:19,522 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 16:27:19,530 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 16:27:19,530 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 16:27:19,541 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 16:27:19,553 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 16:27:19,553 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 16:27:19,562 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 16:27:19,574 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 16:27:19,574 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 16:27:19,582 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 16:27:19,596 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 16:27:19,596 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 16:27:19,601 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 16:27:19,613 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 16:27:19,613 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 16:27:19,621 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 16:27:19,631 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 16:27:19,631 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 16:27:19,642 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 16:27:19,653 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 16:27:19,654 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 16:27:19,662 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 16:27:19,673 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 16:27:19,673 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 16:27:19,682 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 16:27:19,693 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 16:27:19,693 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 16:27:19,701 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 16:27:19,712 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 16:27:19,712 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 16:27:19,721 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 16:27:19,733 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 16:27:19,733 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 16:27:19,741 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 16:27:19,752 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 16:27:19,753 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 16:27:19,762 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 16:27:19,772 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 16:27:19,772 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 16:27:19,782 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 16:27:19,789 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 16:27:19,789 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 16:27:19,801 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 16:27:19,810 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 16:27:19,810 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 16:27:19,821 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 16:27:19,832 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 16:27:19,833 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 16:27:19,842 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 16:27:19,850 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 16:27:19,850 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 16:27:19,862 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 16:27:19,869 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 16:27:19,869 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 16:27:19,881 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 16:27:19,892 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 16:27:19,892 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 16:27:19,893 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 16:27:19,893 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:10:09,891 ERROR o.a.j.g.a.Save: Could not backup file! Backup directory does not exist, is not a directory or could not be created ! </opt/jmeter/backups>
+2021-04-07 17:10:09,908 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:10:09,908 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:10:09,909 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:10:09,920 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:10:09,920 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 17:10:09,920 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:10:09,920 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 17:10:09,921 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:10:09,927 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:10:09,927 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:10:09,940 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:10:09,944 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:10:09,944 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:10:09,947 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:10:09,947 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:10:09,961 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 17:10:09,965 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 17:10:09,965 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 17:10:09,981 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 17:10:09,985 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 17:10:09,985 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 17:10:10,001 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 17:10:10,006 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 17:10:10,006 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 17:10:10,021 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 17:10:10,025 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 17:10:10,025 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 17:10:10,041 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 17:10:10,045 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 17:10:10,045 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 17:10:10,061 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 17:10:10,064 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 17:10:10,064 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 17:10:10,082 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 17:10:10,086 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 17:10:10,086 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 17:10:10,101 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 17:10:10,104 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 17:10:10,105 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 17:10:10,122 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 17:10:10,127 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 17:10:10,128 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 17:10:10,141 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 17:10:10,145 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 17:10:10,145 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 17:10:10,160 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 17:10:10,164 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 17:10:10,164 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 17:10:10,180 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 17:10:10,184 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 17:10:10,184 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 17:10:10,201 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 17:10:10,205 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 17:10:10,205 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 17:10:10,221 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 17:10:10,225 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 17:10:10,225 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 17:10:10,240 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 17:10:10,244 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 17:10:10,244 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 17:10:10,261 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 17:10:10,264 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 17:10:10,264 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 17:10:10,281 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 17:10:10,284 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 17:10:10,284 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 17:10:10,301 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 17:10:10,304 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 17:10:10,304 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 17:10:10,320 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 17:10:10,325 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 17:10:10,326 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 17:10:10,340 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 17:10:10,346 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 17:10:10,346 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 17:10:10,361 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 17:10:10,369 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 17:10:10,369 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 17:10:10,381 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 17:10:10,384 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 17:10:10,384 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 17:10:10,400 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 17:10:10,404 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 17:10:10,404 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 17:10:10,420 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 17:10:10,425 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 17:10:10,425 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 17:10:10,441 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 17:10:10,445 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 17:10:10,445 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 17:10:10,461 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 17:10:10,465 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 17:10:10,465 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 17:10:10,480 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 17:10:10,484 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 17:10:10,484 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 17:10:10,500 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 17:10:10,506 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 17:10:10,506 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 17:10:10,522 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 17:10:10,526 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 17:10:10,526 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 17:10:10,541 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 17:10:10,545 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 17:10:10,545 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 17:10:10,567 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 17:10:10,571 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 17:10:10,571 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 17:10:10,581 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 17:10:10,585 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 17:10:10,585 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 17:10:10,601 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 17:10:10,604 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 17:10:10,604 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 17:10:10,621 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 17:10:10,626 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 17:10:10,626 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 17:10:10,641 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 17:10:10,645 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 17:10:10,645 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 17:10:10,663 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 17:10:10,666 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 17:10:10,666 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 17:10:10,681 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 17:10:10,686 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 17:10:10,686 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 17:10:10,701 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 17:10:10,704 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 17:10:10,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 17:10:10,721 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 17:10:10,726 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 17:10:10,726 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 17:10:10,741 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 17:10:10,746 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 17:10:10,746 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 17:10:10,760 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 17:10:10,769 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 17:10:10,769 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 17:10:10,781 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 17:10:10,786 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 17:10:10,786 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 17:10:10,801 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 17:10:10,805 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 17:10:10,806 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 17:10:10,820 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 17:10:10,825 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 17:10:10,826 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 17:10:10,840 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 17:10:10,845 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 17:10:10,845 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 17:10:10,861 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 17:10:10,865 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 17:10:10,865 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 17:10:10,881 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 17:10:10,884 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 17:10:10,884 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 17:10:10,901 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 17:10:10,906 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 17:10:10,906 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 17:10:10,906 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:10:10,907 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:10:27,310 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:10:27,310 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:10:27,311 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:10:27,480 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:10:27,481 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 17:10:27,481 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:10:27,481 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 17:10:27,482 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:10:27,487 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:10:27,487 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:10:27,501 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:10:27,501 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:10:27,502 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:10:27,506 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:10:27,506 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:10:27,522 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 17:10:27,526 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 17:10:27,526 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 17:10:27,542 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 17:10:27,545 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 17:10:27,545 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 17:10:27,563 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 17:10:27,566 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 17:10:27,566 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 17:10:27,582 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 17:10:27,587 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 17:10:27,587 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 17:10:27,601 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 17:10:27,607 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 17:10:27,607 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 17:10:27,622 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 17:10:27,626 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 17:10:27,626 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 17:10:27,642 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 17:10:27,646 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 17:10:27,646 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 17:10:27,662 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 17:10:27,665 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 17:10:27,665 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 17:10:27,682 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 17:10:27,686 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 17:10:27,686 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 17:10:27,701 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 17:10:27,705 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 17:10:27,705 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 17:10:27,721 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 17:10:27,725 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 17:10:27,726 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 17:10:27,741 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 17:10:27,744 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 17:10:27,745 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 17:10:27,762 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 17:10:27,769 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 17:10:27,769 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 17:10:27,782 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 17:10:27,785 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 17:10:27,785 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 17:10:27,802 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 17:10:27,806 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 17:10:27,807 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 17:10:27,821 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 17:10:27,825 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 17:10:27,825 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 17:10:27,842 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 17:10:27,845 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 17:10:27,845 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 17:10:27,862 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 17:10:27,865 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 17:10:27,866 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 17:10:27,882 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 17:10:27,886 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 17:10:27,886 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 17:10:27,901 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 17:10:27,904 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 17:10:27,904 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 17:10:27,921 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 17:10:27,925 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 17:10:27,925 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 17:10:27,942 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 17:10:27,945 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 17:10:27,945 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 17:10:27,962 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 17:10:27,966 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 17:10:27,966 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 17:10:27,981 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 17:10:27,990 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 17:10:27,990 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 17:10:28,001 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 17:10:28,009 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 17:10:28,009 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 17:10:28,022 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 17:10:28,027 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 17:10:28,027 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 17:10:28,042 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 17:10:28,045 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 17:10:28,045 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 17:10:28,062 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 17:10:28,066 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 17:10:28,066 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 17:10:28,081 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 17:10:28,085 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 17:10:28,085 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 17:10:28,102 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 17:10:28,107 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 17:10:28,107 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 17:10:28,122 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 17:10:28,129 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 17:10:28,129 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 17:10:28,142 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 17:10:28,147 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 17:10:28,147 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 17:10:28,161 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 17:10:28,166 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 17:10:28,166 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 17:10:28,182 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 17:10:28,187 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 17:10:28,187 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 17:10:28,203 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 17:10:28,209 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 17:10:28,209 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 17:10:28,222 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 17:10:28,229 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 17:10:28,229 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 17:10:28,242 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 17:10:28,246 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 17:10:28,246 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 17:10:28,261 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 17:10:28,264 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 17:10:28,265 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 17:10:28,282 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 17:10:28,286 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 17:10:28,286 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 17:10:28,303 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 17:10:28,307 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 17:10:28,307 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 17:10:28,322 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 17:10:28,330 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 17:10:28,330 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 17:10:28,344 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 17:10:28,347 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 17:10:28,348 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 17:10:28,364 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 17:10:28,367 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 17:10:28,368 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 17:10:28,386 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 17:10:28,391 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 17:10:28,392 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 17:10:28,402 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 17:10:28,407 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 17:10:28,407 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 17:10:28,421 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 17:10:28,425 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 17:10:28,425 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 17:10:28,442 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 17:10:28,446 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 17:10:28,446 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 17:10:28,462 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 17:10:28,466 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 17:10:28,466 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 17:10:28,467 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:10:28,467 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:11:16,578 ERROR o.a.j.g.a.Save: Could not backup file! Backup directory does not exist, is not a directory or could not be created ! </opt/jmeter/backups>
+2021-04-07 17:11:16,587 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:11:16,587 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:11:16,588 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:11:16,744 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:11:16,745 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 17:11:16,745 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:11:16,745 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 17:11:16,745 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:11:16,766 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:11:16,787 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 17:11:16,791 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:11:16,791 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:11:16,806 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 17:11:16,826 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 17:11:16,851 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 17:11:16,871 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 17:11:16,886 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 17:11:16,907 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 17:11:16,926 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 17:11:16,958 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 17:11:16,966 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 17:11:16,986 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 17:11:17,006 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 17:11:17,026 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 17:11:17,045 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 17:11:17,065 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 17:11:17,086 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 17:11:17,107 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 17:11:17,125 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 17:11:17,146 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 17:11:17,166 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 17:11:17,185 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 17:11:17,205 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 17:11:17,225 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 17:11:17,246 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 17:11:17,266 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 17:11:17,285 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 17:11:17,306 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 17:11:17,326 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 17:11:17,345 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 17:11:17,366 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 17:11:17,386 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 17:11:17,406 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 17:11:17,425 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 17:11:17,446 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 17:11:17,466 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 17:11:17,485 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 17:11:17,506 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 17:11:17,526 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 17:11:17,551 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 17:11:17,567 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 17:11:17,586 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 17:11:17,607 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 17:11:17,627 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 17:11:17,648 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 17:11:17,667 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 17:11:17,686 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 17:11:17,707 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 17:11:17,726 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 17:11:17,861 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 17:11:17,861 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 17:11:18,064 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 17:11:18,064 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:11:18,064 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 17:11:18,064 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:11:18,270 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 17:11:18,270 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 17:11:18,270 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 17:11:18,270 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 17:11:18,270 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 17:11:18,272 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 17:11:18,272 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 17:11:18,272 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:11:18,272 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:11:18,272 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 17:11:18,273 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 17:11:18,271 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 17:11:18,273 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 17:11:18,274 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 17:11:18,380 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 17:11:18,380 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 17:11:18,380 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 17:11:18,380 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 17:11:18,459 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 17:11:18,459 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 17:11:18,459 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 17:11:18,459 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 17:11:18,466 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 17:11:18,533 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 17:11:18,533 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 17:11:18,555 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 17:11:18,556 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 17:11:18,556 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 17:11:18,564 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 17:11:18,564 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 17:11:18,564 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 17:11:18,564 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 17:11:18,568 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 17:11:18,568 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 17:11:18,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 17:11:18,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 17:11:18,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 17:11:18,694 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 17:11:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 17:11:18,701 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 17:11:18,701 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 17:11:18,703 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 17:11:18,703 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 17:11:18,703 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 17:11:18,703 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 17:11:18,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 17:11:18,703 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 17:11:18,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 17:11:18,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 17:11:18,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 17:11:18,704 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 17:11:18,790 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 17:11:18,790 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 17:11:18,790 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 17:11:18,790 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 17:11:18,790 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:11:18,790 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:11:54,933 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:11:54,934 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:11:54,935 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:11:55,086 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:11:55,086 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group 缓存接口测试.
+2021-04-07 17:11:55,086 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:11:55,086 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=1 delayedStart=false
+2021-04-07 17:11:55,087 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:11:55,107 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:11:55,125 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:11:55,125 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:11:55,127 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-3
+2021-04-07 17:11:55,147 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-4
+2021-04-07 17:11:55,167 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-5
+2021-04-07 17:11:55,187 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-6
+2021-04-07 17:11:55,208 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-7
+2021-04-07 17:11:55,227 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-8
+2021-04-07 17:11:55,248 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-9
+2021-04-07 17:11:55,270 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-10
+2021-04-07 17:11:55,287 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-11
+2021-04-07 17:11:55,308 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-12
+2021-04-07 17:11:55,334 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-13
+2021-04-07 17:11:55,348 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-14
+2021-04-07 17:11:55,366 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-15
+2021-04-07 17:11:55,387 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-16
+2021-04-07 17:11:55,408 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-17
+2021-04-07 17:11:55,426 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-18
+2021-04-07 17:11:55,447 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-19
+2021-04-07 17:11:55,467 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-20
+2021-04-07 17:11:55,486 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-21
+2021-04-07 17:11:55,506 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-22
+2021-04-07 17:11:55,527 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-23
+2021-04-07 17:11:55,547 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-24
+2021-04-07 17:11:55,568 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-25
+2021-04-07 17:11:55,586 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-26
+2021-04-07 17:11:55,606 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-27
+2021-04-07 17:11:55,626 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-28
+2021-04-07 17:11:55,647 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-29
+2021-04-07 17:11:55,667 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-30
+2021-04-07 17:11:55,686 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-31
+2021-04-07 17:11:55,706 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-32
+2021-04-07 17:11:55,720 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-31
+2021-04-07 17:11:55,720 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-26
+2021-04-07 17:11:55,720 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-31
+2021-04-07 17:11:55,720 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-26
+2021-04-07 17:11:55,721 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-29
+2021-04-07 17:11:55,721 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-29
+2021-04-07 17:11:55,721 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-17
+2021-04-07 17:11:55,721 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-17
+2021-04-07 17:11:55,721 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-24
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-24
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-32
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-32
+2021-04-07 17:11:55,724 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-4
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-4
+2021-04-07 17:11:55,724 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-11
+2021-04-07 17:11:55,724 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-8
+2021-04-07 17:11:55,724 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-14
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-11
+2021-04-07 17:11:55,723 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-5
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-8
+2021-04-07 17:11:55,723 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-9
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-9
+2021-04-07 17:11:55,723 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-6
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-6
+2021-04-07 17:11:55,725 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-5
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-25
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-27
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-25
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-30
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-30
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:11:55,726 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-33
+2021-04-07 17:11:55,727 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-12
+2021-04-07 17:11:55,727 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-7
+2021-04-07 17:11:55,727 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-12
+2021-04-07 17:11:55,727 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-28
+2021-04-07 17:11:55,727 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-28
+2021-04-07 17:11:55,728 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-23
+2021-04-07 17:11:55,728 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-19
+2021-04-07 17:11:55,728 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-23
+2021-04-07 17:11:55,728 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-3
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-3
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-20
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-15
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-20
+2021-04-07 17:11:55,730 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-33
+2021-04-07 17:11:55,730 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-33
+2021-04-07 17:11:55,730 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-21
+2021-04-07 17:11:55,730 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-21
+2021-04-07 17:11:55,728 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-16
+2021-04-07 17:11:55,732 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-7
+2021-04-07 17:11:55,732 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-16
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-27
+2021-04-07 17:11:55,732 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-15
+2021-04-07 17:11:55,729 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-19
+2021-04-07 17:11:55,732 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-18
+2021-04-07 17:11:55,733 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-18
+2021-04-07 17:11:55,733 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:11:55,733 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:11:55,735 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-14
+2021-04-07 17:11:55,735 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-22
+2021-04-07 17:11:55,735 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-10
+2021-04-07 17:11:55,737 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-10
+2021-04-07 17:11:55,737 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-22
+2021-04-07 17:11:55,736 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-13
+2021-04-07 17:11:55,737 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-13
+2021-04-07 17:11:55,747 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-34
+2021-04-07 17:11:55,749 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-34
+2021-04-07 17:11:55,750 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-34
+2021-04-07 17:11:55,767 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-35
+2021-04-07 17:11:55,770 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-35
+2021-04-07 17:11:55,770 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-35
+2021-04-07 17:11:55,786 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-36
+2021-04-07 17:11:55,789 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-36
+2021-04-07 17:11:55,789 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-36
+2021-04-07 17:11:55,809 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-37
+2021-04-07 17:11:55,812 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-37
+2021-04-07 17:11:55,812 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-37
+2021-04-07 17:11:55,827 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-38
+2021-04-07 17:11:55,830 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-38
+2021-04-07 17:11:55,830 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-38
+2021-04-07 17:11:55,846 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-39
+2021-04-07 17:11:55,849 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-39
+2021-04-07 17:11:55,849 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-39
+2021-04-07 17:11:55,867 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-40
+2021-04-07 17:11:55,870 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-40
+2021-04-07 17:11:55,870 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-40
+2021-04-07 17:11:55,887 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-41
+2021-04-07 17:11:55,890 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-41
+2021-04-07 17:11:55,890 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-41
+2021-04-07 17:11:55,906 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-42
+2021-04-07 17:11:55,909 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-42
+2021-04-07 17:11:55,909 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-42
+2021-04-07 17:11:55,927 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-43
+2021-04-07 17:11:55,929 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-43
+2021-04-07 17:11:55,929 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-43
+2021-04-07 17:11:55,947 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-44
+2021-04-07 17:11:55,950 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-44
+2021-04-07 17:11:55,950 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-44
+2021-04-07 17:11:55,966 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-45
+2021-04-07 17:11:55,969 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-45
+2021-04-07 17:11:55,969 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-45
+2021-04-07 17:11:55,996 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-46
+2021-04-07 17:11:55,999 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-46
+2021-04-07 17:11:55,999 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-46
+2021-04-07 17:11:56,007 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-47
+2021-04-07 17:11:56,010 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-47
+2021-04-07 17:11:56,010 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-47
+2021-04-07 17:11:56,029 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-48
+2021-04-07 17:11:56,032 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-48
+2021-04-07 17:11:56,032 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-48
+2021-04-07 17:11:56,047 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-49
+2021-04-07 17:11:56,050 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-49
+2021-04-07 17:11:56,051 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-49
+2021-04-07 17:11:56,066 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-50
+2021-04-07 17:11:56,069 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-50
+2021-04-07 17:11:56,069 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-50
+2021-04-07 17:11:56,069 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:11:56,069 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:12:10,767 ERROR o.a.j.g.a.Save: Could not backup file! Backup directory does not exist, is not a directory or could not be created ! </opt/jmeter/backups>
+2021-04-07 17:12:10,789 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:12:10,789 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:12:10,790 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:12:10,962 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:12:10,962 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:12:10,964 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:12:10,964 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:12:10,966 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:12:10,970 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:12:10,970 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:12:10,970 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:12:10,970 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:12:11,468 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:12:11,479 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:12:11,480 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:12:11,480 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:12:11,480 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:12:17,130 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:12:17,130 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:12:17,131 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:12:17,268 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:12:17,268 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:12:17,268 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:12:17,268 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:12:17,269 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:12:17,269 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:12:17,269 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:12:17,769 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:12:18,586 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:12:18,586 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:12:18,695 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:12:18,695 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:12:18,695 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:12:18,695 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:12:30,147 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:12:30,147 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:12:30,148 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:12:30,290 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:12:30,290 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:12:30,290 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:12:30,290 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:12:30,291 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:12:30,291 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:12:30,291 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:12:30,792 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:12:31,748 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:12:31,748 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:12:32,197 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:12:32,197 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:12:32,197 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:12:32,197 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:12:37,084 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:12:37,084 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:12:37,085 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:12:37,230 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:12:37,230 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:12:37,230 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:12:37,230 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:12:37,231 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:12:37,231 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:12:37,231 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:12:37,731 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:12:38,344 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:12:38,344 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:12:38,750 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:12:38,750 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:12:38,751 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:12:38,751 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:14:50,542 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:14:50,542 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:14:50,543 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:14:50,703 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:14:50,703 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:14:50,703 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:14:50,703 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:14:50,704 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:14:50,704 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:14:50,704 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:14:51,203 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:15:19,582 INFO o.a.j.g.a.Start: Stopping test
+2021-04-07 17:15:19,594 INFO o.a.j.t.JMeterThread: Stopping: 缓存接口测试 1-2
+2021-04-07 17:15:19,594 WARN o.a.j.t.JMeterThread: Interrupting: 缓存接口测试 1-2 sampler: HTTP请求
+2021-04-07 17:15:19,595 INFO o.a.j.t.JMeterThread: Stopping: 缓存接口测试 1-1
+2021-04-07 17:15:19,595 WARN o.a.j.t.JMeterThread: Interrupting: 缓存接口测试 1-1 sampler: HTTP请求
+2021-04-07 17:15:19,596 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:15:19,597 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:15:19,597 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:15:19,597 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:15:19,597 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:15:19,597 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:15:21,809 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:15:21,809 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:15:21,810 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:15:21,817 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:15:21,817 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:15:21,817 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:15:21,817 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:15:21,818 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:15:21,818 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:15:21,818 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:15:22,318 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:15:43,974 INFO o.a.j.g.a.Start: Stopping test
+2021-04-07 17:15:43,979 INFO o.a.j.t.JMeterThread: Stopping: 缓存接口测试 1-1
+2021-04-07 17:15:43,980 WARN o.a.j.t.JMeterThread: Interrupting: 缓存接口测试 1-1 sampler: HTTP请求
+2021-04-07 17:15:43,983 INFO o.a.j.t.JMeterThread: Stopping: 缓存接口测试 1-2
+2021-04-07 17:15:43,983 WARN o.a.j.t.JMeterThread: Interrupting: 缓存接口测试 1-2 sampler: HTTP请求
+2021-04-07 17:15:43,985 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:15:43,985 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:15:43,985 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:15:43,985 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:15:43,986 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:15:43,986 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2021-04-07 17:15:51,274 ERROR o.a.j.g.a.Save: Could not backup file! Backup directory does not exist, is not a directory or could not be created ! </opt/jmeter/backups>
+2021-04-07 17:15:51,279 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-04-07 17:15:51,279 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-04-07 17:15:51,280 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2021-04-07 17:15:51,288 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 缓存接口测试
+2021-04-07 17:15:51,288 INFO o.a.j.e.StandardJMeterEngine: Starting 2 threads for group 缓存接口测试.
+2021-04-07 17:15:51,288 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-04-07 17:15:51,288 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=2 ramp-up=1 delayedStart=false
+2021-04-07 17:15:51,289 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-04-07 17:15:51,289 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-1
+2021-04-07 17:15:51,289 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-04-07 17:15:51,788 INFO o.a.j.t.JMeterThread: Thread started: 缓存接口测试 1-2
+2021-04-07 17:18:00,198 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-1
+2021-04-07 17:18:00,198 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-1
+2021-04-07 17:18:01,908 INFO o.a.j.t.JMeterThread: Thread is done: 缓存接口测试 1-2
+2021-04-07 17:18:01,908 INFO o.a.j.t.JMeterThread: Thread finished: 缓存接口测试 1-2
+2021-04-07 17:18:01,908 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-04-07 17:18:01,908 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

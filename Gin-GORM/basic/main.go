@@ -20,7 +20,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func Query(count int) (roads []string) {
+func RoadQuery(count int) (roads []string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		log.Fatalln(err)
@@ -61,6 +61,86 @@ func Query(count int) (roads []string) {
 	return
 }
 
+func BridgeQuery(count int) (bridges []string) {
+	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+
+	log.Println("成功连接到数据库!")
+
+	rows, err := db.Query("select `桥梁名称`,`桥梁代码`,`桥梁中心桩号` ,`路线编号`,`路线名称`,`技术等级`,`桥梁全长(米)`,`跨径总长（米）`,`单孔最大跨径(米)`,`桥梁组合)孔*米)`,`桥梁全宽(米)`,`桥面净宽(米)`,`按跨径分类代码`,`按跨径分类类型` from L24a limit ?,1000", count)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	for rows.Next() {
+		var bridge common.L24a
+		rows.Scan(&bridge.Q桥梁名称,
+			&bridge.Q桥梁代码,
+			&bridge.Q桥梁中心桩号,
+			&bridge.Q路线编号,
+			&bridge.Q路线名称,
+			&bridge.Q技术等级,
+			&bridge.Q桥梁全长米,
+			&bridge.Q跨径总长米,
+			&bridge.Q单孔最大跨径米,
+			&bridge.Q跨径组合孔米,
+			&bridge.Q桥梁全宽米,
+			&bridge.Q桥面净宽米,
+			&bridge.Q按跨径分类代码,
+			&bridge.Q按跨径分类类型)
+		data, err := json.Marshal(bridge)
+		if err != nil {
+			log.Println(err)
+		}
+		//roads += string(data)
+		bridges = append(bridges, string(data))
+	}
+	return
+}
+
+func TunnelQuery(count int) (tunnels []string) {
+	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+
+	log.Println("成功连接到数据库!")
+
+	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 limit ?,1000", count)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	for rows.Next() {
+		var tunnel common.L25
+		rows.Scan(
+			&tunnel.S隧道名称,
+			&tunnel.S隧道代码,
+			&tunnel.S隧道中心桩号,
+			&tunnel.S所属路线编号,
+			&tunnel.S所属路线名称,
+			&tunnel.S所属线路技术等级,
+			&tunnel.S隧道长度米,
+			&tunnel.S隧道净宽米,
+			&tunnel.S隧道净高米,
+			&tunnel.S隧道按长度分类代码,
+			&tunnel.S隧道按长度分类)
+		data, err := json.Marshal(tunnel)
+		if err != nil {
+			log.Println(err)
+		}
+		//roads += string(data)
+		tunnels = append(tunnels, string(data))
+	}
+	return
+}
+
 // 获取路径的中间件
 func m1(c *gin.Context) {
 	infotype := c.Param("infotype")
@@ -75,8 +155,19 @@ func m1(c *gin.Context) {
 func m3(c *gin.Context) {
 	count, _ := c.Get("count")
 	countnum, _ := strconv.Atoi(count.(string))
-	roads := Query(countnum)
-	c.Set("roads", roads)
+	infotype, _ := c.Get("infotype")
+
+	var info []string
+	switch infotype {
+	case "road":
+		info = RoadQuery(countnum)
+	case "bridge":
+		info = BridgeQuery(countnum)
+	case "tunnel":
+		info = TunnelQuery(countnum)
+
+	}
+	c.Set("info", info)
 	c.Next()
 }
 
@@ -116,20 +207,20 @@ func main() {
 		infoGroup.Use(middleware.Cors(), m1)
 
 		infoGroup.GET("/:infotype/:count", m3, func(c *gin.Context) {
-			roads := c.GetStringSlice("roads")
+			info := c.GetStringSlice("info")
 			//roads := c.GetString("roads")
 			key := "/" + c.Param("infotype") + "/" + c.Param("count")
 
 			var x = []byte{}
 
-			for i, l := 0, len(roads); i < l; i++ {
-				b := []byte(roads[i])
+			for i, l := 0, len(info); i < l; i++ {
+				b := []byte(info[i])
 				for j := 0; j < len(b); j++ {
 					x = append(x, b[j])
 				}
 			}
 
-			c.JSON(http.StatusOK, roads)
+			c.JSON(http.StatusOK, info)
 			c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
 			c.Request.Method = http.MethodPut
 			c.Request.Body = ioutil.NopCloser(bytes.NewReader(x))
