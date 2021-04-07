@@ -4,11 +4,11 @@ import (
 	"log"
 )
 
-func New(typ string) Cache {
+func New(typ string, ttl int) Cache {
 	var c Cache
 
 	if typ == "inmemory" {
-		c = newInmemoryCache()
+		c = newInmemoryCache(ttl)
 	} else if typ == "rocksdb" {
 		c = newRocksdbCache()
 	}

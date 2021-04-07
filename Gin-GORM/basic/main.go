@@ -29,7 +29,7 @@ func Query(count int) (roads []string) {
 
 	log.Println("成功连接到数据库!")
 
-	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 limit ?,3", count)
+	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 limit ?,1000", count)
 	if err != nil {
 		log.Println(err)
 		return
@@ -85,10 +85,11 @@ func main() {
 
 	//typ := flag.String("type", "rocksdb", "cache type")
 	typ := flag.String("type", "inmemory", "cache type")
+	ttl := flag.Int("ttl", 0, "TTL")
 	flag.Parse()
 	log.Println("type is", *typ)
 
-	c := cache.New(*typ)
+	c := cache.New(*typ, *ttl)
 
 	// 开启缓存服务
 	go tcp.New(c).Listen()
@@ -138,5 +139,5 @@ func main() {
 		})
 	}
 
-	r.Run(":8081")
+	r.Run("0.0.0.0:8081")
 }
