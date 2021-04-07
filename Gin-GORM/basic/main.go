@@ -6,6 +6,8 @@ import (
 	"basic/cache/tcp"
 	"basic/common"
 	"basic/middleware"
+	"bytes"
+	"io/ioutil"
 
 	"database/sql"
 	"encoding/json"
@@ -18,7 +20,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-func Query(count int) (roads string) {
+func Query(count int) (roads []string) {
 	db, err := sql.Open("mysql", "root:123456789@tcp(192.168.23.169:3306)/BigData?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
 		log.Fatalln(err)
@@ -53,7 +55,8 @@ func Query(count int) (roads string) {
 		if err != nil {
 			log.Println(err)
 		}
-		roads += string(data)
+		//roads += string(data)
+		roads = append(roads, string(data))
 	}
 	return
 }
@@ -112,13 +115,23 @@ func main() {
 		infoGroup.Use(middleware.Cors(), m1)
 
 		infoGroup.GET("/:infotype/:count", m3, func(c *gin.Context) {
-			roads, _ := c.Get("roads")
+			roads := c.GetStringSlice("roads")
+			//roads := c.GetString("roads")
 			key := "/" + c.Param("infotype") + "/" + c.Param("count")
 
-			c.JSON(http.StatusOK, roads)
+			var x = []byte{}
 
+			for i, l := 0, len(roads); i < l; i++ {
+				b := []byte(roads[i])
+				for j := 0; j < len(b); j++ {
+					x = append(x, b[j])
+				}
+			}
+
+			c.JSON(http.StatusOK, roads)
 			c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
 			c.Request.Method = http.MethodPut
+			c.Request.Body = ioutil.NopCloser(bytes.NewReader(x))
 
 			r.HandleContext(c) //继续之后的操作
 

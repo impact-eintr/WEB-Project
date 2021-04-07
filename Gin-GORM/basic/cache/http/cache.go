@@ -20,12 +20,12 @@ func (s *Server) CacheCheck(c *gin.Context) {
 
 	if m == http.MethodGet {
 		b, _ := s.Get(key)
-		log.Println(b)
-
 		if len(b) == 0 {
 			c.Set("test", true) //需要查数据库
 			return
 		}
+
+		// 处理一下使其变成[]string
 
 		c.JSON(http.StatusOK, string(b))
 		c.Set("test", false) //不需要查数据库
@@ -34,8 +34,11 @@ func (s *Server) CacheCheck(c *gin.Context) {
 
 	c.JSON(http.StatusMethodNotAllowed, nil)
 }
+
 func (s *Server) UpdateHandler(c *gin.Context) {
 	key := c.Param("key")
+	roads, _ := c.Get("roads")
+	fmt.Println("roads:", roads)
 
 	if key == "" {
 		c.JSON(http.StatusBadRequest, nil)
@@ -45,7 +48,6 @@ func (s *Server) UpdateHandler(c *gin.Context) {
 	m := c.Request.Method
 	if m == http.MethodPut {
 		b, _ := io.ReadAll(c.Request.Body)
-		fmt.Printf("b: %v\n", string(b))
 		if len(b) != 0 {
 			e := s.Set(key, b)
 			if e != nil {
