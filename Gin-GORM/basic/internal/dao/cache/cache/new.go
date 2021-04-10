@@ -10,7 +10,7 @@ func New(typ string, ttl int) Cache {
 	if typ == "inmemory" {
 		c = newInmemoryCache(ttl)
 	} else if typ == "rocksdb" {
-		c = newRocksdbCache()
+		c = newRocksdbCache(ttl)
 	}
 
 	if c == nil {
