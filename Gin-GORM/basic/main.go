@@ -6,8 +6,11 @@ import (
 	"basic/internal/dao/cache/tcp"
 	"basic/internal/dao/list"
 	"basic/internal/middleware"
+	"bytes"
 	"fmt"
+	"io/ioutil"
 	"net"
+	"net/http"
 	"os"
 
 	"flag"
@@ -20,9 +23,20 @@ import (
 )
 
 func main() {
-
 	// 设置默认值
 	viper.SetDefault("ttl", 0)
+
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath("./confs/")
+
+	if err := viper.ReadInConfig(); err != nil {
+		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
+			// 配置文件未找到错误
+		} else {
+			// 配置文件找到后发生了其他错误
+		}
+	}
 
 	r := gin.Default()
 
@@ -40,7 +54,7 @@ func main() {
 
 	cacheGroup := r.Group("/cache")
 	{
-		cacheGroup.Use(middleware.Cors(), m1)
+		cacheGroup.Use(middleware.Cors(), PathParse)
 		cacheGroup.Any("/hit/*key", cachehttp.New(c).CacheCheck, func(c *gin.Context) {
 			miss, _ := c.Get("miss") // 检查是否命中缓存
 			if miss.(bool) {
@@ -55,51 +69,58 @@ func main() {
 
 	infoGroup := r.Group("/info")
 	{
-		infoGroup.Use(middleware.Cors(), m1)
-		infoGroup.GET("/:infotype/:count", m3, func(c *gin.Context) {
+		infoGroup.Use(middleware.Cors(), PathParse)
+		infoGroup.GET("/:infotype/:count", QueryRouter, func(c *gin.Context) {
 			info := c.GetString("info")
+
+			c.JSON(http.StatusOK, info) // 向浏览器返回数据
+
 			key := "/" + c.Param("infotype") + "/" + c.Param("count")
 
-			klen := strconv.Itoa(len(key))
-			vlen := strconv.Itoa(len(info))
-			test := "S" + klen + " " + vlen + " " + key + info
+			if *typ == "rocksdb" {
+				go func(string, string) {
+					klen := strconv.Itoa(len(key))
+					vlen := strconv.Itoa(len(info))
+					test := "S" + klen + " " + vlen + " " + key + info
 
-			serverAddr := "127.0.0.1:9425"
-			tcpAddr, err := net.ResolveTCPAddr("tcp", serverAddr)
-			if err != nil {
-				log.Println(err.Error())
-				os.Exit(1)
+					serverAddr := "127.0.0.1:9425"
+					tcpAddr, err := net.ResolveTCPAddr("tcp", serverAddr)
+					if err != nil {
+						log.Println(err.Error())
+						os.Exit(1)
+					}
+
+					conn, err := net.DialTCP("tcp", nil, tcpAddr)
+					defer conn.Close()
+
+					if err != nil {
+						log.Println(err.Error())
+						os.Exit(1)
+
+					}
+					_, err = conn.Write([]byte(test))
+					if err != nil {
+						log.Println("Write to server failed:", err.Error())
+						os.Exit(1)
+
+					}
+
+					reply := make([]byte, 1024)
+					_, err = conn.Read(reply)
+					if err != nil {
+						log.Println("Write to server failed:", err.Error())
+						os.Exit(1)
+					}
+					fmt.Printf("reply from server:\n%v\n", string(reply))
+
+				}(key, info)
+			} else {
+				c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
+				c.Request.Method = http.MethodPut
+				c.Request.Body = ioutil.NopCloser(bytes.NewReader([]byte(info)))
+
+				r.HandleContext(c) //继续之后的操作
 			}
-
-			conn, err := net.DialTCP("tcp", nil, tcpAddr)
-			defer conn.Close()
-
-			if err != nil {
-				log.Println(err.Error())
-				os.Exit(1)
-
-			}
-			_, err = conn.Write([]byte(test))
-			if err != nil {
-				log.Println("Write to server failed:", err.Error())
-				os.Exit(1)
-
-			}
-
-			reply := make([]byte, 1024)
-			_, err = conn.Read(reply)
-			if err != nil {
-				log.Println("Write to server failed:", err.Error())
-				os.Exit(1)
-			}
-			fmt.Printf("reply from server:\n%v\n", string(reply))
-
-			//c.JSON(http.StatusOK, info)
-			//c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
-			//c.Request.Method = http.MethodPut
-			//c.Request.Body = ioutil.NopCloser(bytes.NewReader([]byte(info)))
-
-			//r.HandleContext(c) //继续之后的操作
 		})
 	}
 
@@ -107,7 +128,7 @@ func main() {
 }
 
 // 获取路径的中间件
-func m1(c *gin.Context) {
+func PathParse(c *gin.Context) {
 	infotype := c.Param("infotype")
 	count := c.Param("count")
 
@@ -117,7 +138,8 @@ func m1(c *gin.Context) {
 	c.Next()
 }
 
-func m3(c *gin.Context) {
+// 处理路由信息的中间件
+func QueryRouter(c *gin.Context) {
 	count, _ := c.Get("count")
 	countnum, _ := strconv.Atoi(count.(string))
 	infotype, _ := c.Get("infotype")

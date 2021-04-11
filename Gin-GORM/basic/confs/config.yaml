@@ -1,0 +1,14 @@
+port: 8081
+
+mysql:
+  host: "192.168.23.169"
+  port: 3306
+  dbname: "BigData"
+
+memcache:
+  port: "9425"
+
+diskcache:
+  port: "9425"
+  cacheDir: "/home/yixingwei/Share/rocksdb"
+
