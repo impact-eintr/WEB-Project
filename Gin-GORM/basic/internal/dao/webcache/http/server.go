@@ -1,7 +1,7 @@
 package http
 
 import (
-	"basic/internal/dao/cache/cache"
+	"basic/internal/dao/webcache/cache"
 )
 
 type Server struct {

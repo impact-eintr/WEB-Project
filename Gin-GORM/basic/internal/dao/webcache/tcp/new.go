@@ -1,7 +1,7 @@
 package tcp
 
 import (
-	"basic/internal/dao/cache/cache"
+	"basic/internal/dao/webcache/cache"
 	"net"
 )
 

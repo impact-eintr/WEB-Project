@@ -1,6 +1,6 @@
 .PHONY: all build run gotool clean help
 
-BINARY="bluebell"
+BINARY="webconsole"
 
 all: gotool build
 

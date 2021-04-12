@@ -1,10 +1,10 @@
 package main
 
 import (
-	"basic/internal/dao/cache/cache"
-	cachehttp "basic/internal/dao/cache/http"
-	"basic/internal/dao/cache/tcp"
 	"basic/internal/dao/list"
+	"basic/internal/dao/webcache/cache"
+	cachehttp "basic/internal/dao/webcache/http"
+	"basic/internal/dao/webcache/tcp"
 	"basic/internal/middleware"
 	"bytes"
 	"fmt"
@@ -37,6 +37,12 @@ func main() {
 			// 配置文件找到后发生了其他错误
 		}
 	}
+
+	// 实时监控配置文件的变化
+	viper.WatchConfig()
+	//viper.OnConfigChange(func(e fsnotifay.Event) {
+
+	//})
 
 	r := gin.Default()
 
