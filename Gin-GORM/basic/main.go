@@ -17,6 +17,7 @@ import (
 	"log"
 	"strconv"
 
+	"github.com/fsnotify/fsnotify"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
@@ -40,19 +41,17 @@ func main() {
 
 	// 实时监控配置文件的变化
 	viper.WatchConfig()
-	//viper.OnConfigChange(func(e fsnotifay.Event) {
-
-	//})
+	viper.OnConfigChange(func(e fsnotify.Event) {
+		log.Println("修改配置文件", e.Name)
+	})
 
 	r := gin.Default()
 
 	typ := flag.String("type", "rocksdb", "cache type")
-	//typ := flag.String("type", "inmemory", "cache type")
 	ttl := flag.Int("ttl", 0, "TTL")
 	flag.Parse()
 	log.Println("type is", *typ)
 
-	//c := cache.New(*typ, *ttl)
 	c := cache.New(*typ, *ttl)
 
 	// 开启缓存服务
@@ -62,8 +61,8 @@ func main() {
 	{
 		cacheGroup.Use(middleware.Cors(), PathParse)
 		cacheGroup.Any("/hit/*key", cachehttp.New(c).CacheCheck, func(c *gin.Context) {
-			miss, _ := c.Get("miss") // 检查是否命中缓存
-			if miss.(bool) {
+			miss := c.GetBool("miss") // 检查是否命中缓存
+			if miss {
 				c.Request.URL.Path = "/info" + c.Param("key") // 将请求的URL修改
 				r.HandleContext(c)                            // 继续之后的操作
 			}
@@ -89,7 +88,7 @@ func main() {
 					vlen := strconv.Itoa(len(info))
 					test := "S" + klen + " " + vlen + " " + key + info
 
-					serverAddr := "127.0.0.1:9425"
+					serverAddr := fmt.Sprintf("127.0.0.1:%s", viper.GetString("diskcache.port"))
 					tcpAddr, err := net.ResolveTCPAddr("tcp", serverAddr)
 					if err != nil {
 						log.Println(err.Error())

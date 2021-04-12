@@ -1,0 +1,18 @@
+{"level":"info","ts":1618232594.7805343,"msg":"Success...","statusCode":"200 OK","url":"http://www.google.com"}
+{"level":"error","ts":1618232594.780746,"msg":"Error fetching url...","url":"www.google.com","error":"Get \"www.google.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618232989.2233553,"msg":"Success...","statusCode":"200 OK","url":"http://www.google.com"}
+{"level":"error","ts":1618232989.223651,"msg":"Error fetching url...","url":"www.google.com","error":"Get \"www.google.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233026.985975,"msg":"Success...","statusCode":"200 OK","url":"http://www.google.com"}
+{"level":"error","ts":1618233026.9861717,"msg":"Error fetching url...","url":"www.google.com","error":"Get \"www.google.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233042.4243178,"msg":"Success...","statusCode":"403 Forbidden","url":"http://www.bilibili.com"}
+{"level":"error","ts":1618233042.4244711,"msg":"Error fetching url...","url":"www.google.com","error":"Get \"www.google.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233053.6540604,"msg":"Success...","statusCode":"403 Forbidden","url":"http://www.bilibili.com"}
+{"level":"error","ts":1618233053.654322,"msg":"Error fetching url...","url":"www.bilibili.com","error":"Get \"www.bilibili.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233057.5356245,"msg":"Success...","statusCode":"403 Forbidden","url":"http://www.bilibili.com"}
+{"level":"error","ts":1618233057.5359411,"msg":"Error fetching url...","url":"www.bilibili.com","error":"Get \"www.bilibili.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233232.064697,"msg":"Success...","statusCode":"403 Forbidden","url":"https://www.bilibili.com"}
+{"level":"error","ts":1618233232.0648258,"msg":"Error fetching url...","url":"www.bilibili.com","error":"Get \"www.bilibili.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618233253.9064314,"msg":"Success...","statusCode":"200 OK","url":"https://www.baidu.com"}
+{"level":"error","ts":1618233253.9067326,"msg":"Error fetching url...","url":"www.baidu.com","error":"Get \"www.baidu.com\": unsupported protocol scheme \"\""}
+{"level":"info","ts":1618234452.4287033,"msg":"Success...","statusCode":"200 OK","url":"https://www.baidu.com"}
+{"level":"error","ts":1618234452.4290833,"msg":"Error fetching url...","url":"www.baidu.com","error":"Get \"www.baidu.com\": unsupported protocol scheme \"\""}
