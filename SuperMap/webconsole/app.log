@@ -1,0 +1,44 @@
+{"level":"INFO","time":"2020-10-14T23:03:45.862+0800","caller":"logger/logger.go:65","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36","errors":"","cost":0.000050819}
+{"level":"DEBUG","time":"2020-10-14T23:10:08.730+0800","caller":"gin_zap_demo/main.go:43","msg":"hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2020-10-14T23:10:08.731+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36","errors":"","cost":0.000434665}
+{"level":"INFO","time":"2021-04-13T16:41:28.233+0800","caller":"logger/logger.go:66","msg":"/","status":404,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000001932}
+{"level":"DEBUG","time":"2021-04-13T16:41:37.800+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:41:37.800+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000041378}
+{"level":"DEBUG","time":"2021-04-13T16:41:39.634+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:41:39.634+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000039869}
+{"level":"DEBUG","time":"2021-04-13T16:41:40.448+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:41:40.448+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045879}
+{"level":"DEBUG","time":"2021-04-13T16:41:41.113+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:41:41.113+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000050266}
+{"level":"DEBUG","time":"2021-04-13T16:41:41.899+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:41:41.899+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000036731}
+{"level":"DEBUG","time":"2021-04-13T16:44:14.278+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:14.278+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000117894}
+{"level":"DEBUG","time":"2021-04-13T16:44:15.569+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:15.569+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045486}
+{"level":"DEBUG","time":"2021-04-13T16:44:24.085+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:24.085+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00006192}
+{"level":"DEBUG","time":"2021-04-13T16:44:24.817+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:24.817+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000056895}
+{"level":"DEBUG","time":"2021-04-13T16:44:36.929+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:36.929+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000083615}
+{"level":"DEBUG","time":"2021-04-13T16:44:37.702+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:37.702+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000076824}
+{"level":"DEBUG","time":"2021-04-13T16:44:38.419+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:38.419+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045613}
+{"level":"DEBUG","time":"2021-04-13T16:44:39.140+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:39.140+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000049197}
+{"level":"DEBUG","time":"2021-04-13T16:44:39.632+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:39.632+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000056687}
+{"level":"DEBUG","time":"2021-04-13T16:44:40.245+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:40.245+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045175}
+{"level":"DEBUG","time":"2021-04-13T16:44:41.821+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:41.821+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045499}
+{"level":"DEBUG","time":"2021-04-13T16:44:42.532+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:42.532+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000040377}
+{"level":"DEBUG","time":"2021-04-13T16:44:43.194+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:43.195+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045093}
+{"level":"DEBUG","time":"2021-04-13T16:44:46.119+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T16:44:46.119+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000039738}
+{"level":"DEBUG","time":"2021-04-13T17:24:11.577+0800","caller":"webconsole/main.go:43","msg":"this is hello func","user":"q1mi","age":18}
+{"level":"INFO","time":"2021-04-13T17:24:11.578+0800","caller":"logger/logger.go:66","msg":"/hello","status":200,"method":"GET","path":"/hello","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000057025}
