@@ -6,15 +6,17 @@ package cache
 #cgo LDFLAGS: -lpthread -lstdc++ -lrocksdb -ldl -lm -O3
 */
 import "C"
-import "github.com/spf13/viper"
-import "runtime"
+import (
+	"basic/global"
+	"runtime"
+)
 
 func newRocksdbCache(ttl int) *rocksdbCache {
 	options := C.rocksdb_options_create()
 	C.rocksdb_options_increase_parallelism(options, C.int(runtime.NumCPU()))
 	C.rocksdb_options_set_create_if_missing(options, 1)
 	var e *C.char
-	db := C.rocksdb_open_with_ttl(options, C.CString(viper.GetString("diskcache.cacheDir")), C.int(ttl), &e)
+	db := C.rocksdb_open_with_ttl(options, C.CString(global.G.CacheConfig.CacheDir), C.int(ttl), &e)
 	if e != nil {
 		panic(C.GoString(e))
 	}

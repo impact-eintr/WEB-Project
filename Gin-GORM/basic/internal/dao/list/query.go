@@ -1,6 +1,7 @@
 package list
 
 import (
+	"basic/global"
 	"basic/internal/model"
 	"fmt"
 
@@ -9,7 +10,6 @@ import (
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/spf13/viper"
 )
 
 func Level(level int) string {
@@ -32,11 +32,13 @@ func Level(level int) string {
 
 func RoadQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
+	log.Println(dbinfo)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)
@@ -84,11 +86,12 @@ func RoadQuery(count int) string {
 
 func BridgeQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)
@@ -136,11 +139,12 @@ func BridgeQuery(count int) string {
 
 func TunnelQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)
@@ -184,11 +188,12 @@ func TunnelQuery(count int) string {
 
 func FQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)
@@ -230,11 +235,12 @@ func FQuery(count int) string {
 
 func MQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)
@@ -278,11 +284,12 @@ func MQuery(count int) string {
 
 func SQuery(count int) string {
 	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		viper.GetString("mysql.user"),
-		viper.GetString("mysql.password"),
-		viper.GetString("mysql.host"),
-		viper.GetInt("mysql.port"),
-		viper.GetString("mysql.dbname"))
+		global.G.MysqlConfig.User,
+		global.G.MysqlConfig.Password,
+		global.G.MysqlConfig.Host,
+		global.G.MysqlConfig.Port,
+		global.G.MysqlConfig.DBname,
+	)
 	db, err := sql.Open("mysql", dbinfo)
 	if err != nil {
 		log.Fatalln(err)

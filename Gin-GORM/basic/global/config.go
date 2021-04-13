@@ -1,10 +1,9 @@
 package global
 
 type Config struct {
-	Port            int             `mapstructrue:"port"`
-	MysqlConfig     MysqlConfig     `mapstructrue:"mysql"`
-	MemCacheConfig  MemCacheConfig  `mapstructrue:"memcache"`
-	DiskCacheConfig DiskCacheConfig `mapstructrue:"diskcache"`
+	Port        int         `mapstructrue:"port"`
+	CacheConfig CacheConfig `mapstructrue:"cache"`
+	MysqlConfig MysqlConfig `mapstructrue:"mysql"`
 }
 
 type MysqlConfig struct {
@@ -15,15 +14,12 @@ type MysqlConfig struct {
 	DBname   string `mapstructrue:"dbname"`
 }
 
-type MemCacheConfig struct {
-	Port int `mapstructrue:"port"`
-	TTL  int `mapstructrue:"tll"`
-}
-
-type DiskCacheConfig struct {
-	Port     int    `mapstructrue:"port"`
-	TTL      int    `mapstructrue:"tll"`
-	CacheDir string `mapstructrue:"cacheDir"`
+type CacheConfig struct {
+	CacheType string `mapstructrue:"cachetype"`
+	Port      int    `mapstructrue:"port"`
+	TTL       int    `mapstructrue:"tll"`
+	CacheDir  string `mapstructrue:"cacheDir"`
 }
 
 // 配置修改后如何不关停？
+var G = new(Config)

@@ -1,66 +1,50 @@
 package main
 
 import (
+	"fmt"
+	"gin_zap_demo/config"
+	"gin_zap_demo/logger"
 	"net/http"
-	"time"
+	"os"
+
+	"go.uber.org/zap"
 
 	"github.com/gin-gonic/gin"
-	"github.com/natefinch/lumberjack"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 )
 
-var logger *zap.Logger
-
 func main() {
+	// load config from config.json
+	if len(os.Args) < 1 {
+		return
+	}
+
+	if err := config.Init(os.Args[1]); err != nil {
+		panic(err)
+	}
+	// init logger
+	if err := logger.InitLogger(config.Conf.LogConfig); err != nil {
+		fmt.Printf("init logger failed, err:%v\n", err)
+		return
+	}
+
+	gin.SetMode(config.Conf.Mode)
+
 	r := gin.Default()
-	r.GET("hello", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "gin",
-		})
-	})
-	r.Run()
-}
+	// 注册zap相关中间件
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
-func InitLogger() {
-	writeSyncer := getLogWriter()
-	encoder := getEncoder()
-	core := zapcore.NewCore(encoder, writeSyncer, zapcore.DebugLevel)
-	logger = zap.New(core)
-}
-
-func getEncoder() zapcore.Encoder {
-	return zapcore.NewJSONEncoder(zap.NewProductionEncoderConfig())
-}
-
-func getLogWriter() zapcore.WriteSyncer {
-	lumberJackLogger := &lumberjack.Logger{
-		Filename:   "./test.log",
-		MaxSize:    10,
-		MaxBackups: 5,
-		MaxAge:     2,
-		Compress:   false,
-	}
-
-	return zapcore.AddSync(lumberJackLogger)
-}
-
-func GinLogger(logger *zap.Logger) gin.HandlerFunc {
-	return func(c *gin.Context) {
-		start := time.Now()
-		path := c.Request.URL.Path
-		query := c.Request.URL.RawQuery
-		c.Next()
-
-		cost := time.Since(start)
-
-		logger.Info(path,
-		zap.Int("status", c.Writer.Status()),
-		zap.String("method", c.Request.Method)),
-		zap.String("path", path)),
-		zap.String("query", query)),
-		zap.String("ip", c.ClientIP())),
-		zap.String("user-agent", c.Request.UserAgent())),
+	r.GET("/hello", func(c *gin.Context) {
+		// 假设你有一些数据需要记录到日志中
+		var (
+			name = "q1mi"
+			age  = 18
 		)
-	}
+		// 记录日志并使用zap.Xxx(key, val)记录相关字段
+		zap.L().Debug("this is hello func", zap.String("user", name), zap.Int("age", age))
+
+		c.String(http.StatusOK, "hello liwenzhou.com")
+	})
+
+	addr := fmt.Sprintf(":%v", config.Conf.Port)
+	r.Run(addr)
 }

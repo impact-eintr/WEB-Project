@@ -1,18 +1,15 @@
 port: 8081
 
+cache:
+  cachetype: "disk"
+  port: 9425
+  cachettl: 0
+  cacheDir: "/home/yixingwei/Share/rocksdb"
+
 mysql:
   host: "192.168.23.169"
   port: 3306
   user: "root"
   password: "123456789"
   dbname: "BigData"
-
-memcache:
-  port: 9425
-  ttl: 0
-
-diskcache:
-  port: 9425
-  ttl: 0
-  cacheDir: "/home/yixingwei/Share/rocksdb1"
 
