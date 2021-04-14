@@ -34,7 +34,7 @@ func InfoRoute(r *gin.Engine) {
 					vlen := strconv.Itoa(len(info))
 					test := "S" + klen + " " + vlen + " " + key + info
 
-					serverAddr := fmt.Sprintf("127.0.0.1:%d", global.CacheSetting.Port)
+					serverAddr := fmt.Sprintf("127.0.0.1:%s", global.CacheSetting.Port)
 					tcpAddr, err := net.ResolveTCPAddr("tcp", serverAddr)
 					if err != nil {
 						log.Println(err.Error())

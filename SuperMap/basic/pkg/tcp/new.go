@@ -1,6 +1,7 @@
 package tcp
 
 import (
+	"basic/global"
 	"basic/internal/dao/webcache/cache"
 	"net"
 )
@@ -10,7 +11,7 @@ type Server struct {
 }
 
 func (s *Server) Listen() {
-	l, err := net.Listen("tcp", ":9425")
+	l, err := net.Listen("tcp", ":"+global.CacheSetting.Port)
 	if err != nil {
 		panic(err)
 	}

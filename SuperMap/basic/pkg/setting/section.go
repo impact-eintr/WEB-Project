@@ -1,6 +1,8 @@
 package setting
 
-import "log"
+import (
+	"log"
+)
 
 type ServerSettingS struct {
 	Port int
@@ -8,7 +10,7 @@ type ServerSettingS struct {
 
 type CacheSettingS struct {
 	CacheType string
-	Port      int
+	Port      string
 	TTL       int
 	CacheDir  string
 }
@@ -23,8 +25,8 @@ type DatabaseSettingS struct {
 
 func (s *Setting) ReadSection(key string, v interface{}) error {
 	err := s.vp.UnmarshalKey(key, v)
-	log.Println(key, v)
 	if err != nil {
+		log.Println(key)
 		return err
 	}
 	return nil
