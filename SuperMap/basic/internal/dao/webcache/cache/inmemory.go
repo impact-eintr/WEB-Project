@@ -1,6 +1,7 @@
 package cache
 
 import (
+	"basic/global"
 	"sync"
 	"time"
 )
@@ -11,17 +12,17 @@ type value struct {
 }
 
 type inMemoryCache struct {
-	c     map[string]value //缓存键值对
-	mutex sync.Mutex       //读写一致性控制
-	//mutex sync.RWMutex     //读写一致性控制
-	Stat               //缓存当前状态
-	ttl  time.Duration //缓存生存时间
+	c map[string]value //缓存键值对
+	//mutex sync.Mutex       //读写一致性控制
+	mutex sync.RWMutex  //读写一致性控制
+	Stat                //缓存当前状态
+	ttl   time.Duration //缓存生存时间
 }
 
 func newInmemoryCache(ttl int) *inMemoryCache {
 	c := &inMemoryCache{
 		make(map[string]value),
-		sync.Mutex{},
+		sync.RWMutex{},
 		Stat{},
 		time.Duration(ttl) * time.Second,
 	}
@@ -63,12 +64,21 @@ func (c *inMemoryCache) Set(k string, v []byte) error {
 }
 
 func (c *inMemoryCache) Get(k string) ([]byte, error) {
-	c.mutex.Lock()
-	val := c.c[k].c
-	c.c[k] = value{val, time.Now()}
+	if global.CacheSetting.TTL != 0 {
+		c.mutex.Lock()
+		val := c.c[k].c
+		c.c[k] = value{val, time.Now()}
 
-	defer c.mutex.Unlock()
-	return val, nil
+		defer c.mutex.Unlock()
+		return val, nil
+	} else {
+		c.mutex.RLock()
+		val := c.c[k].c
+
+		defer c.mutex.RUnlock()
+		return val, nil
+
+	}
 }
 
 func (c *inMemoryCache) Del(k string) error {
