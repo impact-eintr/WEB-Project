@@ -4,6 +4,8 @@ import (
 	"basic/global"
 	"basic/internal/dao/webcache/cache"
 	"context"
+	"database/sql"
+	"fmt"
 	"syscall"
 	"time"
 
@@ -21,7 +23,14 @@ import (
 )
 
 func init() {
+	// 初始化各种配置
 	err := SettingInit()
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	// 初始化sql连接
+	err = DBInit()
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -29,8 +38,6 @@ func init() {
 }
 
 func main() {
-
-	log.Println("main() 开始")
 	// 配置缓存服务
 	c := cache.New(global.CacheSetting.CacheType, global.CacheSetting.TTL)
 	s := cachehttp.New(c)
@@ -42,6 +49,7 @@ func main() {
 
 	// 缓存路由组
 	router.CacheRoute(r, s)
+
 	// 数据查询路由组
 	router.InfoRoute(r)
 
@@ -64,6 +72,9 @@ func main() {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
+
+	// 延时关闭数据库连接(可能有坑)
+	defer global.DB.Close()
 
 	if err := server.Shutdown(ctx); err != nil {
 		log.Fatalln("Shutdown", err)
@@ -102,4 +113,33 @@ func SettingInit() error {
 
 	return nil
 
+}
+
+func DBInit() error {
+	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+		global.DatabaseSetting.User,
+		global.DatabaseSetting.Password,
+		global.DatabaseSetting.Host,
+		global.DatabaseSetting.Port,
+		global.DatabaseSetting.DBname,
+	)
+
+	var err error
+	global.DB, err = sql.Open("mysql", dbinfo)
+	if err != nil {
+		return err
+	}
+
+	err = global.DB.Ping()
+	if err != nil {
+		return err
+	}
+
+	// 根据具体需求设置
+	//global.DB.SetConnMaxIdleTime(time.Second * 10)
+	//global.DB.SetMaxOpenConns(200)
+	//global.DB.SetMaxIdleConns(10)
+
+	log.Println("成功连接到数据库!")
+	return nil
 }

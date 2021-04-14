@@ -3,9 +3,6 @@ package list
 import (
 	"basic/global"
 	"basic/internal/model"
-	"fmt"
-
-	"database/sql"
 	"encoding/json"
 	"log"
 
@@ -31,25 +28,9 @@ func Level(level int) string {
 }
 
 func RoadQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	log.Println(dbinfo)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
 	level := Level(count)
 
-	rows, err := db.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 where `技术等级`=? AND `ID`>2", level)
+	rows, err := global.DB.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 where `技术等级`=? AND `ID`>2", level)
 	if err != nil {
 		log.Println(err)
 		return ""
@@ -85,24 +66,9 @@ func RoadQuery(count int) string {
 }
 
 func BridgeQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
 	level := Level(count)
 
-	rows, err := db.Query("select `桥梁名称`, `桥梁代码`, `桥梁中心桩号`, `路线编号`, `路线名称`, `技术等级`, `桥梁全长(米)`, `跨径总长(米)`, `单孔最大跨径(米)`, `跨径组合(孔*米)`, `桥梁全宽(米)`, `桥面净宽(米)`, `按跨径分类代码`, `按跨径分类类型` from L24a where `技术等级`=? AND `ID`>2", level)
+	rows, err := global.DB.Query("select `桥梁名称`, `桥梁代码`, `桥梁中心桩号`, `路线编号`, `路线名称`, `技术等级`, `桥梁全长(米)`, `跨径总长(米)`, `单孔最大跨径(米)`, `跨径组合(孔*米)`, `桥梁全宽(米)`, `桥面净宽(米)`, `按跨径分类代码`, `按跨径分类类型` from L24a where `技术等级`=? AND `ID`>2", level)
 	if err != nil {
 		log.Println(err)
 		return ""
@@ -138,24 +104,9 @@ func BridgeQuery(count int) string {
 }
 
 func TunnelQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
 	level := Level(count)
 
-	rows, err := db.Query("select `隧道名称`,`隧道代码`,`隧道中心桩号` ,`所属路线编号`,`所属路线名称`,`所属线路技术等级`,`隧道长度(米)`,`隧道净宽(米)`,`隧道净高(米)`,`隧道按长度分类代码`,`隧道按长度分类` from L25 where `所属线路技术等级`=? AND `ID`>2", level)
+	rows, err := global.DB.Query("select `隧道名称`,`隧道代码`,`隧道中心桩号` ,`所属路线编号`,`所属路线名称`,`所属线路技术等级`,`隧道长度(米)`,`隧道净宽(米)`,`隧道净高(米)`,`隧道按长度分类代码`,`隧道按长度分类` from L25 where `所属线路技术等级`=? AND `ID`>2", level)
 	if err != nil {
 		log.Println(err)
 		return ""
@@ -187,22 +138,7 @@ func TunnelQuery(count int) string {
 }
 
 func FQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
-	rows, err := db.Query("select `路线编号`,`路线名称`,`桩号` ,`服务设施类型`,`服务设施名称`,`初始运营时间`,`布局形式`,`经营模式`,`占地面积(平方米)`,`停车场面积(平方米)`,`停车位数量(个)` from F where `ID`>2")
+	rows, err := global.DB.Query("select `路线编号`,`路线名称`,`桩号` ,`服务设施类型`,`服务设施名称`,`初始运营时间`,`布局形式`,`经营模式`,`占地面积(平方米)`,`停车场面积(平方米)`,`停车位数量(个)` from F where `ID`>2")
 	if err != nil {
 		log.Println(err)
 		return ""
@@ -234,22 +170,7 @@ func FQuery(count int) string {
 }
 
 func MQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
-	rows, err := db.Query("select `序号`, `收费门架编号`, `门架名称`, `门架类型`, `门架种类`, `门架标志`, `省界入出口标识`, `收费单元编码组合`, `车道数`, `纬度`, `经度`, `桩号`, `使用状态` from SM ")
+	rows, err := global.DB.Query("select `序号`, `收费门架编号`, `门架名称`, `门架类型`, `门架种类`, `门架标志`, `省界入出口标识`, `收费单元编码组合`, `车道数`, `纬度`, `经度`, `桩号`, `使用状态` from SM ")
 	if err != nil {
 		log.Println(err)
 		return ""
@@ -283,22 +204,7 @@ func MQuery(count int) string {
 }
 
 func SQuery(count int) string {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-	db, err := sql.Open("mysql", dbinfo)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	defer db.Close()
-
-	log.Println("成功连接到数据库!")
-
-	rows, err := db.Query("select `序号`,`收费站编号`,`收费站名称` ,`收费广场数量`,`收费站HEX`,`线路类型`,`网络所属运营商`,`数据汇聚点` from SZ")
+	rows, err := global.DB.Query("select `序号`,`收费站编号`,`收费站名称` ,`收费广场数量`,`收费站HEX`,`线路类型`,`网络所属运营商`,`数据汇聚点` from SZ")
 	if err != nil {
 		log.Println(err)
 		return ""
