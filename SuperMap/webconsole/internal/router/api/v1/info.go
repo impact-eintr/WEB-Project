@@ -69,8 +69,10 @@ func (this *Info) GetUpdateInfo(c *gin.Context) {
 			fmt.Printf("reply from server:\n%v\n", string(reply))
 
 		}(key, info)
+
 	} else {
-		c.Request.URL.Path = "/cache/update" + key //将请求的URL修改
+		c.Set("type", "mem")
+		c.Request.URL.Path = "/api/v1/cache/update" + key //将请求的URL修改
 		c.Request.Method = http.MethodPut
 		c.Request.Body = ioutil.NopCloser(bytes.NewReader([]byte(info)))
 

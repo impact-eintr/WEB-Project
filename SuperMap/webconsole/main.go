@@ -116,10 +116,10 @@ func DBInit() error {
 		return err
 	}
 
-	//err = global.DB.Ping()
-	//if err != nil {
-	//	return err
-	//}
+	err = global.DB.Ping()
+	if err != nil {
+		return err
+	}
 
 	// 根据具体需求设置
 	//global.DB.SetConnMaxIdleTime(time.Second * 10)

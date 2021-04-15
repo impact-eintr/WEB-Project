@@ -1,6 +1,7 @@
 package router
 
 import (
+	"log"
 	_ "webconsole/docs"
 	"webconsole/global"
 	"webconsole/internal/dao/webcache/cache"
@@ -64,7 +65,10 @@ func NewRouter() *gin.Engine {
 				middleware.QueryRouter,
 				info.GetUpdateInfo,
 				func(c *gin.Context) {
-					r.HandleContext(c) //继续之后的操作
+					if c.GetString("type") == "mem" {
+						log.Println("后续执行了")
+						r.HandleContext(c) //继续之后的操作
+					}
 				})
 		}
 	}
