@@ -8,6 +8,18 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// CacheCheck 检查缓存命中接口
+// @Summary 检查缓存命中接口
+// @Description 检查缓存中是否有请求的值 有就返回没有将请求转发
+// @Tags 缓存相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param infotype query string true "查询类型"
+// @Param level query string true "查询等级"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /hit [get]
 func (s *Server) CacheCheck(c *gin.Context) {
 	key := c.Param("key")
 	if key == "" {
@@ -32,6 +44,18 @@ func (s *Server) CacheCheck(c *gin.Context) {
 	c.JSON(http.StatusMethodNotAllowed, nil)
 }
 
+// CacheCheck 检查缓存命中接口
+// @Summary 检查缓存命中接口
+// @Description 检查缓存中是否有请求的值 有就返回没有将请求转发
+// @Tags 缓存相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param infotype query string true "查询类型"
+// @Param level query string true "查询等级"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /hit [get]
 func (s *Server) UpdateHandler(c *gin.Context) {
 	key := c.Param("key")
 
@@ -55,6 +79,19 @@ func (s *Server) UpdateHandler(c *gin.Context) {
 
 	c.JSON(http.StatusMethodNotAllowed, nil)
 }
+
+// CacheCheck 检查缓存命中接口
+// @Summary 检查缓存命中接口
+// @Description 检查缓存中是否有请求的值 有就返回没有将请求转发
+// @Tags 缓存相关接口
+// @Accept application/json
+// @Produce application/json
+// @Param Authorization header string false "Bearer 用户令牌"
+// @Param infotype query string true "查询类型"
+// @Param level query string true "查询等级"
+// @Security ApiKeyAuth
+// @Success 200 {object} _ResponsePostList
+// @Router /hit [get]
 func (s *Server) DeleteHandler(c *gin.Context) {
 	key := c.Param("key")
 

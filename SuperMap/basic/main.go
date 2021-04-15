@@ -2,7 +2,6 @@ package main
 
 import (
 	"basic/global"
-	"basic/internal/dao/webcache/cache"
 	"context"
 	"database/sql"
 	"fmt"
@@ -10,15 +9,12 @@ import (
 	"time"
 
 	"basic/internal/router"
-	"basic/pkg/cachehttp"
 	"basic/pkg/setting"
-	"basic/pkg/tcp"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 
-	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -38,20 +34,7 @@ func init() {
 }
 
 func main() {
-	// 配置缓存服务
-	c := cache.New(global.CacheSetting.CacheType, global.CacheSetting.TTL)
-	s := cachehttp.New(c)
-
-	// 开启缓存服务
-	go tcp.New(c).Listen()
-
-	r := gin.Default()
-
-	// 缓存路由组
-	router.CacheRoute(r, s)
-
-	// 数据查询路由组
-	router.InfoRoute(r)
+	r := router.NewRouter()
 
 	server := &http.Server{
 		Addr:    ":8081",

@@ -12,11 +12,10 @@ type value struct {
 }
 
 type inMemoryCache struct {
-	c map[string]value //缓存键值对
-	//mutex sync.Mutex       //读写一致性控制
-	mutex sync.RWMutex  //读写一致性控制
-	Stat                //缓存当前状态
-	ttl   time.Duration //缓存生存时间
+	c     map[string]value //缓存键值对
+	mutex sync.RWMutex     //读写一致性控制
+	Stat                   //缓存当前状态
+	ttl   time.Duration    //缓存生存时间
 }
 
 func newInmemoryCache(ttl int) *inMemoryCache {
@@ -73,11 +72,8 @@ func (c *inMemoryCache) Get(k string) ([]byte, error) {
 		return val, nil
 	} else {
 		c.mutex.RLock()
-		val := c.c[k].c
-
 		defer c.mutex.RUnlock()
-		return val, nil
-
+		return c.c[k].c, nil
 	}
 }
 

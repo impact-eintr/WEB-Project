@@ -4,7 +4,7 @@ Server:
 Cache:
   CacheType: mem
   Port: 9425
-  TTL: 10
+  TTL: 0
   CacheDir: /home/yixingwei/Share/rocksdb
 
 Database:
