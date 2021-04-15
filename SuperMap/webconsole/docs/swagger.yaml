@@ -1,0 +1,103 @@
+info:
+  contact: {}
+  description: 交通一张图
+  title: 交通一张图后端系统
+  version: 1.0.0
+paths:
+  /api/v1/cache/delete/{infotype}/{level}:
+    delete:
+      consumes:
+      - application/json
+      description: 删除某条缓存记录
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - description: 查询类型
+        in: query
+        name: infotype
+        required: true
+        type: string
+      - description: 查询等级
+        in: query
+        name: level
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除缓存接口
+      tags:
+      - 缓存相关接口
+  /api/v1/cache/hit/{infotype}/{level}:
+    get:
+      consumes:
+      - application/json
+      description: 检查缓存中是否有请求的值 有就返回没有将请求转发
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - description: 查询类型
+        in: query
+        name: infotype
+        required: true
+        type: string
+      - description: 查询等级
+        in: query
+        name: level
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 检查缓存命中接口
+      tags:
+      - 缓存相关接口
+  /api/v1/cache/update/{infotype}/{level}:
+    put:
+      consumes:
+      - application/json
+      description: 处理没有缓存命中时 更新缓存
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - description: 查询类型
+        in: query
+        name: infotype
+        required: true
+        type: string
+      - description: 查询等级
+        in: query
+        name: level
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新缓存接口
+      tags:
+      - 缓存相关接口
+swagger: "2.0"
