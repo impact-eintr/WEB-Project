@@ -2,10 +2,10 @@ Server:
   Port: 8081
 
 Cache:
-  CacheType: mem
+  CacheType: disk
   Port: 9425
   TTL: 0
-  CacheDir: /home/eintr/Share/rocksdb
+  CacheDir: /home/yixingwei/Share/rocksdb
 
 Database:
   Host: 192.168.23.169

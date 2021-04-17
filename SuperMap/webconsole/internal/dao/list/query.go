@@ -30,11 +30,15 @@ func Level(level int) string {
 func RoadQuery(count int) string {
 	level := Level(count)
 
+	// 查询后调用Scan 否则持有的数据库连接不会被释放
 	rows, err := global.DB.Query("select `路线编号`,`所在行政区划代码`,`路线名称` ,`起点名称`,`止点名称`,`起点桩号`,`止点桩号`,`里程（公里）`,`车道数量(个)`,`面层类型`,`路基宽度(米)`,`路面宽度(米)`,`面层厚度(厘米)`,`设计时速(公里/小时)` from L21 where `技术等级`=? AND `ID`>2", level)
 	if err != nil {
 		log.Println(err)
 		return ""
 	}
+
+	// 关闭rows释放持有的数据库连接
+	defer rows.Close()
 
 	roads := []model.L21{}
 
@@ -73,6 +77,7 @@ func BridgeQuery(count int) string {
 		log.Println(err)
 		return ""
 	}
+	defer rows.Close()
 
 	bridges := []model.L24a{}
 
@@ -111,6 +116,7 @@ func TunnelQuery(count int) string {
 		log.Println(err)
 		return ""
 	}
+	defer rows.Close()
 
 	tunnels := []model.L25{}
 
@@ -143,6 +149,7 @@ func FQuery(count int) string {
 		log.Println(err)
 		return ""
 	}
+	defer rows.Close()
 
 	services := []model.F{}
 
@@ -175,6 +182,7 @@ func MQuery(count int) string {
 		log.Println(err)
 		return ""
 	}
+	defer rows.Close()
 
 	portals := []model.SM{}
 
@@ -209,6 +217,7 @@ func SQuery(count int) string {
 		log.Println(err)
 		return ""
 	}
+	defer rows.Close()
 
 	tolls := []model.SZ{}
 
