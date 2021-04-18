@@ -20,3 +20,9 @@ func Setup() *gin.Engine {
 
 	return r
 }
+
+func translations() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+	}
+}

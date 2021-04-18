@@ -40,7 +40,7 @@ func main() {
 	r := router.NewRouter()
 
 	server := &http.Server{
-		Addr:    ":8081",
+		Addr:    fmt.Sprintf(":%d", global.ServerSetting.Port),
 		Handler: r,
 	}
 

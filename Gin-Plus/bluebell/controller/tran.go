@@ -27,10 +27,8 @@ func InitTrans(locale string) (err error) {
 			name := strings.SplitN(fld.Tag.Get("json"), ",", 2)[0]
 			if name == "-" {
 				return ""
-
 			}
 			return name
-
 		})
 
 		zhT := zh.New() // 中文翻译器
@@ -47,7 +45,6 @@ func InitTrans(locale string) (err error) {
 		trans, ok = uni.GetTranslator(locale)
 		if !ok {
 			return fmt.Errorf("uni.GetTranslator(%s) failed", locale)
-
 		}
 
 		// 注册翻译器
@@ -58,10 +55,8 @@ func InitTrans(locale string) (err error) {
 			err = zhTranslations.RegisterDefaultTranslations(v, trans)
 		default:
 			err = enTranslations.RegisterDefaultTranslations(v, trans)
-
 		}
 		return
-
 	}
 	return
 
