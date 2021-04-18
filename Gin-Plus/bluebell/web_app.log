@@ -1,0 +1,623 @@
+{"level":"DEBUG","time":"2021-04-17T17:20:40.174+0800","caller":"bluebell/main.go:25","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T17:47:48.441+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T17:48:04.583+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T18:50:57.890+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T18:51:23.422+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T18:51:23.423+0800","caller":"bluebell/main.go:33","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T18:51:58.560+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T18:51:58.561+0800","caller":"bluebell/main.go:33","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:04:37.918+0800","caller":"bluebell/main.go:26","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:04:37.919+0800","caller":"bluebell/main.go:33","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:22.468+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:22.469+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:22.480+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:22.481+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.530+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.531+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.531+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.540+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.541+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:42.541+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.551+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.552+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.552+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.557+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.558+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:37:50.558+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.049+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.050+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.050+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.063+0800","caller":"bluebell/main.go:27","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.064+0800","caller":"bluebell/main.go:34","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:38:11.064+0800","caller":"bluebell/main.go:41","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.688+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.689+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.689+0800","caller":"bluebell/main.go:42","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.705+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.706+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:42:01.706+0800","caller":"bluebell/main.go:42","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.294+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.295+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.295+0800","caller":"bluebell/main.go:42","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.326+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.327+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:46:45.327+0800","caller":"bluebell/main.go:42","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.016+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.017+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.017+0800","caller":"bluebell/main.go:43","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.042+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.043+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:47:36.043+0800","caller":"bluebell/main.go:43","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:28.996+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:28.997+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:28.997+0800","caller":"bluebell/main.go:43","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:29.002+0800","caller":"bluebell/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:29.003+0800","caller":"bluebell/main.go:35","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:48:29.003+0800","caller":"bluebell/main.go:43","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.024+0800","caller":"bluebell/main.go:36","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.024+0800","caller":"bluebell/main.go:36","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.025+0800","caller":"bluebell/main.go:45","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.025+0800","caller":"bluebell/main.go:45","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.025+0800","caller":"bluebell/main.go:53","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:51:54.025+0800","caller":"bluebell/main.go:53","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:01.755+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:01.756+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:01.756+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.012+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.013+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.013+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:53:11.013+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.032+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.033+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:53:11.033+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-17T21:53:47.297+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000043903}
+{"level":"INFO","time":"2021-04-17T21:53:47.470+0800","caller":"logger/logger.go:72","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000000525}
+{"level":"INFO","time":"2021-04-17T21:54:30.731+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000010176}
+{"level":"INFO","time":"2021-04-17T21:54:32.624+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000028531}
+{"level":"INFO","time":"2021-04-17T21:54:37.881+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000012705}
+{"level":"INFO","time":"2021-04-17T21:54:38.604+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000026331}
+{"level":"INFO","time":"2021-04-17T21:54:39.335+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000013894}
+{"level":"INFO","time":"2021-04-17T21:54:40.080+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000010496}
+{"level":"INFO","time":"2021-04-17T21:54:40.586+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000016672}
+{"level":"INFO","time":"2021-04-17T21:54:40.886+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004604}
+{"level":"INFO","time":"2021-04-17T21:54:41.047+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004599}
+{"level":"INFO","time":"2021-04-17T21:54:41.232+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000017572}
+{"level":"INFO","time":"2021-04-17T21:54:41.371+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004989}
+{"level":"INFO","time":"2021-04-17T21:54:41.703+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005005}
+{"level":"INFO","time":"2021-04-17T21:54:41.926+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000008426}
+{"level":"INFO","time":"2021-04-17T21:54:42.078+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000008185}
+{"level":"INFO","time":"2021-04-17T21:54:42.207+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000006302}
+{"level":"INFO","time":"2021-04-17T21:54:42.364+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005485}
+{"level":"INFO","time":"2021-04-17T21:54:42.603+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004124}
+{"level":"INFO","time":"2021-04-17T21:54:42.837+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004622}
+{"level":"INFO","time":"2021-04-17T21:54:43.303+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004387}
+{"level":"INFO","time":"2021-04-17T21:54:43.622+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004483}
+{"level":"INFO","time":"2021-04-17T21:54:43.804+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000013967}
+{"level":"INFO","time":"2021-04-17T21:54:43.987+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005484}
+{"level":"INFO","time":"2021-04-17T21:54:44.120+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004785}
+{"level":"INFO","time":"2021-04-17T21:54:44.336+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000006329}
+{"level":"INFO","time":"2021-04-17T21:54:44.641+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000006867}
+{"level":"INFO","time":"2021-04-17T21:54:44.986+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004665}
+{"level":"INFO","time":"2021-04-17T21:54:45.153+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000004248}
+{"level":"INFO","time":"2021-04-17T21:54:45.453+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005601}
+{"level":"INFO","time":"2021-04-17T21:54:45.636+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005154}
+{"level":"INFO","time":"2021-04-17T21:54:45.986+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005271}
+{"level":"INFO","time":"2021-04-17T21:54:46.122+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005671}
+{"level":"DEBUG","time":"2021-04-17T21:54:59.293+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:54:59.296+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:54:59.297+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:54:59.297+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T21:55:20.015+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:55:20.019+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:55:20.020+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:55:20.021+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T21:55:51.903+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:55:51.904+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:55:51.904+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:55:51.905+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2021-04-17T21:56:02.150+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000005038}
+{"level":"DEBUG","time":"2021-04-17T21:56:18.566+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:56:18.569+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:56:18.570+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:56:18.570+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T21:56:26.152+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:56:26.153+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:56:26.153+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T21:56:26.153+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2021-04-17T21:57:12.088+0800","caller":"bluebell/main.go:91","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-17T21:57:25.626+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:57:25.627+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T21:57:25.627+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.120+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.121+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.121+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.151+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.152+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:08:21.153+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T22:08:21.153+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.119+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.120+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.121+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T22:16:16.121+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.135+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.136+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:16.136+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:42.257+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:42.258+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:42.258+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:43.595+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:43.596+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:16:43.597+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T22:16:43.597+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2021-04-17T22:18:12.080+0800","caller":"bluebell/main.go:91","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-17T22:18:14.087+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:18:14.088+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:18:14.088+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-17T22:18:20.647+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000070973}
+{"level":"INFO","time":"2021-04-17T22:18:21.431+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000037266}
+{"level":"INFO","time":"2021-04-17T22:18:22.885+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000041948}
+{"level":"INFO","time":"2021-04-17T22:18:24.606+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000015692}
+{"level":"INFO","time":"2021-04-17T22:18:25.133+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000009791}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.727+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.728+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.728+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.739+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.740+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:19:56.741+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"FATAL","time":"2021-04-17T22:19:56.741+0800","caller":"bluebell/main.go:75","msg":"listen: %s\n","error":"listen tcp :8080: bind: address already in use"}
+{"level":"INFO","time":"2021-04-17T22:20:26.708+0800","caller":"bluebell/main.go:91","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-17T22:20:39.045+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:20:39.048+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-17T22:20:39.049+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-17T22:20:44.864+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.00011956}
+{"level":"INFO","time":"2021-04-17T22:20:47.009+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36","errors":"","cost":0.000017904}
+{"level":"INFO","time":"2021-04-17T22:27:24.879+0800","caller":"bluebell/main.go:91","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T09:49:57.905+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:51:22.857+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:51:22.871+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:51:22.872+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T09:51:51.562+0800","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"curl/7.75.0","errors":"","cost":0.000029392}
+{"level":"DEBUG","time":"2021-04-18T09:52:19.630+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:52:19.631+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:52:19.631+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T09:53:35.766+0800","caller":"bluebell/main.go:91","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T09:54:08.662+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:54:08.663+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:54:08.663+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:54:13.017+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:54:13.018+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:54:13.018+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:55:38.413+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:55:38.414+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:55:38.415+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:23.038+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:23.039+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:23.039+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:59.359+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:59.360+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:56:59.361+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:34.546+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:34.547+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:34.547+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:59.533+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:59.534+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:57:59.535+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:58:56.167+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:58:56.167+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T09:58:56.168+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:41.730+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:41.731+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:41.731+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:44.949+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:44.950+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:00:44.951+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:01:43.947+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:02:16.549+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:02:16.550+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:02:16.550+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:03:56.287+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:03:56.288+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:03:56.289+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:04:41.270+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:04:41.271+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:04:41.271+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:05:42.414+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:05:42.415+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:05:42.415+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:06:39.492+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:06:39.493+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:07:50.721+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:07:50.722+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:08:17.336+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:08:17.336+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:09:16.865+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:09:16.866+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:09:53.487+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:09:53.487+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:09:53.488+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:17.608+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:17.609+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:17.609+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:26.199+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:26.200+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:29:26.200+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:16.377+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:16.378+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:16.378+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:50.538+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:50.539+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T10:55:50.539+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:00:59.246+0800","caller":"logger/logger.go:72","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000033759}
+{"level":"INFO","time":"2021-04-18T11:01:12.049+0800","caller":"logger/logger.go:72","msg":"/","status":404,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000000609}
+{"level":"INFO","time":"2021-04-18T11:01:13.250+0800","caller":"logger/logger.go:72","msg":"/","status":404,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00000058}
+{"level":"INFO","time":"2021-04-18T11:01:19.446+0800","caller":"logger/logger.go:72","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00000387}
+{"level":"INFO","time":"2021-04-18T11:01:20.177+0800","caller":"logger/logger.go:72","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000018276}
+{"level":"INFO","time":"2021-04-18T11:02:45.577+0800","caller":"logger/logger.go:72","msg":"/singup","status":404,"method":"POST","path":"/singup","query":"username=eintr&password=123456&repassword=123456","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000000558}
+{"level":"INFO","time":"2021-04-18T11:03:34.842+0800","caller":"logger/logger.go:72","msg":"/singup","status":404,"method":"POST","path":"/singup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000000607}
+{"level":"INFO","time":"2021-04-18T11:05:16.686+0800","caller":"logger/logger.go:72","msg":"/singup","status":404,"method":"POST","path":"/singup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000000686}
+{"level":"INFO","time":"2021-04-18T11:05:26.701+0800","caller":"logger/logger.go:72","msg":"/singup","status":404,"method":"POST","path":"/singup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000000553}
+{"level":"INFO","time":"2021-04-18T11:06:05.533+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000021158}
+{"level":"DEBUG","time":"2021-04-18T11:12:13.183+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:12:13.184+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:12:13.185+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:12:14.524+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:12:14.525+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:12:14.526+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:12:17.012+0800","caller":"controller/user.go:24","msg":"param check pass"}
+{"level":"INFO","time":"2021-04-18T11:12:17.012+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000180052}
+{"level":"INFO","time":"2021-04-18T11:12:22.262+0800","caller":"controller/user.go:24","msg":"param check pass"}
+{"level":"INFO","time":"2021-04-18T11:12:22.262+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00008151}
+{"level":"INFO","time":"2021-04-18T11:13:31.190+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T11:13:38.198+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:13:38.198+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:13:38.199+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:13:41.074+0800","caller":"controller/user.go:24","msg":"param check pass"}
+{"level":"INFO","time":"2021-04-18T11:13:41.074+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000184254}
+{"level":"INFO","time":"2021-04-18T11:13:43.681+0800","caller":"controller/user.go:24","msg":"param check pass"}
+{"level":"INFO","time":"2021-04-18T11:13:43.681+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000095779}
+{"level":"INFO","time":"2021-04-18T11:13:44.730+0800","caller":"controller/user.go:24","msg":"param check pass"}
+{"level":"INFO","time":"2021-04-18T11:13:44.730+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000064076}
+{"level":"INFO","time":"2021-04-18T11:14:46.012+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T11:14:52.677+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:14:52.678+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:14:52.679+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:14:55.549+0800","caller":"controller/user.go:24","msg":"param check pass","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:14:55.549+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00019581}
+{"level":"INFO","time":"2021-04-18T11:15:34.117+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T11:15:43.313+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:15:43.314+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:15:43.314+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:15:45.766+0800","caller":"controller/user.go:24","msg":"param check pass%v","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:15:45.766+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000210317}
+{"level":"INFO","time":"2021-04-18T11:15:49.003+0800","caller":"controller/user.go:24","msg":"param check pass%v","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:15:49.003+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096665}
+{"level":"INFO","time":"2021-04-18T11:16:04.304+0800","caller":"controller/user.go:24","msg":"param check pass%v","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:16:04.304+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00008657}
+{"level":"INFO","time":"2021-04-18T11:16:07.072+0800","caller":"controller/user.go:24","msg":"param check pass%v","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:16:07.072+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069453}
+{"level":"INFO","time":"2021-04-18T11:16:24.618+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T11:16:25.512+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:16:25.513+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:16:25.513+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:16:27.079+0800","caller":"controller/user.go:24","msg":"param check pass","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:16:27.079+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000212124}
+{"level":"INFO","time":"2021-04-18T11:17:24.035+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T11:17:25.548+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:17:25.549+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T11:17:25.549+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T11:17:27.699+0800","caller":"controller/user.go:24","msg":"param check pass","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T11:17:27.700+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000360181}
+{"level":"INFO","time":"2021-04-18T12:11:15.879+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:11:18.343+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:11:18.344+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:11:18.345+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:11:23.620+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:11:23.621+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096096}
+{"level":"INFO","time":"2021-04-18T12:11:29.230+0800","caller":"controller/user.go:25","msg":"param check pass","username":"eintr"}
+{"level":"INFO","time":"2021-04-18T12:11:29.230+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000251212}
+{"level":"INFO","time":"2021-04-18T12:22:37.147+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:22:38.657+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:22:38.659+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:22:38.659+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:22:44.772+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:22:44.772+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000065589}
+{"level":"INFO","time":"2021-04-18T12:27:28.116+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:27:31.914+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:27:31.915+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:27:31.916+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T12:28:51.285+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:28:52.502+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:28:52.503+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:28:52.504+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:28:58.628+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:28:58.628+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000102924}
+{"level":"ERROR","time":"2021-04-18T12:29:00.712+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:29:00.712+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000091397}
+{"level":"ERROR","time":"2021-04-18T12:29:01.711+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:29:01.711+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000145248}
+{"level":"INFO","time":"2021-04-18T12:30:46.999+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:30:48.363+0800","caller":"bluebell/main.go:34","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:30:48.364+0800","caller":"bluebell/main.go:43","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:30:48.364+0800","caller":"bluebell/main.go:51","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:30:51.273+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:30:51.273+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096774}
+{"level":"ERROR","time":"2021-04-18T12:31:12.844+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:31:12.844+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000163815}
+{"level":"INFO","time":"2021-04-18T12:31:17.929+0800","caller":"logger/logger.go:74","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000053442}
+{"level":"INFO","time":"2021-04-18T12:35:56.448+0800","caller":"bluebell/main.go:90","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:35:59.175+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:35:59.176+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:35:59.177+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T12:36:01.431+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00011316}
+{"level":"ERROR","time":"2021-04-18T12:36:09.047+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:36:09.047+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00009796}
+{"level":"ERROR","time":"2021-04-18T12:40:16.539+0800","caller":"controller/user.go:18","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:40:16.539+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00006662}
+{"level":"INFO","time":"2021-04-18T12:40:17.732+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:40:18.644+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:40:18.645+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:40:18.645+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:40:20.448+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:40:20.448+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000128061}
+{"level":"ERROR","time":"2021-04-18T12:40:24.041+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-04-18T12:40:24.042+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000093637}
+{"level":"ERROR","time":"2021-04-18T12:40:33.857+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:40:33.857+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000220609}
+{"level":"INFO","time":"2021-04-18T12:40:55.064+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:40:56.004+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:40:56.005+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:40:56.006+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:40:57.511+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:40:57.511+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000140373}
+{"level":"INFO","time":"2021-04-18T12:41:49.735+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:41:52.056+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:41:52.057+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:41:52.058+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:41:53.834+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:41:53.834+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000150846}
+{"level":"ERROR","time":"2021-04-18T12:42:00.214+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:42:00.214+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000094367}
+{"level":"ERROR","time":"2021-04-18T12:42:01.598+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:42:01.598+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00009441}
+{"level":"INFO","time":"2021-04-18T12:42:35.735+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:42:36.720+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:42:36.721+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:42:36.722+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:42:38.345+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:42:38.346+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00021381}
+{"level":"INFO","time":"2021-04-18T12:43:07.479+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:43:08.434+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:43:08.435+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:43:08.435+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:43:09.984+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:43:09.984+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000192726}
+{"level":"ERROR","time":"2021-04-18T12:43:12.639+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:43:12.639+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000108782}
+{"level":"INFO","time":"2021-04-18T12:43:54.002+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:43:54.891+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:43:54.891+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:43:54.892+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:43:56.636+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:43:56.636+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000147462}
+{"level":"ERROR","time":"2021-04-18T12:44:01.585+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:44:01.585+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000105418}
+{"level":"INFO","time":"2021-04-18T12:44:16.877+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:44:17.859+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:44:17.859+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:44:17.860+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:44:18.968+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:44:18.969+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001027055}
+{"level":"INFO","time":"2021-04-18T12:45:13.257+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:45:14.300+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:45:14.301+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:45:14.302+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:45:15.806+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:45:15.806+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000155999}
+{"level":"INFO","time":"2021-04-18T12:45:42.093+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:45:42.977+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:45:42.978+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:45:42.978+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:45:44.626+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:45:44.626+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000168214}
+{"level":"INFO","time":"2021-04-18T12:46:06.229+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:46:07.016+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:46:07.017+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:46:07.017+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:46:09.350+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:09.351+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000794975}
+{"level":"ERROR","time":"2021-04-18T12:46:11.205+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:11.205+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000115219}
+{"level":"ERROR","time":"2021-04-18T12:46:12.366+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:12.366+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000121278}
+{"level":"ERROR","time":"2021-04-18T12:46:13.225+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:13.225+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000127825}
+{"level":"ERROR","time":"2021-04-18T12:46:13.715+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:13.715+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000124559}
+{"level":"ERROR","time":"2021-04-18T12:46:23.786+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:23.786+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000106092}
+{"level":"ERROR","time":"2021-04-18T12:46:25.090+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:25.090+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000089372}
+{"level":"INFO","time":"2021-04-18T12:46:26.605+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:46:27.574+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:46:27.575+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:46:27.576+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:46:28.802+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:28.802+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000163452}
+{"level":"ERROR","time":"2021-04-18T12:46:30.705+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:46:30.705+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000097092}
+{"level":"INFO","time":"2021-04-18T12:47:07.120+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:47:08.117+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:47:08.118+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:47:08.118+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:47:09.514+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:47:09.514+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000249112}
+{"level":"INFO","time":"2021-04-18T12:49:18.856+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:49:19.828+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:49:19.830+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:49:19.830+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:49:27.684+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:49:27.684+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00015394}
+{"level":"ERROR","time":"2021-04-18T12:49:31.945+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:49:31.945+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00025076}
+{"level":"ERROR","time":"2021-04-18T12:49:32.684+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:49:32.684+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000117404}
+{"level":"INFO","time":"2021-04-18T12:50:01.134+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:50:02.058+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:50:02.059+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:50:02.060+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:50:03.252+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:50:03.252+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000548217}
+{"level":"INFO","time":"2021-04-18T12:51:13.318+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:51:14.243+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:51:14.244+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:51:14.244+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:51:16.104+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:16.105+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000223273}
+{"level":"ERROR","time":"2021-04-18T12:51:18.666+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:18.666+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000138529}
+{"level":"ERROR","time":"2021-04-18T12:51:20.734+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:20.734+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000144074}
+{"level":"ERROR","time":"2021-04-18T12:51:21.658+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:21.658+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000139567}
+{"level":"INFO","time":"2021-04-18T12:51:26.164+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:51:27.246+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:51:27.247+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:51:27.248+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:51:28.456+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:28.456+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000195}
+{"level":"ERROR","time":"2021-04-18T12:51:29.266+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:51:29.266+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000122854}
+{"level":"INFO","time":"2021-04-18T12:52:49.726+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:52:51.067+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:52:51.068+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:52:51.069+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:52:51.983+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:51.983+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000158319}
+{"level":"ERROR","time":"2021-04-18T12:52:53.338+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:53.338+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000148906}
+{"level":"ERROR","time":"2021-04-18T12:52:54.009+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:54.010+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000116041}
+{"level":"ERROR","time":"2021-04-18T12:52:54.858+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:54.858+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000089616}
+{"level":"ERROR","time":"2021-04-18T12:52:55.423+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:55.423+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000101877}
+{"level":"ERROR","time":"2021-04-18T12:52:55.904+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:55.904+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000091764}
+{"level":"ERROR","time":"2021-04-18T12:52:56.405+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:56.405+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000087491}
+{"level":"ERROR","time":"2021-04-18T12:52:56.857+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:56.858+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00012831}
+{"level":"ERROR","time":"2021-04-18T12:52:57.324+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:57.324+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000086025}
+{"level":"ERROR","time":"2021-04-18T12:52:57.801+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:57.801+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000094583}
+{"level":"ERROR","time":"2021-04-18T12:52:58.280+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:58.280+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096078}
+{"level":"ERROR","time":"2021-04-18T12:52:58.785+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:58.785+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000105281}
+{"level":"ERROR","time":"2021-04-18T12:52:59.244+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:59.244+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096585}
+{"level":"ERROR","time":"2021-04-18T12:52:59.711+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:52:59.711+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000158132}
+{"level":"ERROR","time":"2021-04-18T12:53:00.156+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:00.156+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000115402}
+{"level":"ERROR","time":"2021-04-18T12:53:00.675+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:00.675+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000100907}
+{"level":"ERROR","time":"2021-04-18T12:53:01.155+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:01.155+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000113334}
+{"level":"ERROR","time":"2021-04-18T12:53:01.703+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:01.703+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000085224}
+{"level":"ERROR","time":"2021-04-18T12:53:02.146+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:02.146+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000091909}
+{"level":"ERROR","time":"2021-04-18T12:53:02.561+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:02.561+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096985}
+{"level":"ERROR","time":"2021-04-18T12:53:02.984+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:02.984+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000096044}
+{"level":"ERROR","time":"2021-04-18T12:53:03.442+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:53:03.442+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000117382}
+{"level":"INFO","time":"2021-04-18T12:53:46.238+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:54:05.594+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:54:05.595+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:54:05.595+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:54:06.943+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:54:06.943+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00019003}
+{"level":"ERROR","time":"2021-04-18T12:54:12.183+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:54:12.183+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000068758}
+{"level":"ERROR","time":"2021-04-18T12:54:13.422+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:54:13.422+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000065496}
+{"level":"INFO","time":"2021-04-18T12:54:34.474+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:54:35.389+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:54:35.390+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:54:35.390+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:54:36.564+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:54:36.564+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000187147}
+{"level":"INFO","time":"2021-04-18T12:55:00.998+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:55:02.711+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:55:02.712+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:55:02.712+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:55:03.602+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:03.602+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000151511}
+{"level":"ERROR","time":"2021-04-18T12:55:07.279+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:07.279+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000118527}
+{"level":"ERROR","time":"2021-04-18T12:55:08.144+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:08.144+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000086249}
+{"level":"ERROR","time":"2021-04-18T12:55:08.760+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:08.760+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000140031}
+{"level":"ERROR","time":"2021-04-18T12:55:09.408+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:09.408+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000119652}
+{"level":"ERROR","time":"2021-04-18T12:55:11.182+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:11.182+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000117194}
+{"level":"INFO","time":"2021-04-18T12:55:30.459+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:55:32.474+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:55:32.475+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:55:32.475+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:55:33.232+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:33.232+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000156887}
+{"level":"ERROR","time":"2021-04-18T12:55:34.862+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:34.863+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000122444}
+{"level":"ERROR","time":"2021-04-18T12:55:35.048+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:55:35.048+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000109582}
+{"level":"INFO","time":"2021-04-18T12:56:32.731+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T12:56:33.639+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:56:33.640+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T12:56:33.640+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T12:56:35.550+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:56:35.551+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000200024}
+{"level":"ERROR","time":"2021-04-18T12:56:37.305+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:56:37.305+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000098588}
+{"level":"ERROR","time":"2021-04-18T12:56:38.036+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:56:38.036+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000154008}
+{"level":"ERROR","time":"2021-04-18T12:56:38.569+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T12:56:38.569+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000119725}
+{"level":"INFO","time":"2021-04-18T13:02:13.379+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T13:02:16.055+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:02:16.056+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:02:16.057+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T13:02:20.342+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:02:20.342+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000192308}
+{"level":"INFO","time":"2021-04-18T13:03:16.784+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T13:03:17.615+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:03:17.617+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:03:17.617+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T13:03:20.756+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:03:20.756+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000164759}
+{"level":"INFO","time":"2021-04-18T13:04:54.674+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T13:04:55.537+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:04:55.538+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:04:55.538+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-18T13:05:01.263+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:05:01.263+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000530636}
+{"level":"ERROR","time":"2021-04-18T13:05:02.837+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:05:02.837+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000122812}
+{"level":"ERROR","time":"2021-04-18T13:09:02.223+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:09:02.223+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000110547}
+{"level":"ERROR","time":"2021-04-18T13:09:04.059+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-04-18T13:09:04.059+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000111103}
+{"level":"INFO","time":"2021-04-18T13:09:34.122+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000033835}
+{"level":"INFO","time":"2021-04-18T13:10:07.462+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-18T13:10:08.376+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:10:08.377+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-18T13:10:08.378+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-18T13:10:09.924+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000144205}
+{"level":"INFO","time":"2021-04-18T16:03:16.937+0800","caller":"logger/logger.go:72","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000037418}
+{"level":"INFO","time":"2021-04-18T16:48:07.389+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
