@@ -18,7 +18,7 @@ mysql:
   host: 127.0.0.1
   port: 3306
   user: root
-  password: yxwdmysql
+  password: 123456
   dbname: sql_demo
   max_open_conns: 200
   max_idel_conns: 50

@@ -6,6 +6,7 @@ import (
 	"bluebell/setting"
 	"net/http"
 
+	_ "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/locales/en"
@@ -21,19 +22,41 @@ func Setup() *gin.Engine {
 		gin.SetMode(gin.ReleaseMode) // 设置为发布模式
 	}
 	r := gin.New()
-	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
-	})
+	r.Use(logger.GinLogger(), logger.GinRecovery(true), Cors())
+
+	r.GET("/ping", controller.ResponseSuccess)
 
 	r.POST("/signup", controller.SignUpHandler)
 
 	r.POST("/login", controller.LoginHandler)
 
+	r.NoRoute(controller.ResponseNotFound)
+
 	return r
 }
 
+// 处理跨域请求,支持options访问
+func Cors() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		method := c.Request.Method
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Headers", "Content-Type,AccessToken,X-CSRF-Token, Authorization, Token,X-Token,X-User-Id")
+		c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT")
+		c.Header("Access-Control-Expose-Headers", "Content-Length, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Content-Type")
+		c.Header("Access-Control-Allow-Credentials", "true")
+
+		// 放行所有OPTIONS方法
+		if method == "OPTIONS" {
+			c.AbortWithStatus(http.StatusNoContent)
+
+		}
+		// 处理请求
+		c.Next()
+
+	}
+
+}
 func translations() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		uni := ut.New(en.New(), zh.New())

@@ -1,8 +1,9 @@
 package controller
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 /*
@@ -15,9 +16,9 @@ import (
 */
 
 type ResponseData struct {
-	Code ResCode
-	Msg  interface{}
-	Data interface{}
+	Code ResCode     `json:"code"`
+	Msg  interface{} `json:"msg"`
+	Data interface{} `json:"data"`
 }
 
 func ResponseError(c *gin.Context, code ResCode) {
@@ -40,10 +41,20 @@ func ResponseErrorWithMsg(c *gin.Context, code ResCode, msg interface{}) {
 
 }
 
-func ResponseSuccess(c *gin.Context, data interface{}) {
+func ResponseSuccess(c *gin.Context) {
 	rd := &ResponseData{
 		Code: CodeSuccess,
 		Msg:  CodeSuccess.Msg(),
+		Data: nil,
+	}
+	c.JSON(http.StatusOK, rd)
+
+}
+
+func ResponseNotFound(c *gin.Context) {
+	rd := &ResponseData{
+		Code: CodeNotFound,
+		Msg:  CodeNotFound.Msg(),
 		Data: nil,
 	}
 	c.JSON(http.StatusOK, rd)

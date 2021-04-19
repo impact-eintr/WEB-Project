@@ -1,9 +1,11 @@
 package controller
 
 import (
+	"bluebell/dao/mysql"
 	"bluebell/logic"
 	"bluebell/models"
-	"net/http"
+	"errors"
+	"fmt"
 
 	"go.uber.org/zap"
 
@@ -29,16 +31,18 @@ func SignUpHandler(c *gin.Context) {
 
 	// 2. 业务处理
 	if err := logic.SignUp(p); err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
-			"err": err.Error(),
-		})
+		zap.L().Error("注册失败", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+		} else {
+			ResponseError(c, CodeServerBusy)
+
+		}
+		return
 	}
 
 	// 3. 返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	ResponseSuccess(c)
 
 }
 
@@ -51,28 +55,32 @@ func LoginHandler(c *gin.Context) {
 		zap.L().Error("SignUp with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": errs.Translate(trans),
-		})
+
+		ResponseErrorWithMsg(c, CodeInvalidParam, errs.Translate(trans))
 		return
 	}
 
 	// 2. 业务处理
 	if err := logic.Login(p); err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "登录失败",
-			"err": err.Error(),
-		})
+		zap.L().Error("登录失败", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+
+		} else if errors.Is(err, mysql.ErrorInvalidPassword) {
+			ResponseError(c, CodeInvalidPassword)
+
+		} else {
+			ResponseError(c, CodeServerBusy)
+
+		}
+		return
 	}
 
 	// 3. 返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	fmt.Println("成功")
+	ResponseSuccess(c)
 
 }

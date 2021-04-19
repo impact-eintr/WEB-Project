@@ -9,6 +9,7 @@ const (
 	CodeUserNotExist
 	CodeInvalidPassword
 	CodeServerBusy
+	CodeNotFound
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -18,6 +19,7 @@ var codeMsgMap = map[ResCode]string{
 	CodeUserNotExist:    "该用户不存在",
 	CodeInvalidPassword: "用户密码错误",
 	CodeServerBusy:      "服务器繁忙，通知后端查看日志",
+	CodeNotFound:        "路由不存在",
 }
 
 func (rescode ResCode) Msg() string {
