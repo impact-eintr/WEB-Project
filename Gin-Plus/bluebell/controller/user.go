@@ -19,14 +19,11 @@ func SignUpHandler(c *gin.Context) {
 		zap.L().Error("SignUp with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": errs.Translate(trans),
-		})
+
+		ResponseErrorWithMsg(c, CodeInvalidParam, errs.Translate(trans))
 		return
 	}
 
