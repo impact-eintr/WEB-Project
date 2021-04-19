@@ -678,3 +678,62 @@
 {"level":"DEBUG","time":"2021-04-18T22:09:19.268+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
 {"level":"DEBUG","time":"2021-04-18T22:09:19.269+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
 {"level":"DEBUG","time":"2021-04-18T22:09:19.269+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-19T09:12:40.834+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-19T09:17:33.693+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:17:33.694+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:17:33.695+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:17:48.736+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:17:48.737+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:17:48.737+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:20:51.962+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:20:51.963+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:20:51.964+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-19T09:20:58.851+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000744499}
+{"level":"ERROR","time":"2021-04-19T09:21:07.007+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:07.007+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000168555}
+{"level":"ERROR","time":"2021-04-19T09:21:08.787+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:08.787+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000124828}
+{"level":"ERROR","time":"2021-04-19T09:21:09.680+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:09.680+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000110009}
+{"level":"DEBUG","time":"2021-04-19T09:21:44.141+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:21:44.141+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:21:44.142+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-19T09:21:45.279+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:45.279+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00017484}
+{"level":"ERROR","time":"2021-04-19T09:21:48.077+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:48.077+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000142733}
+{"level":"ERROR","time":"2021-04-19T09:21:48.725+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:48.725+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000144505}
+{"level":"ERROR","time":"2021-04-19T09:21:49.321+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:49.321+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000164773}
+{"level":"ERROR","time":"2021-04-19T09:21:49.940+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:49.940+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000116727}
+{"level":"ERROR","time":"2021-04-19T09:21:50.452+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:50.452+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00014199}
+{"level":"ERROR","time":"2021-04-19T09:21:50.941+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:50.942+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000183453}
+{"level":"ERROR","time":"2021-04-19T09:21:51.321+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.repassword' Error:Field validation for 'repassword' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-04-19T09:21:51.322+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000136918}
+{"level":"INFO","time":"2021-04-19T09:24:37.930+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.041012166}
+{"level":"DEBUG","time":"2021-04-19T09:31:09.830+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:31:09.830+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:31:09.831+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:31:25.881+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:31:25.882+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:31:25.882+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:35:14.170+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:35:14.171+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:35:14.172+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:36:39.047+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:36:39.048+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:36:39.049+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:10.773+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:10.774+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:10.774+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:45.198+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:45.199+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-19T09:47:45.199+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-19T09:48:00.923+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000710054}
+{"level":"INFO","time":"2021-04-19T09:48:10.357+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000676828}
+{"level":"INFO","time":"2021-04-19T09:48:15.999+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000515075}
+{"level":"INFO","time":"2021-04-19T09:48:17.065+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000545026}
