@@ -1,5 +1,20 @@
-Server:
-  Port: 8081
+server:
+  name: webconsole
+  mode: dev
+  port: 8081
+  version: v0.0.1
+  locale: zh
+  start_time: 2021-04-16
+  machine_id: 1
+
+log:
+  level: debug
+  filename: web_app.log
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+
 
 Cache:
   CacheType: disk

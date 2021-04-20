@@ -1,8 +1,9 @@
 package setting
 
 import (
-	"github.com/spf13/viper"
 	"log"
+
+	"github.com/spf13/viper"
 )
 
 type Setting struct {
@@ -12,7 +13,6 @@ type Setting struct {
 func NewSetting() (*Setting, error) {
 	vp := viper.New()
 	vp.SetConfigName("config")  // 设置文件名称（无后缀）
-	vp.SetConfigType("yaml")    // 设置后缀名 {"1.6以后的版本可以不设置该后缀"}
 	vp.AddConfigPath("./confs") // 设置文件所在路径
 
 	if err := vp.ReadInConfig(); err != nil {

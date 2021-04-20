@@ -1,8 +1,10 @@
-package main
+package jwt
 
 import (
-	"github.com/dgrijalva/jwt-go"
+	"errors"
 	"time"
+
+	"github.com/dgrijalva/jwt-go"
 )
 
 const TokenExpireDuration = time.Hour * 2
@@ -15,20 +17,39 @@ var salt = []byte("impact-eintr")
 // 如果想要保存更多信息，都可以添加到这个结构体中
 type MyClaims struct {
 	UserID   int64  `json:"user_id"`
-	Username string `json:"username"`
+	UserName string `json:"username"`
 	jwt.StandardClaims
 }
 
-func GenToken(userID int64, username string) (string, error) {
+func GenToken(userID int64, userName string) (string, error) {
 	c := MyClaims{
 		UserID:   userID,
-		Username: "username", // 自定义字段
+		UserName: userName,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
 			Issuer:    "webconsole",                               // 签发人
+			IssuedAt:  time.Now().Unix(),                          // 签发时间
 		},
 	}
 
-	token := jwt.NewWithClaims(jwt.SigningMethodES256, c)
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, c)
 	return token.SignedString(salt)
+}
+
+func ParseToken(tokenString string) (*MyClaims, error) {
+	var mc = new(MyClaims)
+	token, err := jwt.ParseWithClaims(tokenString,
+		mc,
+		func(token *jwt.Token) (interface{}, error) {
+			return salt, nil
+		})
+
+	if err != nil {
+		return nil, err
+	}
+
+	if token.Valid {
+		return mc, nil
+	}
+	return nil, errors.New("invalid token")
 }

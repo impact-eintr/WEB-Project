@@ -41,11 +41,11 @@ func ResponseErrorWithMsg(c *gin.Context, code ResCode, msg interface{}) {
 
 }
 
-func ResponseSuccess(c *gin.Context) {
+func ResponseSuccess(c *gin.Context, data interface{}) {
 	rd := &ResponseData{
 		Code: CodeSuccess,
 		Msg:  CodeSuccess.Msg(),
-		Data: nil,
+		Data: data,
 	}
 	c.JSON(http.StatusOK, rd)
 

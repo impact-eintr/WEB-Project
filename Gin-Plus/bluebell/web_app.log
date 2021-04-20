@@ -1516,3 +1516,289 @@
 {"level":"DEBUG","time":"2021-04-20T15:39:43.793+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
 {"level":"DEBUG","time":"2021-04-20T15:39:43.794+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
 {"level":"DEBUG","time":"2021-04-20T15:39:43.795+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T15:59:24.242+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T15:59:24.243+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T15:59:24.243+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:28.628+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:28.629+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:28.629+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:36.772+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:36.772+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:00:36.772+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:04:38.340+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:04:38.341+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:04:38.341+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:05:28.461+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:05:28.462+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:05:28.462+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:07:03.082+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:07:03.083+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:07:03.083+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:17:37.744+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:17:37.745+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:17:37.745+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:18:28.549+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:18:28.549+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000711636}
+{"level":"ERROR","time":"2021-04-20T16:18:34.837+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:18:34.837+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000488393}
+{"level":"ERROR","time":"2021-04-20T16:18:36.420+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:18:36.420+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000561007}
+{"level":"DEBUG","time":"2021-04-20T16:21:32.846+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:21:32.846+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:21:32.847+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:21:40.392+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:21:40.393+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:21:40.393+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:21:42.316+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:21:42.316+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000673677}
+{"level":"DEBUG","time":"2021-04-20T16:22:11.176+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:22:11.177+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:22:11.177+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:22:11.692+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:22:11.692+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00070678}
+{"level":"DEBUG","time":"2021-04-20T16:22:24.026+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:22:24.027+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:22:24.027+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:22:24.331+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:22:24.332+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00066748}
+{"level":"ERROR","time":"2021-04-20T16:22:27.043+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:22:27.043+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000445886}
+{"level":"DEBUG","time":"2021-04-20T16:23:06.308+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:23:06.308+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:23:06.309+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:23:07.178+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:23:07.178+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000723817}
+{"level":"ERROR","time":"2021-04-20T16:23:12.676+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:23:12.676+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000612972}
+{"level":"DEBUG","time":"2021-04-20T16:23:45.223+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:23:45.224+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:23:45.224+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:23:46.539+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:23:46.539+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000647196}
+{"level":"DEBUG","time":"2021-04-20T16:24:05.822+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:24:05.823+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:24:05.823+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:24:06.411+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:24:06.411+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000735261}
+{"level":"DEBUG","time":"2021-04-20T16:25:29.771+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:25:29.772+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:25:29.772+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:25:48.359+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:25:48.360+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:25:48.360+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:27:13.401+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:27:13.401+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:27:13.401+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:27:19.233+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:27:19.233+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000792513}
+{"level":"DEBUG","time":"2021-04-20T16:27:34.550+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:27:34.550+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:27:34.551+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:27:36.405+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:27:36.405+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000801732}
+{"level":"DEBUG","time":"2021-04-20T16:28:34.971+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:28:34.972+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:28:34.972+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:28:47.176+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:28:47.176+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:28:47.177+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:28:47.525+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:28:47.525+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00074913}
+{"level":"DEBUG","time":"2021-04-20T16:29:02.698+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:29:02.699+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:29:02.699+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:29:03.871+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:29:03.871+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000682772}
+{"level":"DEBUG","time":"2021-04-20T16:30:20.363+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:30:20.363+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:30:20.363+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:30:23.809+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:30:23.809+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000791384}
+{"level":"ERROR","time":"2021-04-20T16:30:27.137+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:30:27.137+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000487137}
+{"level":"DEBUG","time":"2021-04-20T16:36:45.134+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:36:45.134+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:36:45.135+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:36:50.383+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:36:50.383+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000745321}
+{"level":"ERROR","time":"2021-04-20T16:37:01.849+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:37:01.849+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000543272}
+{"level":"DEBUG","time":"2021-04-20T16:37:01.871+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:37:01.871+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:37:01.872+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:37:02.995+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:37:02.995+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000675777}
+{"level":"DEBUG","time":"2021-04-20T16:43:05.629+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:43:05.630+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:43:05.630+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:43:06.787+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:43:06.787+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000764447}
+{"level":"ERROR","time":"2021-04-20T16:43:09.423+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:43:09.423+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000558533}
+{"level":"DEBUG","time":"2021-04-20T16:43:58.397+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:43:58.398+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:43:58.398+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:43:58.764+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:43:58.764+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000906849}
+{"level":"ERROR","time":"2021-04-20T16:44:18.645+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:44:18.645+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000575627}
+{"level":"DEBUG","time":"2021-04-20T16:44:18.691+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:44:18.691+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:44:18.691+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:44:20.065+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:44:20.065+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000951652}
+{"level":"DEBUG","time":"2021-04-20T16:44:37.811+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:44:37.811+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:44:37.811+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:44:38.702+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:44:38.702+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000662771}
+{"level":"DEBUG","time":"2021-04-20T16:46:40.833+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:46:40.833+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:46:40.833+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:46:42.064+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:46:42.064+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000713833}
+{"level":"DEBUG","time":"2021-04-20T16:47:28.606+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:47:28.606+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:47:28.607+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:47:30.308+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:47:30.308+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00080085}
+{"level":"DEBUG","time":"2021-04-20T16:47:57.425+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:47:57.426+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:47:57.426+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"ERROR","time":"2021-04-20T16:47:57.575+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:47:57.575+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000688329}
+{"level":"ERROR","time":"2021-04-20T16:48:01.471+0800","caller":"controller/user.go:68","msg":"登录失败","error":"key is of invalid type"}
+{"level":"INFO","time":"2021-04-20T16:48:01.471+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00068836}
+{"level":"DEBUG","time":"2021-04-20T16:54:27.611+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:54:27.612+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:54:27.612+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:55:08.593+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:55:08.594+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T16:55:08.594+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:03:32.704+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:03:32.705+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:03:32.705+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T17:03:34.311+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000619616}
+{"level":"DEBUG","time":"2021-04-20T17:03:42.297+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:03:42.298+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:03:42.298+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T17:03:43.402+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000664084}
+{"level":"INFO","time":"2021-04-20T17:03:46.067+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000446188}
+{"level":"INFO","time":"2021-04-20T17:03:47.513+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000477661}
+{"level":"INFO","time":"2021-04-20T17:03:48.227+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00041699}
+{"level":"INFO","time":"2021-04-20T17:03:50.978+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000480317}
+{"level":"INFO","time":"2021-04-20T17:03:52.047+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000391524}
+{"level":"INFO","time":"2021-04-20T17:03:53.267+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000499592}
+{"level":"INFO","time":"2021-04-20T17:03:54.412+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00063259}
+{"level":"DEBUG","time":"2021-04-20T17:05:24.910+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:05:24.911+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:05:24.911+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:11:44.231+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:11:44.232+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:11:44.232+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:15:00.835+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:15:00.835+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:15:00.836+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:17:14.710+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:17:14.711+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:17:14.711+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:19:23.929+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:19:23.929+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:19:23.929+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:20:00.709+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:20:00.710+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:20:00.710+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:33.184+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:33.185+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:33.185+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:59.398+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:59.399+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:22:59.399+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:02.498+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:02.499+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:02.499+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:09.813+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:09.814+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:23:09.814+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T17:23:27.181+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000154465}
+{"level":"INFO","time":"2021-04-20T17:23:31.273+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000090028}
+{"level":"INFO","time":"2021-04-20T17:23:32.128+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000419929}
+{"level":"INFO","time":"2021-04-20T17:23:32.862+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000073341}
+{"level":"INFO","time":"2021-04-20T17:23:33.497+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000065792}
+{"level":"INFO","time":"2021-04-20T17:23:34.180+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000053427}
+{"level":"INFO","time":"2021-04-20T17:23:39.803+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045647}
+{"level":"INFO","time":"2021-04-20T17:23:44.532+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00010578}
+{"level":"ERROR","time":"2021-04-20T17:31:12.838+0800","caller":"controller/user.go:68","msg":"登录失败","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-04-20T17:31:12.838+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.113","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.002073864}
+{"level":"INFO","time":"2021-04-20T17:32:58.624+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000147766}
+{"level":"INFO","time":"2021-04-20T17:33:02.787+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000041659}
+{"level":"INFO","time":"2021-04-20T17:33:07.235+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000073369}
+{"level":"INFO","time":"2021-04-20T17:33:46.161+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"GET","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000026929}
+{"level":"INFO","time":"2021-04-20T17:33:50.795+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000412758}
+{"level":"INFO","time":"2021-04-20T17:33:58.839+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000425946}
+{"level":"DEBUG","time":"2021-04-20T17:36:35.347+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:36:35.347+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T17:36:35.347+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T17:36:36.850+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000615007}
+{"level":"ERROR","time":"2021-04-20T17:36:58.425+0800","caller":"controller/user.go:68","msg":"登录失败","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-04-20T17:36:58.425+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.113","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001529159}
+{"level":"INFO","time":"2021-04-20T17:37:03.894+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.113","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001608874}
+{"level":"INFO","time":"2021-04-20T17:40:39.090+0800","caller":"logger/logger.go:86","msg":"/login","status":204,"method":"OPTIONS","path":"/login","query":"","ip":"192.168.1.113","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36","errors":"","cost":0.00006291}
+{"level":"INFO","time":"2021-04-20T17:40:39.104+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.113","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36","errors":"","cost":0.000565673}
+{"level":"INFO","time":"2021-04-20T17:42:10.533+0800","caller":"logger/logger.go:86","msg":"/login","status":204,"method":"OPTIONS","path":"/login","query":"","ip":"192.168.1.113","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36","errors":"","cost":0.000005718}
+{"level":"INFO","time":"2021-04-20T17:42:10.538+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.113","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36","errors":"","cost":0.000476681}
+{"level":"INFO","time":"2021-04-20T17:46:07.497+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.113","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000046621}
+{"level":"DEBUG","time":"2021-04-20T18:32:39.121+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:32:39.121+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:32:39.122+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T18:39:05.781+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000219914}
+{"level":"INFO","time":"2021-04-20T18:39:06.679+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00012034}
+{"level":"INFO","time":"2021-04-20T18:39:08.013+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000067317}
+{"level":"INFO","time":"2021-04-20T18:39:08.728+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069137}
+{"level":"INFO","time":"2021-04-20T18:39:09.256+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069783}
+{"level":"INFO","time":"2021-04-20T18:39:09.749+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000068606}
+{"level":"INFO","time":"2021-04-20T18:39:10.180+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000098515}
+{"level":"INFO","time":"2021-04-20T18:39:10.569+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000058198}
+{"level":"INFO","time":"2021-04-20T18:39:10.986+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00010168}
+{"level":"INFO","time":"2021-04-20T18:39:11.299+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069307}
+{"level":"INFO","time":"2021-04-20T18:39:12.825+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000064842}
+{"level":"INFO","time":"2021-04-20T18:39:14.941+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000065758}
+{"level":"INFO","time":"2021-04-20T18:39:15.695+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.0000497}
+{"level":"INFO","time":"2021-04-20T18:40:59.914+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000049548}
+{"level":"INFO","time":"2021-04-20T18:41:01.651+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00007185}
+{"level":"INFO","time":"2021-04-20T18:41:02.363+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000094047}
+{"level":"INFO","time":"2021-04-20T18:41:02.867+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000054364}
+{"level":"INFO","time":"2021-04-20T18:41:03.439+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000070263}
+{"level":"INFO","time":"2021-04-20T18:41:07.172+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000519868}
+{"level":"INFO","time":"2021-04-20T18:41:10.151+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000076229}
+{"level":"INFO","time":"2021-04-20T18:41:11.138+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000088607}
+{"level":"INFO","time":"2021-04-20T18:41:11.810+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000072992}
+{"level":"INFO","time":"2021-04-20T18:41:12.487+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000049439}
+{"level":"INFO","time":"2021-04-20T18:41:13.134+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000095617}
+{"level":"INFO","time":"2021-04-20T18:41:13.665+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000089034}
+{"level":"INFO","time":"2021-04-20T18:41:14.165+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000106834}
+{"level":"INFO","time":"2021-04-20T18:41:14.740+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000054174}
+{"level":"INFO","time":"2021-04-20T18:41:15.246+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000074778}
+{"level":"INFO","time":"2021-04-20T18:41:15.781+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000071633}
+{"level":"INFO","time":"2021-04-20T18:41:16.282+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000081412}
+{"level":"INFO","time":"2021-04-20T18:41:16.818+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069156}
+{"level":"INFO","time":"2021-04-20T18:41:17.404+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000053165}
+{"level":"INFO","time":"2021-04-20T18:41:17.965+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000059459}
+{"level":"INFO","time":"2021-04-20T18:41:18.359+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000051904}
+{"level":"INFO","time":"2021-04-20T18:43:10.476+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000094219}
+{"level":"INFO","time":"2021-04-20T18:43:11.263+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000070092}
+{"level":"INFO","time":"2021-04-20T18:43:11.877+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000120549}
+{"level":"INFO","time":"2021-04-20T18:43:12.376+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000075362}
+{"level":"INFO","time":"2021-04-20T18:43:54.370+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
+{"level":"DEBUG","time":"2021-04-20T18:43:56.978+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:43:56.979+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:43:56.979+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T18:44:05.173+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000176518}
+{"level":"INFO","time":"2021-04-20T18:44:08.845+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000057577}
+{"level":"INFO","time":"2021-04-20T18:44:21.939+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.110","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000121988}
+{"level":"INFO","time":"2021-04-20T18:44:31.163+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.110","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000069433}
+{"level":"ERROR","time":"2021-04-20T18:44:37.677+0800","caller":"controller/user.go:33","msg":"注册失败","error":"用户已经存在"}
+{"level":"INFO","time":"2021-04-20T18:44:37.677+0800","caller":"logger/logger.go:86","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"192.168.1.113","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000947655}
+{"level":"DEBUG","time":"2021-04-20T18:54:01.579+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:54:01.580+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T18:54:01.581+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
