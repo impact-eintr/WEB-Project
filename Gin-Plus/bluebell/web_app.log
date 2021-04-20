@@ -1462,3 +1462,26 @@
 {"level":"DEBUG","time":"2021-04-19T22:12:10.967+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
 {"level":"INFO","time":"2021-04-19T22:12:16.835+0800","caller":"logger/logger.go:86","msg":"/login9","status":200,"method":"POST","path":"/login9","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000061073}
 {"level":"INFO","time":"2021-04-19T22:13:48.831+0800","caller":"logger/logger.go:86","msg":"/login9","status":200,"method":"POST","path":"/login9","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000034509}
+{"level":"DEBUG","time":"2021-04-20T10:11:43.274+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:12:05.831+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:12:05.842+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:12:05.843+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:53.556+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:53.559+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:53.560+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:58.462+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:58.464+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:25:58.465+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:27:57.910+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:27:57.912+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:27:57.913+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:28:02.794+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:28:02.796+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:28:02.797+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:34:04.722+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:34:04.724+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T10:34:04.725+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-20T11:08:28.621+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-20T11:08:28.623+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-20T11:08:28.623+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-20T15:01:20.197+0800","caller":"bluebell/main.go:94","msg":"Server exit"}
