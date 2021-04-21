@@ -40,6 +40,10 @@ func Setup() *gin.Engine {
 		controller.ResponseSuccess(c, nil)
 	})
 
+	r.GET("/home", middleware.JWTAuthMiddleware(), func(c *gin.Context) {
+		controller.ResponseSuccess(c, nil)
+	})
+
 	r.NoRoute(controller.ResponseNotFound)
 
 	return r

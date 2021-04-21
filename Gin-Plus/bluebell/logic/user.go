@@ -29,7 +29,7 @@ func SignUp(p *models.ParamSignUp) error {
 }
 
 // 处理用户登录以及JWT的发放
-func Login(p *models.ParamLogin) (token string, err error) {
+func Login(p *models.ParamLogin) (aToken, rToken string, err error) {
 	// 构造一个User实例
 	user := &models.User{
 		Username: p.UserName,
@@ -38,7 +38,7 @@ func Login(p *models.ParamLogin) (token string, err error) {
 
 	// 数据库验证
 	if err = mysql.UserLogin(user); err != nil {
-		return "", err
+		return "", "", err
 	}
 	return jwt.GenToken(user.UserID, user.Username)
 

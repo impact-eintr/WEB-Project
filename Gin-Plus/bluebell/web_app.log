@@ -1802,3 +1802,57 @@
 {"level":"DEBUG","time":"2021-04-20T18:54:01.579+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
 {"level":"DEBUG","time":"2021-04-20T18:54:01.580+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
 {"level":"DEBUG","time":"2021-04-20T18:54:01.581+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:12:52.695+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:12:52.696+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:12:52.696+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:14:13.539+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:14:13.540+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:14:13.540+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:15.036+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:15.036+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:15.037+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.573+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.574+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.575+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.731+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.731+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:18:22.731+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:26.510+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:26.511+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:26.511+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:49.564+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:49.565+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:24:49.565+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:29:22.145+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:29:22.146+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:29:22.146+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:30:33.932+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:30:33.932+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:30:33.933+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:00.154+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:00.155+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:00.155+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:15.167+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:15.167+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:15.167+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:44.931+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:44.932+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:34:44.932+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:35:51.661+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:35:51.662+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T21:35:51.663+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:05:25.774+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:05:25.775+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:05:25.775+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:13:33.918+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:13:33.919+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:13:33.919+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:19:02.418+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:19:02.419+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-21T22:19:02.419+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}
+{"level":"INFO","time":"2021-04-21T22:19:11.540+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000131213}
+{"level":"INFO","time":"2021-04-21T22:19:15.449+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000055125}
+{"level":"INFO","time":"2021-04-21T22:19:21.631+0800","caller":"logger/logger.go:86","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000760338}
+{"level":"INFO","time":"2021-04-21T22:19:36.418+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00005785}
+{"level":"INFO","time":"2021-04-21T22:19:37.612+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000082602}
+{"level":"INFO","time":"2021-04-21T22:19:38.473+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00040451}

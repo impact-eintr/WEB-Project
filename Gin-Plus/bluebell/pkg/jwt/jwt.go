@@ -21,8 +21,8 @@ type MyClaims struct {
 	jwt.StandardClaims
 }
 
-func GenToken(userID int64, userName string) (string, error) {
-	c := MyClaims{
+func GenToken(userID int64, userName string) (aToken, rToken string, err error) {
+	mc := MyClaims{
 		UserID:   userID,
 		UserName: userName,
 		StandardClaims: jwt.StandardClaims{
@@ -32,8 +32,18 @@ func GenToken(userID int64, userName string) (string, error) {
 		},
 	}
 
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, c)
-	return token.SignedString(salt)
+	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, mc).SignedString(salt)
+
+	c := MyClaims{
+		StandardClaims: jwt.StandardClaims{
+			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
+			Issuer:    "webconsole",                               // 签发人
+			IssuedAt:  time.Now().Unix(),                          // 签发时间
+		},
+	}
+	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, c).SignedString(salt)
+
+	return
 }
 
 func ParseToken(tokenString string) (*MyClaims, error) {
