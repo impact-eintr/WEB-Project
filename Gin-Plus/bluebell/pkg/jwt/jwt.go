@@ -21,7 +21,32 @@ type MyClaims struct {
 	jwt.StandardClaims
 }
 
-func GenToken(userID int64, userName string) (aToken, rToken string, err error) {
+//func GenToken(userID int64, userName string) (aToken, rToken string, err error) {
+//	mc := MyClaims{
+//		UserID:   userID,
+//		UserName: userName,
+//		StandardClaims: jwt.StandardClaims{
+//			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
+//			Issuer:    "webconsole",                               // 签发人
+//			IssuedAt:  time.Now().Unix(),                          // 签发时间
+//		},
+//	}
+//
+//	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, mc).SignedString(salt)
+//
+//	c := MyClaims{
+//		StandardClaims: jwt.StandardClaims{
+//			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
+//			Issuer:    "webconsole",                               // 签发人
+//			IssuedAt:  time.Now().Unix(),                          // 签发时间
+//		},
+//	}
+//	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, c).SignedString(salt)
+//
+//	return
+//}
+
+func GenToken(userID int64, userName string) (token string, err error) {
 	mc := MyClaims{
 		UserID:   userID,
 		UserName: userName,
@@ -32,16 +57,7 @@ func GenToken(userID int64, userName string) (aToken, rToken string, err error) 
 		},
 	}
 
-	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, mc).SignedString(salt)
-
-	c := MyClaims{
-		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
-			Issuer:    "webconsole",                               // 签发人
-			IssuedAt:  time.Now().Unix(),                          // 签发时间
-		},
-	}
-	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, c).SignedString(salt)
+	token, err = jwt.NewWithClaims(jwt.SigningMethodHS256, mc).SignedString(salt)
 
 	return
 }

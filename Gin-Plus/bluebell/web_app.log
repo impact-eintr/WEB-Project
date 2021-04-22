@@ -1856,3 +1856,6 @@
 {"level":"INFO","time":"2021-04-21T22:19:36.418+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00005785}
 {"level":"INFO","time":"2021-04-21T22:19:37.612+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000082602}
 {"level":"INFO","time":"2021-04-21T22:19:38.473+0800","caller":"logger/logger.go:86","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"192.168.1.122","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00040451}
+{"level":"DEBUG","time":"2021-04-22T09:18:33.501+0800","caller":"bluebell/main.go:35","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T09:18:33.502+0800","caller":"bluebell/main.go:44","msg":"mysql init success..."}
+{"level":"DEBUG","time":"2021-04-22T09:18:33.502+0800","caller":"bluebell/main.go:52","msg":"redis init success..."}

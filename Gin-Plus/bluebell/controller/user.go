@@ -76,7 +76,7 @@ func LoginHandler(c *gin.Context) {
 	}
 
 	// 2. 业务处理
-	aToken, rToken, err := logic.Login(p)
+	aToken, err := logic.Login(p)
 	if err != nil {
 		zap.L().Error("登录失败", zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserNotExist) {
@@ -92,7 +92,7 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 
-	data := map[string]string{"aToken": aToken, "rToken": rToken}
+	data := map[string]string{"token": aToken}
 
 	// 3. 返回响应
 	ResponseSuccess(c, data)
