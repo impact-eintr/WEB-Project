@@ -1,0 +1,112 @@
+{"level":"DEBUG","time":"2021-04-22T20:22:06.960+0800","caller":"webconsole/main.go:47","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:22:19.411+0800","caller":"webconsole/main.go:47","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:22:28.544+0800","caller":"webconsole/main.go:47","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:22:30.741+0800","caller":"webconsole/main.go:47","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:23:15.145+0800","caller":"webconsole/main.go:47","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:23:37.287+0800","caller":"webconsole/main.go:43","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:24:02.995+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:04.674+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:04.675+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:24.006+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:24.007+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:25.829+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:28:25.830+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:35:16.349+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:35:16.350+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:35:22.078+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:35:22.079+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:37:39.978+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:37:39.979+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:43:37.404+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:43:37.405+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:09.978+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:09.979+0800","caller":"webconsole/main.go:51","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:50.711+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:50.711+0800","caller":"webconsole/main.go:58","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:50.715+0800","caller":"webconsole/main.go:72","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:52.335+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:52.335+0800","caller":"webconsole/main.go:58","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:46:52.337+0800","caller":"webconsole/main.go:72","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:47:50.755+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:47:50.755+0800","caller":"webconsole/main.go:59","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:47:50.756+0800","caller":"webconsole/main.go:73","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:07.362+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:07.363+0800","caller":"webconsole/main.go:59","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:07.363+0800","caller":"webconsole/main.go:73","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:30.812+0800","caller":"webconsole/main.go:43","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:30.812+0800","caller":"webconsole/main.go:59","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:48:30.813+0800","caller":"webconsole/main.go:73","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:04.849+0800","caller":"webconsole/main.go:49","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:04.850+0800","caller":"webconsole/main.go:65","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:04.851+0800","caller":"webconsole/main.go:79","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:05.709+0800","caller":"webconsole/main.go:49","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:05.710+0800","caller":"webconsole/main.go:65","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:50:05.711+0800","caller":"webconsole/main.go:79","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:00.195+0800","caller":"webconsole/main.go:49","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:00.195+0800","caller":"webconsole/main.go:59","msg":"cache init success...","type":"disk"}
+{"level":"DEBUG","time":"2021-04-22T20:53:00.195+0800","caller":"webconsole/main.go:65","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:00.196+0800","caller":"webconsole/main.go:79","msg":"database init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:20.368+0800","caller":"webconsole/main.go:49","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:20.368+0800","caller":"webconsole/main.go:59","msg":"cache init success...","cachetype":"disk"}
+{"level":"DEBUG","time":"2021-04-22T20:53:20.368+0800","caller":"webconsole/main.go:65","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-22T20:53:20.369+0800","caller":"webconsole/main.go:79","msg":"database init success..."}
+{"level":"INFO","time":"2021-04-22T21:21:00.359+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.020397629}
+{"level":"INFO","time":"2021-04-22T21:21:01.177+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.005134516}
+{"level":"INFO","time":"2021-04-22T21:21:01.955+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.004606321}
+{"level":"INFO","time":"2021-04-22T21:21:02.586+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.02511844}
+{"level":"INFO","time":"2021-04-22T21:21:03.520+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.004904297}
+{"level":"INFO","time":"2021-04-22T21:21:03.989+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.02053329}
+{"level":"INFO","time":"2021-04-22T21:21:59.132+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.053939831}
+{"level":"INFO","time":"2021-04-22T21:22:00.342+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.055326502}
+{"level":"INFO","time":"2021-04-22T21:22:02.070+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.019887558}
+{"level":"INFO","time":"2021-04-22T21:22:02.886+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.021526736}
+{"level":"INFO","time":"2021-04-22T21:22:03.571+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.026367282}
+{"level":"INFO","time":"2021-04-22T21:22:04.303+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.056141932}
+{"level":"INFO","time":"2021-04-22T21:22:04.877+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.048196273}
+{"level":"INFO","time":"2021-04-22T21:22:05.878+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.022991918}
+{"level":"INFO","time":"2021-04-22T21:22:06.404+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.053535695}
+{"level":"INFO","time":"2021-04-22T21:22:07.674+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.022310537}
+{"level":"INFO","time":"2021-04-22T21:22:10.684+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.049294572}
+{"level":"INFO","time":"2021-04-22T21:22:11.140+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.044978737}
+{"level":"INFO","time":"2021-04-22T21:22:11.962+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.047856031}
+{"level":"INFO","time":"2021-04-22T21:22:12.759+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.056393434}
+{"level":"INFO","time":"2021-04-22T21:22:13.527+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.054026217}
+{"level":"INFO","time":"2021-04-22T21:22:14.222+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.053178986}
+{"level":"INFO","time":"2021-04-22T21:22:14.883+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.023420732}
+{"level":"INFO","time":"2021-04-22T21:22:15.625+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.052848604}
+{"level":"INFO","time":"2021-04-22T21:22:16.605+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.023296236}
+{"level":"INFO","time":"2021-04-22T21:22:17.288+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.022651692}
+{"level":"INFO","time":"2021-04-22T21:22:18.078+0800","caller":"logger/logger.go:86","msg":"/api/v1/info/road/4","status":200,"method":"GET","path":"/api/v1/info/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.040032499}
+{"level":"INFO","time":"2021-04-22T21:22:25.238+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.007619487}
+{"level":"INFO","time":"2021-04-22T21:22:26.358+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.015128458}
+{"level":"INFO","time":"2021-04-22T21:22:27.116+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013820444}
+{"level":"INFO","time":"2021-04-22T21:22:27.783+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003515155}
+{"level":"INFO","time":"2021-04-22T21:22:28.381+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013696708}
+{"level":"INFO","time":"2021-04-22T21:22:28.882+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.015307043}
+{"level":"INFO","time":"2021-04-22T21:22:29.715+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.004683208}
+{"level":"INFO","time":"2021-04-22T21:22:30.496+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.01331935}
+{"level":"INFO","time":"2021-04-22T21:22:31.240+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.016814489}
+{"level":"INFO","time":"2021-04-22T21:22:31.972+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.016767451}
+{"level":"INFO","time":"2021-04-22T21:22:32.710+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.015420118}
+{"level":"INFO","time":"2021-04-22T21:22:33.391+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003336279}
+{"level":"INFO","time":"2021-04-22T21:22:34.110+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.012398495}
+{"level":"INFO","time":"2021-04-22T21:22:34.813+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013752214}
+{"level":"INFO","time":"2021-04-22T21:22:35.501+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.011682046}
+{"level":"INFO","time":"2021-04-22T21:22:36.162+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.012615119}
+{"level":"INFO","time":"2021-04-22T21:22:52.580+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.017475556}
+{"level":"INFO","time":"2021-04-22T21:22:53.390+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.015337366}
+{"level":"INFO","time":"2021-04-22T21:22:54.163+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003128228}
+{"level":"INFO","time":"2021-04-22T21:22:54.845+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.012584665}
+{"level":"INFO","time":"2021-04-22T21:23:12.593+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013834739}
+{"level":"INFO","time":"2021-04-22T21:23:13.316+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.016960953}
+{"level":"INFO","time":"2021-04-22T21:23:13.904+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.014062792}
+{"level":"INFO","time":"2021-04-22T21:23:14.448+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.009930466}
+{"level":"INFO","time":"2021-04-22T21:23:27.084+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003872094}
+{"level":"INFO","time":"2021-04-22T21:23:27.696+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.014713054}
+{"level":"INFO","time":"2021-04-22T21:23:28.156+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013478991}
+{"level":"INFO","time":"2021-04-22T21:23:29.029+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013360101}
+{"level":"INFO","time":"2021-04-22T21:23:29.504+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013295817}
+{"level":"INFO","time":"2021-04-22T21:23:30.265+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003060111}
+{"level":"INFO","time":"2021-04-22T21:23:30.820+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003660818}
+{"level":"INFO","time":"2021-04-22T21:23:31.300+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003777583}
+{"level":"INFO","time":"2021-04-22T21:23:31.778+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013270143}

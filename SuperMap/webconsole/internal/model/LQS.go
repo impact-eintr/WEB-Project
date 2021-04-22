@@ -88,7 +88,7 @@ type L25 struct {
 	//S备注         string `json:"备注"`
 }
 
-type L24a struct {
+type L24 struct {
 	Q桥梁名称    string `json:"桥梁名称"`
 	Q桥梁代码    string `json:"桥梁代码"`
 	Q桥梁中心桩号  string `json:"桥梁中心桩号"`

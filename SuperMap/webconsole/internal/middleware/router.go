@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"strconv"
-	"webconsole/internal/dao/list"
+	"webconsole/internal/dao/database"
 
 	"github.com/gin-gonic/gin"
 )
@@ -27,17 +27,17 @@ func QueryRouter(c *gin.Context) {
 	var info string
 	switch infotype {
 	case "road":
-		info = list.RoadQuery(countnum)
+		info = database.RoadQuery(countnum)
 	case "bridge":
-		info = list.BridgeQuery(countnum)
+		info = database.BridgeQuery(countnum)
 	case "tunnel":
-		info = list.TunnelQuery(countnum)
+		info = database.TunnelQuery(countnum)
 	case "service":
-		info = list.FQuery(countnum)
+		info = database.FQuery(countnum)
 	case "portal":
-		info = list.MQuery(countnum)
+		info = database.MQuery(countnum)
 	case "toll":
-		info = list.SQuery(countnum)
+		info = database.SQuery(countnum)
 	}
 	c.Set("info", info)
 	c.Next()

@@ -32,7 +32,7 @@ type CacheSettingS struct {
 type DatabaseSettingS struct {
 	Host         string `mapstructure:"host"`
 	User         string `mapstructure:"user"`
-	Password     string `mapstructure:"Password"`
+	Password     string `mapstructure:"password"`
 	DBname       string `mapstructure:"dbname"`
 	Port         int    `mapstructure:"port"`
 	MaxOpenConns int    `mapstructure:"max_open_conns"`

@@ -2,34 +2,81 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"fmt"
 	"syscall"
 	"time"
 	"webconsole/global"
 
+	"go.uber.org/zap"
+
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
+	"webconsole/internal/dao/database"
 	"webconsole/internal/router"
+	"webconsole/pkg/logger"
 	"webconsole/pkg/setting"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func init() {
-	// 初始化各种配置
-	err := SettingInit()
+	// 加载配置文件
+	if err := global.Init(); err != nil {
+		fmt.Println("init failed, err: ", err)
+		return
+	}
+
+	err := global.Conf.ReadSection("server", &global.ServerSetting)
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println("init failed, err: ", err)
+		return
+	}
+
+	// 初始化日志
+	err = global.Conf.ReadSection("log", &global.LoggerSetting)
+	if err != nil {
+		fmt.Println("init logger failed, err: ", err)
+		return
+	}
+
+	if err := logger.Init(); err != nil {
+		fmt.Println("init logger failed, err: ", err)
+		return
+	}
+
+	zap.L().Debug("logger init success...")
+
+	// 初始化缓存
+	err = global.Conf.ReadSection("cache", &global.CacheSetting)
+	if err != nil {
+		fmt.Println("init cache failed, err: ", err)
+		return
+	}
+
+	if ctyp := global.CacheSetting.CacheType; ctyp != "" {
+		zap.L().Debug("cache init success...", zap.String("cachetype", ctyp))
+	} else {
+		// 如果不设置缓存，可以直接连接到数据库(待设计)
+		log.Fatalln("未指定缓存类型")
+	}
+
+	zap.L().Debug("cache init success...")
+
+	err = global.Conf.ReadSection("database", &global.DatabaseSetting)
+	if err != nil {
+		fmt.Println("init database failed, err: ", err)
+		return
 	}
 
 	// 初始化sql连接
-	err = DBInit()
-	if err != nil {
-		log.Fatalln(err)
+	if err := database.Init(); err != nil {
+		fmt.Println("init database failed, err: ", err)
+		return
 	}
+
+	zap.L().Debug("database init success...")
 
 }
 
@@ -37,7 +84,12 @@ func init() {
 // @version 1.0.0
 // @description 交通一张图
 func main() {
-	r := router.NewRouter()
+
+	defer zap.L().Sync()
+	r, err := router.NewRouter()
+	if err != nil {
+		return
+	}
 
 	server := &http.Server{
 		Addr:    fmt.Sprintf(":%d", global.ServerSetting.Port),
@@ -76,12 +128,12 @@ func SettingInit() error {
 		return err
 	}
 
-	err = setting.ReadSection("Server", &global.ServerSetting)
+	err = setting.ReadSection("server", &global.ServerSetting)
 	if err != nil {
 		return err
 	}
 
-	err = setting.ReadSection("Cache", &global.CacheSetting)
+	err = setting.ReadSection("cache", &global.CacheSetting)
 	if err != nil {
 		return err
 	}
@@ -92,40 +144,7 @@ func SettingInit() error {
 		// 如果不设置缓存，可以直接连接到数据库(待设计)
 		log.Fatalln("未指定缓存类型")
 	}
-	err = setting.ReadSection("Database", &global.DatabaseSetting)
-	if err != nil {
-		log.Fatalln(err)
-	}
 
 	return nil
 
-}
-
-func DBInit() error {
-	dbinfo := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		global.DatabaseSetting.User,
-		global.DatabaseSetting.Password,
-		global.DatabaseSetting.Host,
-		global.DatabaseSetting.Port,
-		global.DatabaseSetting.DBname,
-	)
-
-	var err error
-	global.DB, err = sql.Open("mysql", dbinfo)
-	if err != nil {
-		return err
-	}
-
-	err = global.DB.Ping()
-	if err != nil {
-		return err
-	}
-
-	// 根据具体需求设置
-	//global.DB.SetConnMaxIdleTime(time.Second * 10)
-	//global.DB.SetMaxOpenConns(200)
-	//global.DB.SetMaxIdleConns(10)
-
-	log.Println("成功连接到数据库!")
-	return nil
 }

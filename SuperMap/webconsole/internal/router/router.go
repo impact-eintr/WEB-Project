@@ -6,6 +6,7 @@ import (
 	"webconsole/global"
 	"webconsole/internal/dao/webcache/cache"
 	"webconsole/internal/middleware"
+	"webconsole/pkg/logger"
 	"webconsole/pkg/tcp"
 
 	v1 "webconsole/internal/router/api/v1"
@@ -15,19 +16,24 @@ import (
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
-func NewRouter() *gin.Engine {
-	r := gin.New()
+func NewRouter() (r *gin.Engine, err error) {
 
-	// 调用gin自带的日志收集 之后可以替换
-	r.Use(gin.Logger())
-	r.Use(gin.Recovery())
+	if global.ServerSetting.Mode == "release" {
+		gin.SetMode(gin.ReleaseMode)
+	}
+
+	r = gin.New()
+
+	r.Use(logger.GinLogger())
+	r.Use(logger.GinRecovery(true))
+	r.Use(middleware.Cors())
 
 	// 配置缓存服务
 	c := cache.New(global.CacheSetting.CacheType, global.CacheSetting.TTL)
-	s := v1.NewServer(c)
 	// 开启缓存服务
 	go tcp.New(c).Listen()
 
+	s := v1.NewServer(c)
 	info := v1.NewInfo()
 
 	// 注册swagger
@@ -39,7 +45,7 @@ func NewRouter() *gin.Engine {
 		cacheGroup := apiv1.Group("/cache")
 		{
 			// 操作缓存
-			cacheGroup.Use(middleware.Cors(), middleware.PathParse)
+			cacheGroup.Use(middleware.PathParse)
 			cacheGroup.GET("/hit/*key", s.CacheCheck, func(c *gin.Context) {
 				miss := c.GetBool("miss") // 检查是否命中缓存
 				if miss {
@@ -59,7 +65,7 @@ func NewRouter() *gin.Engine {
 		// 数据查询路由
 		infoGroup := apiv1.Group("/info")
 		{
-			infoGroup.Use(middleware.Cors(), middleware.PathParse)
+			infoGroup.Use(middleware.PathParse)
 
 			infoGroup.GET("/:infotype/:count",
 				middleware.QueryRouter,
@@ -73,5 +79,5 @@ func NewRouter() *gin.Engine {
 		}
 	}
 
-	return r
+	return r, nil
 }
