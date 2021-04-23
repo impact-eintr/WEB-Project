@@ -22,13 +22,13 @@ import (
 func main() {
 	// 1. 加载配置文件
 	if err := setting.Init(); err != nil {
-		fmt.Printf("init mysql failed, err:#{err}\n")
+		fmt.Printf("init setting failed, err:#{err}\n")
 		return
 	}
 
 	// 2. 初始化日志
 	if err := logger.Init(); err != nil {
-		fmt.Printf("init mysql failed, err:#{err}\n")
+		fmt.Printf("init logger failed, err:#{err}\n")
 		return
 	}
 
