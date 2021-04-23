@@ -16,7 +16,6 @@ import (
 	"webconsole/internal/dao/database"
 	"webconsole/internal/router"
 	"webconsole/pkg/logger"
-	"webconsole/pkg/setting"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -119,32 +118,5 @@ func main() {
 	}
 
 	log.Println("Server exit")
-
-}
-
-func SettingInit() error {
-	setting, err := setting.NewSetting()
-	if err != nil {
-		return err
-	}
-
-	err = setting.ReadSection("server", &global.ServerSetting)
-	if err != nil {
-		return err
-	}
-
-	err = setting.ReadSection("cache", &global.CacheSetting)
-	if err != nil {
-		return err
-	}
-
-	if ctyp := global.CacheSetting.CacheType; ctyp != "" {
-		log.Println("cache type is", ctyp)
-	} else {
-		// 如果不设置缓存，可以直接连接到数据库(待设计)
-		log.Fatalln("未指定缓存类型")
-	}
-
-	return nil
 
 }

@@ -110,3 +110,7 @@
 {"level":"INFO","time":"2021-04-22T21:23:30.820+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003660818}
 {"level":"INFO","time":"2021-04-22T21:23:31.300+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.003777583}
 {"level":"INFO","time":"2021-04-22T21:23:31.778+0800","caller":"logger/logger.go:86","msg":"/api/v1/cache/hit/road/4","status":200,"method":"GET","path":"/api/v1/cache/hit/road/4","query":"","ip":"192.168.1.122","user-agent":"curl/7.76.1","errors":"","cost":0.013270143}
+{"level":"DEBUG","time":"2021-04-23T10:02:13.804+0800","caller":"webconsole/main.go:48","msg":"logger init success..."}
+{"level":"DEBUG","time":"2021-04-23T10:02:13.805+0800","caller":"webconsole/main.go:58","msg":"cache init success...","cachetype":"disk"}
+{"level":"DEBUG","time":"2021-04-23T10:02:13.805+0800","caller":"webconsole/main.go:64","msg":"cache init success..."}
+{"level":"DEBUG","time":"2021-04-23T10:02:13.806+0800","caller":"webconsole/main.go:78","msg":"database init success..."}
