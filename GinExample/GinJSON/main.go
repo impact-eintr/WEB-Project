@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -19,7 +20,9 @@ func main() {
 		}
 
 		c.JSON(http.StatusOK, data)
+
 	})
 
-	r.Run(":8081")
+	r.Run(":8080")
+
 }
