@@ -2,6 +2,7 @@ package znet
 
 import (
 	"Zinx/ziface"
+	"errors"
 	"fmt"
 	"net"
 )
@@ -30,6 +31,10 @@ func (s *Server) Start() {
 	if err != nil {
 		fmt.Println("listen ", s.IPVersion, "err", err)
 	}
+
+	// 初始化connid
+	var cid uint32 = 0
+
 	fmt.Println("成功启动server", s.Name)
 
 	// 阻塞地等待客户端连接处理客户端连接业务
@@ -40,25 +45,19 @@ func (s *Server) Start() {
 			continue
 		}
 
-		// 已经建立了连接 实现一个简单的回显业务
-		go func() {
-			for {
+		connDeal := NewConnection(conn, cid, func(conn *net.TCPConn, data []byte, cnt int) error {
+			fmt.Println("[ConnHandle] CallbackToClient")
+			if _, err := conn.Write(data[:cnt]); err != nil {
+				fmt.Println("write back buf err", err)
+				return errors.New("CallBackToClient error")
 
-				buf := make([]byte, 512)
-				cnt, err := conn.Read(buf)
-				if err != nil {
-					fmt.Println("recv buf err", err)
-					continue
-				}
-
-				fmt.Println("recv buf:", string(buf))
-				if _, err := conn.Write(buf[:cnt]); err != nil {
-					fmt.Println("write buf err", err)
-					continue
-				}
 			}
-		}()
+			return nil
+		})
 
+		go connDeal.Start()
+
+		cid++
 	}
 }
 

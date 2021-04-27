@@ -37,7 +37,7 @@ func NewConnection(conn *net.TCPConn, connID uint32, callback_api ziface.HandleF
 // 连接读取数据的业务
 func (c *Connection) StartReader() {
 	fmt.Println("Reader Goroutine is running...")
-	defer fmt.Println("connID:", c.ConnID, "Reader is exit, remote addr is ", c.GetRemoteAddr().String)
+	defer fmt.Println("connID:", c.ConnID, "Reader is exit, remote addr is ", c.GetRemoteAddr().String())
 	defer c.Stop()
 
 	for {
@@ -50,6 +50,7 @@ func (c *Connection) StartReader() {
 
 		if err := c.handleAPI(c.Conn, buf, cnt); err != nil {
 			fmt.Printf("ConnID[%v]\n handle err:%v", c.ConnID, err)
+			break
 		}
 	}
 }
@@ -70,6 +71,7 @@ func (c *Connection) Stop() {
 	c.isClosed = true
 
 	c.Conn.Close()
+
 	close(c.ExitChan)
 }
 
@@ -90,5 +92,5 @@ func (c *Connection) GetRemoteAddr() net.Addr {
 
 // 发送数据 将数据发送给远程的客户端
 func (c *Connection) Send(data []byte) error {
-
+	return nil
 }
