@@ -20,6 +20,7 @@
 ## v0.3
 
 > 基础router模块
+
 - Ruquest请求封装(将链接和数据绑定在一起)
     - 属性
         - 连接IConnection
@@ -37,9 +38,27 @@
         -  处理业务的方法
         -  处理业务之后的方法
 - zinx集成router模块
-    -  Iserver增添路由功能
+    - Iserver增添路由功能
     - Server类增添Router成员
     - Commection类绑定一个Router成员
     - 在Connection调用 已经注册的Router处理业务
 
-###
+## v0.4
+> 增添全局配置
+
+## v0.5
+
+> 消息封装
+
+- 定义一个消息的结构
+    - 属性
+        - 消息的ID
+        - 消息长度
+        - 消息的内容
+    - 方法
+        - Setter
+        - Getter
+- 将消息封装机制集成到Zinx框架中    
+    - 将Message添加到Request中
+    - 修改连接读取数据的机制 将之前的单纯读取byte改为拆包读取方式
+    - 连接的发包机制 将发送的消息进行打包 再发送

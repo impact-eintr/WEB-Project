@@ -1,4 +1,4 @@
-package znet
+package ziface
 
 // 路由抽象接口 路由里的数据都是IRequest
 type IRouter interface {

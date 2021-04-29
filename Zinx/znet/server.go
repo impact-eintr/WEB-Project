@@ -1,9 +1,10 @@
 package znet
 
 import (
+	"Zinx/utils"
 	"Zinx/ziface"
-	"errors"
 	"fmt"
+	"log"
 	"net"
 )
 
@@ -16,9 +17,12 @@ type Server struct {
 	IP string
 	// 服务器监听的端口
 	Port int
+	// 当前的Server添加一个router server注册的连接对应的处理业务
+	Router ziface.IRouter
 }
 
 func (s *Server) Start() {
+	log.Println("[Zinx] Conf:", utils.GlobalConf)
 	fmt.Printf("[Start] Server Listening on IP: %s, Port :%d, is starting\n", s.IP, s.Port)
 	// 获取一个TCP连接的Addr
 	addr, err := net.ResolveTCPAddr(s.IPVersion, fmt.Sprintf("%s:%d", s.IP, s.Port))
@@ -45,15 +49,7 @@ func (s *Server) Start() {
 			continue
 		}
 
-		connDeal := NewConnection(conn, cid, func(conn *net.TCPConn, data []byte, cnt int) error {
-			fmt.Println("[ConnHandle] CallbackToClient")
-			if _, err := conn.Write(data[:cnt]); err != nil {
-				fmt.Println("write back buf err", err)
-				return errors.New("CallBackToClient error")
-
-			}
-			return nil
-		})
+		connDeal := NewConnection(conn, cid, s.Router)
 
 		go connDeal.Start()
 
@@ -75,13 +71,20 @@ func (s *Server) Run() {
 
 }
 
+// 添加router模块
+func (s *Server) AddRouter(router ziface.IRouter) {
+	s.Router = router
+	fmt.Println("[Zinx] add Router Suss!!")
+}
+
 // 初始化Server模块
 func NewServer(name string) ziface.IServer {
 	s := &Server{
-		Name:      name,
+		Name:      utils.GlobalConf.Name,
 		IPVersion: "tcp4",
-		IP:        "0.0.0.0",
-		Port:      8999,
+		IP:        utils.GlobalConf.Host,
+		Port:      utils.GlobalConf.Port,
+		Router:    nil,
 	}
 
 	return s
