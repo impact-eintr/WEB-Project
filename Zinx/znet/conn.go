@@ -4,6 +4,7 @@ import (
 	"Zinx/utils"
 	"Zinx/ziface"
 	"fmt"
+	"io"
 	"net"
 )
 
@@ -42,12 +43,35 @@ func (c *Connection) StartReader() {
 	defer c.Stop()
 
 	for {
-		buf := make([]byte, utils.GlobalConf.MaxPackageSize)
-		cnt, err := c.Conn.Read(buf)
-		if err != nil {
-			fmt.Println("recv buf err", err)
-			continue
+		//buf := make([]byte, utils.GlobalConf.MaxPackageSize)
+		//cnt, err := c.Conn.Read(buf)
+		//if err != nil {
+		//	fmt.Println("recv buf err", err)
+		//	continue
+		//}
+		dp := NewDataPack()
+
+		headData := make([]byte, dp.GetHeadLen())
+		if _, err := io.ReadFull(c.GetTCPConnection(), headData); err != nil {
+			fmt.Println("read msg head error", err)
+			break
 		}
+
+		msg, err := dp.Unpack(headData)
+		if err != nil {
+			fmt.Println("read msg head error", err)
+			break
+		}
+
+		var data []byte
+		if msg.GetMsgLen() > 0 {
+			if _, err := io.ReadFull(c.GetTCPConnection(), data); err != nil {
+				fmt.Println("read msg head error", err)
+				break
+			}
+		}
+
+		msg.SetMsgData(data)
 
 		// 得到当前conn数据的Request请求数据
 		req := Request{
