@@ -1,7 +1,6 @@
 package znet
 
 import (
-	"Zinx/utils"
 	"Zinx/ziface"
 	"fmt"
 	"io"
@@ -76,7 +75,7 @@ func (c *Connection) StartReader() {
 		// 得到当前conn数据的Request请求数据
 		req := Request{
 			conn: c,
-			data: buf[:cnt],
+			msg:  msg,
 		}
 
 		// 执行注册的路由方法
