@@ -2,6 +2,7 @@ package znet
 
 import (
 	"Zinx/ziface"
+	"errors"
 	"fmt"
 	"io"
 	"net"
@@ -129,5 +130,24 @@ func (c *Connection) Send(data []byte) error {
 	return nil
 }
 
-// 提供一个SendMsg方法 简爱嗯我们要发送到客户端的数据 先进行封包再发送
-func (c *Connection) SendMsg(msgId uint32)
+// 提供一个SendMsg方法 将我们要发送到客户端的数据 先进行封包再发送
+func (c *Connection) SendMsg(msgId uint32, data []byte) error {
+	if c.isClosed {
+		return errors.New("Connection closed when send msg")
+	}
+
+	dp := NewDataPack()
+	msgpkg := NewMsgPackage(msgId, data)
+
+	msg, err := dp.Pack(msgpkg)
+	if err != nil {
+		fmt.Println("Pack error msgid:", msgId)
+		return errors.New("Pack error")
+	}
+	// 将数据发送给客户端
+	if _, err = c.Conn.Write(msg); err != nil {
+		fmt.Println("write msg error id", msgId, err)
+	}
+
+	return nil
+}
