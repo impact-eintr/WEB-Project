@@ -55,7 +55,7 @@ func (c *Connection) StartReader() {
 			fmt.Println("read msg head error", err)
 			break
 		}
-
+		// 解包 获取数据长度
 		msg, err := dp.Unpack(headData)
 		if err != nil {
 			fmt.Println("read msg head error", err)
@@ -64,6 +64,7 @@ func (c *Connection) StartReader() {
 
 		var data []byte
 		if msg.GetMsgLen() > 0 {
+			data = make([]byte, msg.GetMsgLen())
 			if _, err := io.ReadFull(c.GetTCPConnection(), data); err != nil {
 				fmt.Println("read msg head error", err)
 				break
@@ -127,3 +128,6 @@ func (c *Connection) GetRemoteAddr() net.Addr {
 func (c *Connection) Send(data []byte) error {
 	return nil
 }
+
+// 提供一个SendMsg方法 简爱嗯我们要发送到客户端的数据 先进行封包再发送
+func (c *Connection) SendMsg(msgId uint32)
