@@ -125,11 +125,6 @@ func (c *Connection) GetRemoteAddr() net.Addr {
 	return c.Conn.RemoteAddr()
 }
 
-// 发送数据 将数据发送给远程的客户端
-func (c *Connection) Send(data []byte) error {
-	return nil
-}
-
 // 提供一个SendMsg方法 将我们要发送到客户端的数据 先进行封包再发送
 func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 	if c.isClosed {
