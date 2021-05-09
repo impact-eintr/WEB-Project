@@ -72,6 +72,11 @@
 - 方法
     - 根据msgID来索引调度路由方法
     - 添加路由方法到map集合中
+> 将消息管理机制集成到Zinx框架中
+1. 将server模块中的Router属性 替换成MsgHandler属性
+2. 将server之前的AddRouter修改成AddRouter--AddRouter(msgId unit32, router ziface.IRouter)
+3. 将connection模块Router属性 替换成MsgHandler 修改Connection方法
+4. Connection的之前调度Router的业务替换成MsgHandler调度 修改StartReader方法
 
 ## v0.7
 

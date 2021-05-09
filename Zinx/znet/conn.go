@@ -18,20 +18,20 @@ type Connection struct {
 	// 当前的连接状态
 	isClosed bool
 
-	// 该连接处理的方法Router
-	Router ziface.IRouter
+	// 消息处理API
+	MsgHandler ziface.IMsgHandle
 
 	// 告知当前连接已经退出/停止的channel
 	ExitChan chan bool
 }
 
-func NewConnection(conn *net.TCPConn, connID uint32, router ziface.IRouter) *Connection {
+func NewConnection(conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandle) *Connection {
 	c := &Connection{
-		Conn:     conn,
-		ConnID:   connID,
-		Router:   router,
-		isClosed: false,
-		ExitChan: make(chan bool, 1),
+		Conn:       conn,
+		ConnID:     connID,
+		MsgHandler: msgHandler,
+		isClosed:   false,
+		ExitChan:   make(chan bool, 1),
 	}
 	return c
 }
@@ -43,12 +43,6 @@ func (c *Connection) StartReader() {
 	defer c.Stop()
 
 	for {
-		//buf := make([]byte, utils.GlobalConf.MaxPackageSize)
-		//cnt, err := c.Conn.Read(buf)
-		//if err != nil {
-		//	fmt.Println("recv buf err", err)
-		//	continue
-		//}
 		dp := NewDataPack()
 
 		headData := make([]byte, dp.GetHeadLen())
@@ -81,11 +75,7 @@ func (c *Connection) StartReader() {
 		}
 
 		// 执行注册的路由方法
-		go func(request ziface.IRequest) {
-			c.Router.PreHandle(request)
-			c.Router.Handle(request)
-			c.Router.PostHandle(request)
-		}(&req)
+		go c.MsgHandler.DoMsgHandler(&req)
 
 	}
 }
