@@ -14,6 +14,8 @@ type Global struct {
 	Version        string `json:"version"`          // 当前Zinx的版本号
 	MaxConn        int    `json:"max_conn"`         // 当前服务器允许的最大连接数
 	MaxPackageSize uint32 `json:"max_package_size"` // 当前Zinx框架数据包的最大值
+	WorkerPoolSize uint32 `json:"worker_pool_size"` //当前Zinx资源池限制
+	TaskQueueSize  uint32 `json:"task_queue_size"`  //当前Zinx等待队列限制
 
 	/*
 		Server
@@ -46,7 +48,9 @@ func init() {
 		Name:           "ZinxApp",
 		MaxConn:        1000,
 		MaxPackageSize: 4096,
-		Version:        "0.4",
+		WorkerPoolSize: 8,
+		TaskQueueSize:  5,
+		Version:        "1.0",
 		Host:           "0.0.0.0",
 		Port:           8889,
 	}

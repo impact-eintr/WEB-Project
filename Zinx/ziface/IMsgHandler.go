@@ -6,4 +6,6 @@ type IMsgHandle interface {
 	DoMsgHandler(IRequest)
 	// 为消息添加具体的处理逻辑
 	AddRouter(uint32, IRouter)
+	// 开启一个Worker工作池
+	StartWorkerPool()
 }

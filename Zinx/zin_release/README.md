@@ -79,8 +79,34 @@
 4. Connection的之前调度Router的业务替换成MsgHandler调度 修改StartReader方法
 
 ## v0.7
+> Zinx读写分离
+
+![Zinx读写分离](https://img.kancloud.cn/80/28/8028019d6bfce107ebc1bf5a15fd8940_1024x768.jpeg)
+
+1. 添加一个Reader与Write之间通信的channel
+2. 添加一个Writer Goroutine
+3. Reader由之前直接发送给客户端 改为发送给通信Channel
+4. 启动Reader和Writer一同工作
+
 
 ## v0.8
+> 消息队列以及多任务
+
+![消息队列](https://img.kancloud.cn/70/6c/706cb06abebcb8c1b7dd22c23d79cf48_1024x768.jpeg)
+
+1. 创建一个消息队列
+- MsgHandler消息管理模块
+    - 增加属性
+        - 消息队列
+        - worker工作池的数量
+2. 创建多任务worker的工作池并且启动
+- 创建一个Worker的工作池并且启动
+    - 根据Workerpoolsize的数量去创建Worker
+    - 每一个Worker都开启一个协程负载
+        - 阻塞等待与当前Worker对应的channel来消息
+        - 一旦有消息到来mworker应该处理当前消息对应的业务
+3. 将之前的发送消息，全部都改成发送给消息队列和Worker工作池来处理
+
 
 ## v0.9
 

@@ -1,6 +1,7 @@
 package znet
 
 import (
+	"Zinx/utils"
 	"Zinx/ziface"
 	"fmt"
 	"log"
@@ -10,11 +11,17 @@ import (
 type MsgHandle struct {
 	// 存放每个MsgID所对应的处理方法(之后是否可以编写路由组)
 	Apis map[uint32]ziface.IRouter
+	// 负责Worker取任务的消息队列
+	TaskQueue []chan ziface.IRequest
+	// Worker工作池中Worker的数量
+	WorkerPoolSize uint32
 }
 
 func NewMsgHandle() *MsgHandle {
 	return &MsgHandle{
-		Apis: make(map[uint32]ziface.IRouter),
+		Apis:           make(map[uint32]ziface.IRouter),
+		TaskQueue:      make([]chan ziface.IRequest, utils.GlobalConf.TaskQueueSize),
+		WorkerPoolSize: utils.GlobalConf.WorkerPoolSize,
 	}
 }
 
@@ -41,5 +48,20 @@ func (h *MsgHandle) AddRouter(msgId uint32, router ziface.IRouter) {
 
 	h.Apis[msgId] = router
 	fmt.Println("Add Router [MsgId] Succ")
+
+}
+
+// 启动一个Worker工作池 开启动作只能发生一次
+func (h *MsgHandle) StartWorkerPool() {
+	for i := 0; i < int(h.WorkerPoolSize); i++ {
+		// 给当前的Worker的TaskQueue开辟空间
+		h.TaskQueue[i] = make(chan ziface.IRequest, utils.GlobalConf.TaskQueueSize)
+		go h.startOneWorfer()
+	}
+
+}
+
+// 启动一个Worker工作流程
+func (h *MsgHandle) startOneWorfer() {
 
 }
