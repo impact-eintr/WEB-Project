@@ -79,7 +79,7 @@ func (c *Connection) StartReader() {
 		}
 
 		// 执行注册的路由方法
-		go c.MsgHandler.DoMsgHandler(&req)
+		go c.MsgHandler.SendMsgToTaskQueue(&req)
 
 	}
 }
@@ -124,7 +124,7 @@ func (c *Connection) Stop() {
 
 	c.Conn.Close()
 
-	// 告知Writer关闭
+	// 告知Writer关闭 可能多余
 	c.ExitChan <- true
 
 	close(c.ExitChan)

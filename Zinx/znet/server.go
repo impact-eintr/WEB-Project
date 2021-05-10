@@ -25,36 +25,42 @@ func (s *Server) Start() {
 	log.Println("[Zinx] Conf:", utils.GlobalConf)
 	fmt.Printf("[Start] Server Listening on IP: %s, Port :%d, is starting\n", s.IP, s.Port)
 	// 获取一个TCP连接的Addr
-	addr, err := net.ResolveTCPAddr(s.IPVersion, fmt.Sprintf("%s:%d", s.IP, s.Port))
-	if err != nil {
-		fmt.Println("处理tcp地址出错:", err)
-		return
-	}
+	go func() {
 
-	listener, err := net.ListenTCP(s.IPVersion, addr)
-	if err != nil {
-		fmt.Println("listen ", s.IPVersion, "err", err)
-	}
+		s.MsgHandler.StartWorkerPool()
 
-	// 初始化connid
-	var cid uint32 = 0
-
-	fmt.Println("成功启动server", s.Name)
-
-	// 阻塞地等待客户端连接处理客户端连接业务
-	for {
-		conn, err := listener.AcceptTCP()
+		addr, err := net.ResolveTCPAddr(s.IPVersion, fmt.Sprintf("%s:%d", s.IP, s.Port))
 		if err != nil {
-			fmt.Println("Accept err", err)
-			continue
+			fmt.Println("处理tcp地址出错:", err)
+			return
 		}
 
-		connDeal := NewConnection(conn, cid, s.MsgHandler)
+		listener, err := net.ListenTCP(s.IPVersion, addr)
+		if err != nil {
+			fmt.Println("listen ", s.IPVersion, "err", err)
+		}
 
-		go connDeal.Start()
+		// 初始化connid
+		var cid uint32 = 0
 
-		cid++
-	}
+		fmt.Println("成功启动server", s.Name)
+
+		// 阻塞地等待客户端连接处理客户端连接业务
+		for {
+			conn, err := listener.AcceptTCP()
+			if err != nil {
+				fmt.Println("Accept err", err)
+				continue
+			}
+
+			connDeal := NewConnection(conn, cid, s.MsgHandler)
+
+			go connDeal.Start()
+
+			cid++
+		}
+	}()
+
 }
 
 func (s *Server) Stop() {

@@ -8,4 +8,6 @@ type IMsgHandle interface {
 	AddRouter(uint32, IRouter)
 	// 开启一个Worker工作池
 	StartWorkerPool()
+	// 发送消息给消息队列
+	SendMsgToTaskQueue(IRequest)
 }

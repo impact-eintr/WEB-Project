@@ -20,7 +20,7 @@ type MsgHandle struct {
 func NewMsgHandle() *MsgHandle {
 	return &MsgHandle{
 		Apis:           make(map[uint32]ziface.IRouter),
-		TaskQueue:      make([]chan ziface.IRequest, utils.GlobalConf.TaskQueueSize),
+		TaskQueue:      make([]chan ziface.IRequest, utils.GlobalConf.WorkerPoolSize),
 		WorkerPoolSize: utils.GlobalConf.WorkerPoolSize,
 	}
 }
@@ -56,12 +56,33 @@ func (h *MsgHandle) StartWorkerPool() {
 	for i := 0; i < int(h.WorkerPoolSize); i++ {
 		// 给当前的Worker的TaskQueue开辟空间
 		h.TaskQueue[i] = make(chan ziface.IRequest, utils.GlobalConf.TaskQueueSize)
-		go h.startOneWorfer()
+		go h.startOneWorfer(i, h.TaskQueue[i])
+
 	}
 
 }
 
 // 启动一个Worker工作流程
-func (h *MsgHandle) startOneWorfer() {
+func (h *MsgHandle) startOneWorfer(workerId int, taskQueue chan ziface.IRequest) {
+	fmt.Println("Worker ID = ", workerId, "is started")
+	// 不断地阻塞等待对应的消息队列的消息
+	for request := range taskQueue {
+		h.DoMsgHandler(request)
+	}
+	//for {
+	//	select {
+	//	case request := <-taskQueue:
+	//		h.DoMsgHandler(request)
+	//	}
+	//}
+}
 
+// 发送消息给消息队列
+func (h *MsgHandle) SendMsgToTaskQueue(request ziface.IRequest) {
+	//根据ConnID来分配当前的连接应该由哪个worker负责处理
+	//轮询的平均分配法则
+	connID := request.GetConnection().GetConnID()
+	workerID := connID % h.WorkerPoolSize
+	fmt.Printf("conn[%v]---msg[%v] ---> worker[%v]\n", connID, request.GetMsgID(), workerID)
+	h.TaskQueue[workerID] <- request
 }
