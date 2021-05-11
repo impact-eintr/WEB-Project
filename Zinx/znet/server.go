@@ -19,6 +19,12 @@ type Server struct {
 	Port int
 	// 当前的Server的消息管理模块 用来绑定MsgId和对应的处理业务API
 	MsgHandler ziface.IMsgHandle
+	// 当前Server链接管理模块
+	ConnManager ziface.IConnManager
+	// 该Server的连接创建时Hook函数
+	OnConnStart func(ziface.IConnection)
+	// 该Server的连接断开时的Hook函数
+	OnConnStop func(ziface.IConnection)
 }
 
 func (s *Server) Start() {
@@ -53,7 +59,19 @@ func (s *Server) Start() {
 				continue
 			}
 
-			connDeal := NewConnection(conn, cid, s.MsgHandler)
+			fmt.Println(utils.GlobalConf.MaxConn, s.ConnManager.Len())
+			if s.ConnManager.Len() > utils.GlobalConf.MaxConn {
+				//TODO 给客户端相应的一个超出最大链接数量的error
+				if _, err = conn.Write([]byte("链接太多了 即将断开链接 请稍后尝试")); err != nil {
+					fmt.Println(err)
+				}
+
+				fmt.Println("Too Many Connection!")
+				conn.Close()
+				continue
+			}
+
+			connDeal := NewConnection(s, conn, cid, s.MsgHandler)
 
 			go connDeal.Start()
 
@@ -65,6 +83,7 @@ func (s *Server) Start() {
 
 func (s *Server) Stop() {
 	// TODO
+	s.ConnManager.ClearConns()
 }
 
 func (s *Server) Run() {
@@ -80,17 +99,50 @@ func (s *Server) Run() {
 // 添加router模块
 func (s *Server) AddRouter(msgId uint32, router ziface.IRouter) {
 	s.MsgHandler.AddRouter(msgId, router)
-	fmt.Println("[Zinx] add Router Suss!!")
+	fmt.Printf("[Zinx] add Router[%v] Suss!!\n", msgId)
+}
+
+// 获取当前Server的链接管理器
+func (s *Server) GetConnManager() ziface.IConnManager {
+	return s.ConnManager
+}
+
+//设置该Server的连接创建时Hook函数
+func (s *Server) SetOnConnStart(hook func(ziface.IConnection)) {
+	s.OnConnStart = hook
+}
+
+//设置该Server的连接断开时的Hook函数
+func (s *Server) SetOnConnStop(hook func(ziface.IConnection)) {
+	s.OnConnStop = hook
+}
+
+//调用连接OnConnStart Hook函数
+func (s *Server) CallOnConnStart(conn ziface.IConnection) {
+	if s.OnConnStart != nil {
+		s.OnConnStart(conn)
+		fmt.Println("成功调用Hook On Start")
+	}
+}
+
+//调用连接OnConnStop Hook函数
+func (s *Server) CallOnConnStop(conn ziface.IConnection) {
+	if s.OnConnStop != nil {
+		s.OnConnStop(conn)
+		fmt.Println("成功调用Hook On Stop")
+
+	}
 }
 
 // 初始化Server模块
 func NewServer(name string) ziface.IServer {
 	s := &Server{
-		Name:       utils.GlobalConf.Name,
-		IPVersion:  "tcp4",
-		IP:         utils.GlobalConf.Host,
-		Port:       utils.GlobalConf.Port,
-		MsgHandler: NewMsgHandle(),
+		Name:        utils.GlobalConf.Name,
+		IPVersion:   "tcp4",
+		IP:          utils.GlobalConf.Host,
+		Port:        utils.GlobalConf.Port,
+		MsgHandler:  NewMsgHandle(),
+		ConnManager: NewConnManager(),
 	}
 
 	return s

@@ -6,9 +6,13 @@ import (
 	"fmt"
 	"io"
 	"net"
+	"sync"
 )
 
 type Connection struct {
+	// 当前conn隶属于哪个Server
+	TcpServer ziface.IServer
+
 	// 当前连接的socket TCP套接字
 	Conn *net.TCPConn
 
@@ -26,17 +30,28 @@ type Connection struct {
 
 	// 读写分离通信管道
 	msgChan chan []byte
+
+	// 链接属性
+	property map[string]interface{}
+
+	// 链接属性锁
+	propertyLock sync.RWMutex
 }
 
-func NewConnection(conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandle) *Connection {
+func NewConnection(server ziface.IServer, conn *net.TCPConn, connID uint32, msgHandler ziface.IMsgHandle) *Connection {
 	c := &Connection{
+		TcpServer:  server,
 		Conn:       conn,
 		ConnID:     connID,
 		MsgHandler: msgHandler,
 		isClosed:   false,
 		ExitChan:   make(chan bool, 1),
 		msgChan:    make(chan []byte),
+		property:   make(map[string]interface{}),
 	}
+
+	server.GetConnManager().Add(c)
+	fmt.Println("server: ", server)
 	return c
 }
 
@@ -127,6 +142,9 @@ func (c *Connection) Stop() {
 	// 告知Writer关闭 可能多余
 	c.ExitChan <- true
 
+	// 将当前链接从ConnManager中移除
+	c.TcpServer.GetConnManager().Remove(c)
+
 	close(c.ExitChan)
 	close(c.msgChan)
 }
@@ -164,4 +182,34 @@ func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 	c.msgChan <- msg
 
 	return nil
+}
+
+//设置链接属性
+func (c *Connection) SetProperty(key string, value interface{}) {
+	c.propertyLock.Lock()
+	defer c.propertyLock.Unlock()
+
+	c.property[key] = value
+
+}
+
+//获取链接属性
+func (c *Connection) GetProperty(key string) (interface{}, error) {
+	c.propertyLock.RLock()
+	defer c.propertyLock.RUnlock()
+
+	if value, ok := c.property[key]; ok {
+		return value, nil
+	} else {
+		return nil, errors.New("未注册该链接属性")
+	}
+
+}
+
+//移除链接属性
+func (c *Connection) RemoveProperty(key string) {
+	c.propertyLock.Lock()
+	defer c.propertyLock.Unlock()
+
+	delete(c.property, key)
 }

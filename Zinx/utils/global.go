@@ -48,7 +48,7 @@ func init() {
 		Name:           "ZinxApp",
 		MaxConn:        1000,
 		MaxPackageSize: 4096,
-		WorkerPoolSize: 1,
+		WorkerPoolSize: 8,
 		TaskQueueSize:  1024,
 		Version:        "1.0",
 		Host:           "0.0.0.0",

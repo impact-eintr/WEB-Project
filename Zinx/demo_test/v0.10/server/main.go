@@ -6,22 +6,21 @@ import (
 	"fmt"
 )
 
-type HeartBeatRouter struct {
+type PingRouter struct {
 	znet.BaseRouter
 }
 
-type CheckHeartBeatRouter struct {
+type HelloRouter struct {
 	znet.BaseRouter
 }
 
 const (
-	MsgHeartBeat      uint32 = 0
-	MsgCheckHeartBeat uint32 = 1
+	MsgPing  uint32 = 0
+	MsgHello uint32 = 1
 )
 
-// 检测心跳信号
-func (p *HeartBeatRouter) Handle(request ziface.IRequest) {
-	fmt.Println("Call Router Handle...")
+// Ping Handle
+func (p *PingRouter) Handle(request ziface.IRequest) {
 	fmt.Println("recv from client:msgID = ", request.GetMsgID(),
 		",data = ", string(request.GetMsgData()))
 
@@ -32,8 +31,7 @@ func (p *HeartBeatRouter) Handle(request ziface.IRequest) {
 	}
 }
 
-func (h *CheckHeartBeatRouter) Handle(request ziface.IRequest) {
-	fmt.Println("Call Router Handle...")
+func (h *HelloRouter) Handle(request ziface.IRequest) {
 	fmt.Println("recv from client:msgID = ", request.GetMsgID(),
 		",data = ", string(request.GetMsgData()))
 
@@ -47,12 +45,10 @@ func (h *CheckHeartBeatRouter) Handle(request ziface.IRequest) {
 func main() {
 	fmt.Println("Hello Zinx")
 	// 1. 创建server句柄
-	s := znet.NewServer("[zinx v0.8]")
+	s := znet.NewServer("[zinx v0.9]")
 	// 2. 注册路由
-	// 接收心跳
-	s.AddRouter(MsgHeartBeat, &HeartBeatRouter{})
-	// 检查心跳
-	s.AddRouter(MsgCheckHeartBeat, &CheckHeartBeatRouter{})
+	s.AddRouter(MsgPing, &PingRouter{})
+	s.AddRouter(MsgHello, &HelloRouter{})
 
 	// 3. 启动server
 	s.Run()
