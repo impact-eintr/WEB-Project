@@ -22,6 +22,8 @@ const (
 // 检测心跳信号
 func (p *HeartBeatRouter) PreHandle(request ziface.IRequest) {
 
+	fmt.Println("recv from client:msgID = ", request.GetMsgID(),
+		",data = ", string(request.GetMsgData()))
 }
 func (p *HeartBeatRouter) Handle(request ziface.IRequest) {
 	fmt.Println("Call Router Handle...")
