@@ -8,6 +8,11 @@ import (
 	"time"
 )
 
+var (
+	heartbeat      uint32 = 0
+	checkheartbeat uint32 = 1
+)
+
 func main() {
 	// 直接连接远程服务器 得到一个conn连接
 	conn, err := net.Dial("tcp", "127.0.0.1:8999")
@@ -19,7 +24,7 @@ func main() {
 	for {
 		dp := znet.NewDataPack()
 
-		msg, err := dp.Pack(znet.NewMsgPackage(0, []byte("Zinx服务器你好！！！\n我是一个客户端")))
+		msg, err := dp.Pack(znet.NewMsgPackage(heartbeat, []byte(conn.LocalAddr().String())))
 		if err != nil {
 			fmt.Println("write conn err", err)
 			return
